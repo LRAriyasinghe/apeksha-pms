@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1151.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="9.0" layoutY="19.0" prefHeight="666.0" prefWidth="1121.0" style="-fx-border-color: #000000;">
+         <children>
+            <Pane layoutY="53.0" prefHeight="586.0" prefWidth="213.0" style="-fx-border-color: #000000;">
+               <children>
+                  <JFXButton layoutX="3.0" layoutY="267.0" prefHeight="31.0" prefWidth="207.0" style="-fx-border-color: #000000;" text="Home" />
+                  <JFXButton layoutX="3.0" layoutY="300.0" prefHeight="31.0" prefWidth="207.0" style="-fx-border-color: #000000;" text="Employee Managment" />
+                  <JFXButton layoutX="3.0" layoutY="333.0" prefHeight="33.0" prefWidth="207.0" style="-fx-border-color: #000000;" text="Statistical Report Managment" />
+                  <ImageView fitHeight="133.0" fitWidth="178.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton layoutX="21.0" layoutY="176.0" prefHeight="33.0" prefWidth="76.0" style="-fx-border-color: #000000;" text="Edit" />
+                  <JFXButton layoutX="120.0" layoutY="176.0" style="-fx-border-color: #000000;" text="Log Out" />
+               </children>
+            </Pane>
+            <Pane layoutX="213.0" layoutY="53.0" prefHeight="374.0" prefWidth="674.0" style="-fx-border-color: #000000;">
+               <children>
+                  <JFXButton layoutX="78.0" layoutY="104.0" prefHeight="166.0" prefWidth="244.0" style="-fx-border-color: #000000;" text="Statistical Report Managment" />
+                  <JFXButton layoutX="353.0" layoutY="104.0" prefHeight="166.0" prefWidth="225.0" style="-fx-border-color: #000000;" text="Employee Management" />
+               </children>
+            </Pane>
+            <Pane layoutX="887.0" layoutY="53.0" prefHeight="374.0" prefWidth="234.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Label layoutX="-1.0" prefHeight="51.0" prefWidth="234.0" style="-fx-border-color: #000000;" text="Quick launch" />
+                  <Label layoutX="5.0" layoutY="116.0" prefHeight="42.0" prefWidth="225.0" style="-fx-border-color: #000000;" text="Add Employee" />
+                  <JFXButton layoutX="147.0" layoutY="122.0" />
+                  <Label layoutX="2.0" layoutY="165.0" prefHeight="42.0" prefWidth="234.0" style="-fx-border-color: #000000;" text="Add Report" />
+                  <Label layoutX="1.0" layoutY="216.0" prefHeight="42.0" prefWidth="234.0" style="-fx-border-color: #000000;" text="Remove Employee" />
+                  <Label layoutX="2.0" layoutY="256.0" prefHeight="31.0" prefWidth="234.0" style="-fx-border-color: #000000;" text="Remove Report" />
+                  <JFXButton layoutX="155.0" layoutY="166.0" />
+                  <JFXButton layoutX="147.0" layoutY="217.0" />
+                  <JFXButton layoutX="147.0" layoutY="256.0" />
+               </children>
+            </Pane>
+            <Label layoutX="7.0" layoutY="2.0" prefHeight="51.0" prefWidth="244.0" text="Home" />
+            <Pane layoutX="213.0" layoutY="435.0" prefHeight="205.0" prefWidth="907.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Label layoutX="36.0" layoutY="14.0" prefHeight="21.0" prefWidth="142.0" text="Current Statistics" wrapText="true" />
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>
