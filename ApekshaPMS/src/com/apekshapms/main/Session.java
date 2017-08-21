@@ -1,7 +1,7 @@
 package com.apekshapms.main;
 
-import com.apekshapms.controller.DashboardController;
+import com.apekshapms.database.connector.PatientConnector;
 
 public class Session {
-    public static DashboardController dashboardController;
+    public static PatientConnector patientConnector;
 }

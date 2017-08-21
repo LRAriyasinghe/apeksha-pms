@@ -1,97 +1,102 @@
 package com.apekshapms.controller;
 
-import com.apekshapms.main.Session;
+import com.apekshapms.factory.UIFactory;
+import com.apekshapms.ui.UIName;
+import javafx.animation.ParallelTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
 
-
-import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 
-public class DashboardController implements Initializable{
+public class DashboardController implements Controller{
 
     @FXML
-    private AnchorPane containerAnchorPane;
+    private AnchorPane workspaceAnchorPane;
 
     @FXML
-    private Button button1Button;
+    private Button newPatientButton;
     @FXML
-    private Button button2Button;
+    private Button searchPatientButton;
     @FXML
-    private Button button3Button;
-    @FXML
-    private Button button4Button;
-    @FXML
-    private Button button5Button;
+    private Button issueDiagnizationCardButton;
+
+    private static final Duration WORKSPACE_ANIMATE_TIME = Duration.millis(400);
 
     public DashboardController() {
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-       /* button1Button.setOnAction(new EventHandler<ActionEvent>() {
+        Rectangle clipRectangle = new Rectangle(1100, 700);
+        workspaceAnchorPane.setClip(clipRectangle);
+
+        newPatientButton.setOnAction(event -> UIFactory.launchUI(UIName.NEW_PATIENT, true));
+
+        searchPatientButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("/com/apekshapms/ui/view/NewPatient.fxml"));
-                    containerAnchorPane.getChildren().add(root);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }*/
-
-
-        button2Button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("cat");
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("/com/apekshapms/ui/view/EditPatientDetails.fxml"));
-                    containerAnchorPane.getChildren().add(root);
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                UIFactory.launchUI(UIName.SOME_LOGIN, true);
             }
         });
 
-        Session.dashboardController = this;
+        issueDiagnizationCardButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UIFactory.launchUI(UIName.SOME_LOGIN, true);
+            }
+        });
     }
 
-    public  void changeslide1(){
-        //System.out.println("fhdgdgdg");
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/com/apekshapms/ui/view/PatientHistory.fxml"));
+    @Override
+    public void refreshView() {
 
-            containerAnchorPane.getChildren().clear();
+    }
 
-            containerAnchorPane.getChildren().add(root);
+    private void slideInParent(Parent parent) {
+        TranslateTransition parentInTranslation = new TranslateTransition(WORKSPACE_ANIMATE_TIME);
+        parentInTranslation.setFromX(1100);
+        parentInTranslation.setToX(0);
+        parentInTranslation.setNode(parent);
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (workspaceAnchorPane.getChildren().size() == 0) {
+            workspaceAnchorPane.getChildren().add(parent);
+            parentInTranslation.play();
+        } else {
+            Node childNode = workspaceAnchorPane.getChildren().get(0);
+            workspaceAnchorPane.getChildren().add(parent);
+
+            TranslateTransition childOutTranslation = new TranslateTransition(WORKSPACE_ANIMATE_TIME);
+            childOutTranslation.setFromX(0);
+            childOutTranslation.setToX(-1100);
+            childOutTranslation.setNode(childNode);
+
+            ParallelTransition parallelTransition = new ParallelTransition(parentInTranslation, childOutTranslation);
+            parallelTransition.setOnFinished(event -> {
+                Iterator<Node> nodeIterator = workspaceAnchorPane.getChildren().iterator();
+                while (nodeIterator.hasNext()) {
+                    nodeIterator.next();
+                    if (nodeIterator.hasNext()) {
+                        nodeIterator.remove();
+                    }
+                }
+            });
+            parallelTransition.play();
         }
     }
 
-    public  void changeslide2(){
-        //System.out.println("fhdgdgdg");
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/com/apekshapms/ui/view/Assigning.fxml"));
-
-            containerAnchorPane.getChildren().clear();
-
-            containerAnchorPane.getChildren().add(root);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void setWorkspace(Parent parent) {
+        if (!(workspaceAnchorPane.getChildren().size() > 0 && workspaceAnchorPane.getChildren().get(0).equals(parent))) {
+            slideInParent(parent);
         }
     }
 }
