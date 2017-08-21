@@ -7,6 +7,7 @@ import com.apekshapms.ui.UIName;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +15,22 @@ import java.util.ResourceBundle;
 public class PatientHistoryController implements Controller{
     @FXML
     private Button nextButton;
+
+    @FXML
+    private TextArea txtHistory;
+
+    @FXML
+    private TextArea txtSurgical;
+
+    @FXML
+    private TextArea txtAllergy;
+
+    @FXML
+    private TextArea txtSocial;
+
+    @FXML
+    private TextArea txtFamily;
+
 
     private Patient patient;
 

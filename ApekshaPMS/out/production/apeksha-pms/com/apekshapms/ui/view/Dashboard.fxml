@@ -16,16 +16,15 @@
                         <AnchorPane fx:id="profileAnchorPane" prefHeight="100.0" prefWidth="200.0" />
                         <VBox prefHeight="600.0" prefWidth="100.0">
                            <children>
-                              <Button fx:id="button2Button" mnemonicParsing="false" styleClass="sideBarButton" text="New Patient" textAlignment="CENTER" />
-                              <Button fx:id="button3Button" mnemonicParsing="false" styleClass="sideBarButton" text="Search Patient" textAlignment="CENTER" />
-                              <Button fx:id="button4Button" mnemonicParsing="false" styleClass="sideBarButton" text="Issue Diagnization Card" textAlignment="CENTER" />
-                              <Button fx:id="button5Button" mnemonicParsing="false" styleClass="sideBarButton" text="Button 5" />
+                              <Button fx:id="newPatientButton" mnemonicParsing="false" styleClass="sideBarButton" text="New Patient" textAlignment="CENTER" />
+                              <Button fx:id="searchPatientButton" mnemonicParsing="false" styleClass="sideBarButton" text="Search Patient" textAlignment="CENTER" />
+                              <Button fx:id="issueDiagnizationCardButton" mnemonicParsing="false" styleClass="sideBarButton" text="Issue Diagnization Card" textAlignment="CENTER" />
                            </children>
                         </VBox>
                      </children>
                   </VBox>
                </children></AnchorPane>
-            <AnchorPane fx:id="containerAnchorPane" prefHeight="200.0" prefWidth="1100.0" />
+            <AnchorPane fx:id="workspaceAnchorPane" prefHeight="200.0" prefWidth="1100.0" />
          </children>
       </HBox>
    </children>

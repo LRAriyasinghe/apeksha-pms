@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -15,6 +16,14 @@ public class AssigningController implements Controller {
 
     @FXML
     private Button submitButton;
+
+    @FXML
+    private TextField txtRegisterDocId;
+
+    @FXML
+    private TextField txtConsultantId;
+
+    private TextField txtDetails;
 
     private Patient patient;
 
