@@ -56,7 +56,6 @@ public class NewPatientController implements Controller {
 
     @FXML
     private ComboBox cmbCivil;
-
     private Patient patient;
 
     @Override
