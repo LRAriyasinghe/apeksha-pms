@@ -1,71 +1,186 @@
 package com.apekshapms.model;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import java.util.Date;
 
 public class Patient {
-    @FXML
-    private TextField txtIdNo;
+    private String id;
+    private String title;
+    private String firstName;
+    private String lastName;
+    private Date dob;
+    private boolean isMale;
+    private String occupation;
+    private String telephone;
+    private String city;
+    private String district;
+    private String address;
+    private String civil;
+    private String history;
+    private String surgical;
+    private String allergy;
+    private String social;
+    private String family;
+    private String registerDocId;
+    private String consultantId;
+    private String details;
 
-    @FXML
-    private TextField txtTtile;
+    public String getId() {
+        return id;
+    }
 
-    @FXML
-    private TextField txtFirstname;
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    @FXML
-    private TextField txtLastname;
+    public String getTitle() {
+        return title;
+    }
 
-    @FXML
-    private DatePicker DOB;
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    @FXML
-    private RadioButton Male;
+    public String getFirstName() {
+        return firstName;
+    }
 
-    @FXML
-    private RadioButton Female;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-    @FXML
-    private TextField txtOccupation;
+    public String getLastName() {
+        return lastName;
+    }
 
-    @FXML
-    private TextField txtContactNo;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-    @FXML
-    private TextField txtCity;
+    public Date getDob() {
+        return dob;
+    }
 
-    @FXML
-    private TextField txtDistrict;
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
 
-    @FXML
-    private TextArea txtAddress;
+    public boolean isMale() {
+        return isMale;
+    }
 
-    @FXML
-    private ComboBox cmbCivil;
+    public void setMale(boolean male) {
+        isMale = male;
+    }
 
-    @FXML
-    private TextArea txtHistory;
+    public String getOccupation() {
+        return occupation;
+    }
 
-    @FXML
-    private TextArea txtSurgical;
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
 
-    @FXML
-    private TextArea txtAllergy;
+    public String getTelephone() {
+        return telephone;
+    }
 
-    @FXML
-    private TextArea txtSocial;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
 
-    @FXML
-    private TextArea txtFamily;
+    public String getCity() {
+        return city;
+    }
 
-    @FXML
-    private TextField txtRegisterDocId;
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-    @FXML
-    private TextField txtConsultantId;
+    public String getDistrict() {
+        return district;
+    }
 
-    @FXML
-    private TextField txtDetails;
+    public void setDistrict(String district) {
+        this.district = district;
+    }
 
+    public String getAddress() {
+        return address;
+    }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCivil() {
+        return civil;
+    }
+
+    public void setCivil(String civil) {
+        this.civil = civil;
+    }
+
+    public String getHistory() {
+        return history;
+    }
+
+    public void setHistory(String history) {
+        this.history = history;
+    }
+
+    public String getSurgical() {
+        return surgical;
+    }
+
+    public void setSurgical(String surgical) {
+        this.surgical = surgical;
+    }
+
+    public String getAllergy() {
+        return allergy;
+    }
+
+    public void setAllergy(String allergy) {
+        this.allergy = allergy;
+    }
+
+    public String getSocial() {
+        return social;
+    }
+
+    public void setSocial(String social) {
+        this.social = social;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getRegisterDocId() {
+        return registerDocId;
+    }
+
+    public void setRegisterDocId(String registerDocId) {
+        this.registerDocId = registerDocId;
+    }
+
+    public String getConsultantId() {
+        return consultantId;
+    }
+
+    public void setConsultantId(String consultantId) {
+        this.consultantId = consultantId;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
 }

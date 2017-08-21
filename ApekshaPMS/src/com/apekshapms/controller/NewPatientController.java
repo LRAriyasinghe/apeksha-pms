@@ -60,9 +60,14 @@ public class NewPatientController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        patient = new Patient();
+
         nextButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                patient.setId(txtIdNo.getText());
+
+
                 UI ui = UIFactory.getUI(UIName.PATIENT_HISTORY);
                 Parent parent = ui.getParent();
                 PatientHistoryController controller = (PatientHistoryController) ui.getController();
