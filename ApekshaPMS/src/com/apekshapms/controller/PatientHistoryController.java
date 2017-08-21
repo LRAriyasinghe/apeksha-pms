@@ -37,7 +37,7 @@ public class PatientHistoryController implements Controller{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nextButton.setOnAction(event -> {
-            
+
 
 
             UI ui = UIFactory.getUI(UIName.ASSIGNING);
