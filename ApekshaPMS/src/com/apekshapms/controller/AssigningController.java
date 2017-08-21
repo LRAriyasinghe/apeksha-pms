@@ -32,7 +32,9 @@ public class AssigningController implements Controller {
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                patient.setRegisterDocId(txtRegisterDocId.getText());
+                patient.setConsultantId(txtConsultantId.getText());
+                patient.setDetails(txtDetails.getText());
             }
         });
     }

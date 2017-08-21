@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.NewPatientController">
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.NewPatientController">
    <children>
       <Separator layoutX="188.0" layoutY="633.0" prefHeight="14.0" prefWidth="752.0" />
       <Circle fill="#3498dc" layoutX="308.0" layoutY="640.0" radius="20.0" strokeType="INSIDE" />
@@ -54,7 +54,6 @@
       </Label>
       <RadioButton fx:id="Male" layoutX="691.0" layoutY="218.0" mnemonicParsing="false" text="Male" />
       <RadioButton fx:id="Female" layoutX="810.0" layoutY="218.0" mnemonicParsing="false" text="Female" />
-      <RadioButton layoutX="927.0" layoutY="218.0" mnemonicParsing="false" text="Other" />
       <DatePicker fx:id="DOB" layoutX="691.0" layoutY="176.0" />
       <Label layoutX="592.0" layoutY="249.0" prefHeight="25.0" prefWidth="86.0" text="Occupation" textFill="#595959">
          <font>

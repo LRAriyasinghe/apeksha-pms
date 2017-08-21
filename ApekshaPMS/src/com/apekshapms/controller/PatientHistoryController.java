@@ -37,8 +37,12 @@ public class PatientHistoryController implements Controller{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nextButton.setOnAction(event -> {
-            
 
+            patient.setHistory(txtHistory.getText());
+            patient.setSurgical(txtSurgical.getText());
+            patient.setAllergy(txtAllergy.getText());
+            patient.setSocial(txtSocial.getText());
+            patient.setFamily(txtFamily.getText());
 
             UI ui = UIFactory.getUI(UIName.ASSIGNING);
             Parent parent = ui.getParent();
