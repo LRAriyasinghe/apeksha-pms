@@ -56,6 +56,7 @@ public class NewPatientController implements Controller {
 
     @FXML
     private ComboBox cmbCivil;
+
     private Patient patient;
 
     @Override
@@ -66,6 +67,18 @@ public class NewPatientController implements Controller {
             @Override
             public void handle(ActionEvent event) {
                 patient.setId(txtIdNo.getText());
+                patient.setTitle(txtTtile.getText());
+                patient.setFirstName(txtFirstname.getText());
+                patient.setLastName(txtLastname.getText());
+                patient.setDob(DOB.getValue());
+                patient.setMale(Male.isSelected());
+                patient.setOccupation(txtOccupation.getText());
+                patient.setTelephone(txtContactNo.getText());
+                patient.setCity(txtCity.getText());
+                patient.setDistrict(txtDistrict.getText());
+                patient.setAddress(txtAddress.getText());
+                patient.setCivil(cmbCivil.getTypeSelector());
+
 
 
                 UI ui = UIFactory.getUI(UIName.PATIENT_HISTORY);

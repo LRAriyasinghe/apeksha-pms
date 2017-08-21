@@ -61,9 +61,89 @@
       <file leaf-file-name="Patient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apekshapms/model/Patient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="-266">
+              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1248#1249#0" expanded="true" />
+                <element signature="e#1274#1275#0" expanded="true" />
+                <marker date="1503309170000" expanded="false" signature="1340:1346" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1375:1386" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1400:1406" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1445:1456" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1470:1476" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1511:1522" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1540:1546" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1596:1607" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1636:1642" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1676:1687" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1704:1710" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1758:1769" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1796:1802" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1831:1842" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1854:1860" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1898:1909" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1926:1932" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="1965:1976" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="1992:1998" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2044:2055" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2080:2086" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2118:2129" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2144:2150" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2194:2205" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2228:2234" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2264:2275" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2288:2294" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2334:2345" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2364:2370" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2402:2413" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2428:2434" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2478:2489" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2512:2518" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2551:2562" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2578:2584" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2630:2641" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2666:2672" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2704:2715" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2730:2736" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2780:2791" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2814:2820" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2851:2862" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2876:2882" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2924:2935" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="2956:2962" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="2993:3004" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3018:3024" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3066:3077" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3098:3104" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3142:3153" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3174:3180" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3236:3247" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3282:3288" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3325:3336" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3356:3362" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3416:3427" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3460:3466" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3498:3509" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3524:3530" ph=" }" />
+                <marker date="1503309170000" expanded="false" signature="3574:3585" ph=" { " />
+                <marker date="1503309170000" expanded="false" signature="3608:3614" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,18 +151,45 @@
       <file leaf-file-name="NewPatientController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/NewPatientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+            <state relative-caret-position="133">
+              <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatientHistoryController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PatientServices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/apekshapms/services/PatientServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientConnector.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/apekshapms/database/connector/PatientConnector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1503309434000" expanded="true" signature="430:655" ph="INSERT INTO patient... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientHistoryController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/PatientHistoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -91,11 +198,11 @@
       <file leaf-file-name="AssigningController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/AssigningController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="269">
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1329#1330#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/com/apekshapms/ui/view/NewPatientController.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/resources/styles/mycss.css" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/database/Connector.java" />
-        <option value="$PROJECT_DIR$/src/com/apekshapms/database/connector/PatientConnector.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/ui/view/PatientHistory.fxml" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/ui/view/Assigning.fxml" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/controller/EditPatientController.java" />
@@ -152,10 +258,12 @@
         <option value="$PROJECT_DIR$/src/com/apekshapms/services/SystemServices.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/ui/view/NewPatient.fxml" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/controller/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/com/apekshapms/controller/AssigningController.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/model/Patient.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/controller/NewPatientController.java" />
         <option value="$PROJECT_DIR$/src/com/apekshapms/controller/PatientHistoryController.java" />
+        <option value="$PROJECT_DIR$/src/com/apekshapms/controller/AssigningController.java" />
+        <option value="$PROJECT_DIR$/src/com/apekshapms/services/PatientServices.java" />
+        <option value="$PROJECT_DIR$/src/com/apekshapms/database/connector/PatientConnector.java" />
       </list>
     </option>
   </component>
@@ -224,6 +332,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApekshaPMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="connector" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApekshaPMS" type="b2602c69:ProjectViewProjectNode" />
@@ -449,12 +565,12 @@
       <workItem from="1503059015329" duration="7000" />
       <workItem from="1503059046793" duration="1027000" />
       <workItem from="1503273813008" duration="6738000" />
-      <workItem from="1503301882448" duration="2934000" />
+      <workItem from="1503301882448" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17090000" />
+    <option name="totallyTimeSpent" value="17335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="822" extended-state="0" />
@@ -517,7 +633,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <marker date="1503309170000" expanded="false" signature="1340:1346" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1375:1386" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1400:1406" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1445:1456" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1470:1476" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1511:1522" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1540:1546" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1596:1607" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1636:1642" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1676:1687" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1704:1710" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1758:1769" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1796:1802" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1831:1842" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1854:1860" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1898:1909" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1926:1932" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1965:1976" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1992:1998" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2044:2055" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2080:2086" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2118:2129" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2144:2150" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2194:2205" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2228:2234" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2264:2275" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2288:2294" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2334:2345" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2364:2370" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2402:2413" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2428:2434" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2478:2489" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2512:2518" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2551:2562" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2578:2584" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2630:2641" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2666:2672" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2704:2715" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2730:2736" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2780:2791" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2814:2820" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2851:2862" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2876:2882" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2924:2935" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2956:2962" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2993:3004" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3018:3024" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3066:3077" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3098:3104" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3142:3153" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3174:3180" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3236:3247" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3282:3288" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3325:3336" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3356:3362" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3416:3427" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3460:3466" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3498:3509" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3524:3530" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3574:3585" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3608:3614" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,8 +738,8 @@
         <state relative-caret-position="390">
           <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -604,6 +800,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -637,6 +840,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -670,6 +880,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,6 +912,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,13 +931,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apekshapms/database/ConnectorType.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/database/connector/PatientConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apekshapms/resources/styles/patientManagement.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -778,6 +995,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -799,6 +1017,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -813,6 +1034,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -831,6 +1053,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
           <caret line="82" column="117" lean-forward="true" selection-start-line="82" selection-start-column="117" selection-end-line="82" selection-end-column="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -856,38 +1085,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/AssigningController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/PatientHistoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apekshapms/model/Patient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="-266">
+          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <marker date="1503309170000" expanded="false" signature="1340:1346" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1375:1386" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1400:1406" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1445:1456" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1470:1476" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1511:1522" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1540:1546" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1596:1607" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1636:1642" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1676:1687" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1704:1710" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1758:1769" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1796:1802" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1831:1842" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1854:1860" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1898:1909" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1926:1932" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="1965:1976" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="1992:1998" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2044:2055" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2080:2086" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2118:2129" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2144:2150" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2194:2205" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2228:2234" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2264:2275" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2288:2294" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2334:2345" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2364:2370" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2402:2413" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2428:2434" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2478:2489" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2512:2518" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2551:2562" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2578:2584" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2630:2641" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2666:2672" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2704:2715" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2730:2736" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2780:2791" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2814:2820" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2851:2862" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2876:2882" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2924:2935" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="2956:2962" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="2993:3004" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3018:3024" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3066:3077" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3098:3104" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3142:3153" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3174:3180" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3236:3247" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3282:3288" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3325:3336" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3356:3362" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3416:3427" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3460:3466" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3498:3509" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3524:3530" ph=" }" />
+            <marker date="1503309170000" expanded="false" signature="3574:3585" ph=" { " />
+            <marker date="1503309170000" expanded="false" signature="3608:3614" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/NewPatientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        <state relative-caret-position="133">
+          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/PatientHistoryController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/controller/AssigningController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="269">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/services/PatientServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/apekshapms/database/connector/PatientConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1503309434000" expanded="true" signature="430:655" ph="INSERT INTO patient... " />
+          </folding>
         </state>
       </provider>
     </entry>

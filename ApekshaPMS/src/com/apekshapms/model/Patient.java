@@ -1,13 +1,13 @@
 package com.apekshapms.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Patient {
     private String id;
     private String title;
     private String firstName;
     private String lastName;
-    private Date dob;
+    private LocalDate dob;
     private boolean isMale;
     private String occupation;
     private String telephone;
@@ -56,11 +56,11 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public Date getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 

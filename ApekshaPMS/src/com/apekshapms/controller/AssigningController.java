@@ -1,6 +1,7 @@
 package com.apekshapms.controller;
 
 import com.apekshapms.model.Patient;
+import com.apekshapms.services.PatientServices;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -32,7 +33,11 @@ public class AssigningController implements Controller {
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                patient.setRegisterDocId(txtRegisterDocId.getText());
+                patient.setConsultantId(txtConsultantId.getText());
+                patient.setDetails(txtDetails.getText());
 
+                PatientServices.addPatient(patient);
             }
         });
     }
