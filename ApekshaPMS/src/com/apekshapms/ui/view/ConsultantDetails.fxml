@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.NewPatientController">
+   <children>
+      <Label layoutX="64.0" layoutY="50.0" prefHeight="40.0" prefWidth="297.0" text="Consultant" textFill="#595959">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="137.0" prefHeight="25.0" prefWidth="148.0" text="ID" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="175.0" prefHeight="25.0" prefWidth="148.0" text="Title" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="217.0" prefHeight="25.0" prefWidth="148.0" text="First Name" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="176.0" prefHeight="25.0" prefWidth="86.0" text="Date of Birth" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="175.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="217.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="691.0" layoutY="249.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="589.0" layoutY="214.0" prefHeight="25.0" prefWidth="86.0" text="Gender" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="691.0" layoutY="218.0" mnemonicParsing="false" text="Male" />
+      <RadioButton layoutX="810.0" layoutY="218.0" mnemonicParsing="false" text="Female" />
+      <RadioButton layoutX="927.0" layoutY="218.0" mnemonicParsing="false" text="Other" />
+      <DatePicker layoutX="691.0" layoutY="176.0" />
+      <Label layoutX="589.0" layoutY="249.0" prefHeight="25.0" prefWidth="86.0" text="Occupation" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="210.0" layoutY="332.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="64.0" layoutY="301.0" prefHeight="25.0" prefWidth="86.0" text="Contact Info" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="332.0" prefHeight="25.0" prefWidth="86.0" text="Contact No" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="336.0" prefHeight="25.0" prefWidth="86.0" text="Address" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="773.0" layoutY="595.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Cancel" textFill="#595959" />
+      <Button layoutX="852.0" layoutY="595.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Back" textFill="#595959" />
+      <Button layoutX="928.0" layoutY="595.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="156.0" styleClass="bottomButton" text="Next" textFill="#595959" />
+      <Label layoutX="64.0" layoutY="103.0" prefHeight="25.0" prefWidth="86.0" text="Basic Info" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="141.0" layoutY="109.0" prefHeight="14.0" prefWidth="873.0" />
+      <Separator layoutX="152.0" layoutY="307.0" prefHeight="14.0" prefWidth="873.0" />
+      <TextField layoutX="211.0" layoutY="366.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="113.0" layoutY="366.0" prefHeight="25.0" prefWidth="86.0" text="City" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="209.0" layoutY="401.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="111.0" layoutY="401.0" prefHeight="25.0" prefWidth="86.0" text="District" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="257.0" prefHeight="25.0" prefWidth="148.0" text="Last Name" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="257.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="589.0" layoutY="137.0" prefHeight="25.0" prefWidth="148.0" text="NIC" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="688.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextArea layoutX="688.0" layoutY="335.0" prefHeight="87.0" prefWidth="306.0" />
+      <Label layoutX="117.0" layoutY="475.0" prefHeight="25.0" prefWidth="148.0" text="Bank" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="513.0" prefHeight="25.0" prefWidth="148.0" text="Branch" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="513.0" prefHeight="25.0" prefWidth="148.0" text="Job Type" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="475.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="513.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="688.0" layoutY="513.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="64.0" layoutY="441.0" prefHeight="25.0" prefWidth="86.0" text="Work Info" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="141.0" layoutY="447.0" prefHeight="14.0" prefWidth="873.0" />
+      <Label layoutX="118.0" layoutY="554.0" prefHeight="25.0" prefWidth="148.0" text="Department" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="554.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="589.0" layoutY="475.0" prefHeight="25.0" prefWidth="148.0" text="Type" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="688.0" layoutY="475.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="589.0" layoutY="554.0" prefHeight="25.0" prefWidth="148.0" text="Specialized Field" textFill="#595959">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="688.0" layoutY="554.0" prefHeight="25.0" prefWidth="297.0" />
+   </children>
+</AnchorPane>

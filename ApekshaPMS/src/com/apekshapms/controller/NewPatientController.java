@@ -31,6 +31,9 @@ public class NewPatientController implements Controller {
     private TextField txtLastname;
 
     @FXML
+    private TextField txtNic;
+
+    @FXML
     private DatePicker DOB;
 
     @FXML
@@ -55,7 +58,10 @@ public class NewPatientController implements Controller {
     private TextArea txtAddress;
 
     @FXML
-    private ComboBox cmbCivil;
+    private RadioButton rbtnMarried;
+
+    @FXML
+    private RadioButton rbtnUnmarried;
 
     private Patient patient;
 
@@ -64,12 +70,17 @@ public class NewPatientController implements Controller {
         patient = new Patient();
 
         nextButton.setOnAction(new EventHandler<ActionEvent>() {
+
+
+
+
             @Override
             public void handle(ActionEvent event) {
                 patient.setId(txtIdNo.getText());
                 patient.setTitle(txtTtile.getText());
                 patient.setFirstName(txtFirstname.getText());
                 patient.setLastName(txtLastname.getText());
+                patient.setNicNo(txtNic.getText());
                 patient.setDob(DOB.getValue());
                 patient.setMale(Male.isSelected());
                 patient.setOccupation(txtOccupation.getText());
@@ -77,7 +88,7 @@ public class NewPatientController implements Controller {
                 patient.setCity(txtCity.getText());
                 patient.setDistrict(txtDistrict.getText());
                 patient.setAddress(txtAddress.getText());
-                patient.setCivil(cmbCivil.getTypeSelector());
+                patient.setCivil(rbtnMarried.isSelected());
 
 
 

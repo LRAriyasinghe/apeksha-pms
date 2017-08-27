@@ -6,11 +6,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         SystemServices.start();
 
         SystemServices.loadDashboard(primaryStage);
+        primaryStage.setTitle("Apeksha Hospitals-Maharagama");
     }
 
 

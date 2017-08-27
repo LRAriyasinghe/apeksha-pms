@@ -14,7 +14,7 @@ public class Connector{
     public Connector() {
         url = "jdbc:mysql://" + "localhost" + ":3306/";
         userName = "root";
-        password = "root";
+        password = "";
         dbName = "apeksha_hospital_maharagama";
 
         try {

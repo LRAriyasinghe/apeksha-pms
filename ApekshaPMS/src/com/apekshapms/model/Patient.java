@@ -7,6 +7,7 @@ public class Patient {
     private String title;
     private String firstName;
     private String lastName;
+    private String nicNo;
     private LocalDate dob;
     private boolean isMale;
     private String occupation;
@@ -14,7 +15,7 @@ public class Patient {
     private String city;
     private String district;
     private String address;
-    private String civil;
+    private boolean isCivil;
     private String history;
     private String surgical;
     private String allergy;
@@ -23,6 +24,8 @@ public class Patient {
     private String registerDocId;
     private String consultantId;
     private String details;
+
+
 
     public String getId() {
         return id;
@@ -112,13 +115,7 @@ public class Patient {
         this.address = address;
     }
 
-    public String getCivil() {
-        return civil;
-    }
 
-    public void setCivil(String civil) {
-        this.civil = civil;
-    }
 
     public String getHistory() {
         return history;
@@ -182,5 +179,21 @@ public class Patient {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public String getNicNo() {
+        return nicNo;
+    }
+
+    public void setNicNo(String nicNo) {
+        this.nicNo = nicNo;
+    }
+
+    public boolean isCivil() {
+        return isCivil;
+    }
+
+    public void setCivil(boolean civil) {
+        isCivil = civil;
     }
 }
