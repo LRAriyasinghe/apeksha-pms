@@ -15,10 +15,11 @@ public class Connector{
         url = "jdbc:mysql://" + "localhost" + ":3306/";
         userName = "root";
         password = "";
-        dbName = "apeksha_hospital_maharagama";
+        dbName = "apekshahospitalmaharagama";
 
         try {
-            connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
+            connection  =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama", "root", "");
+            //connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
