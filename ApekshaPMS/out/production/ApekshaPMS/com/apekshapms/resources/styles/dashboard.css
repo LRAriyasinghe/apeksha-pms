@@ -1,13 +1,13 @@
-#workspaceAnchorPane {
+#containerAnchorPane {
 
 }
 
 #sideBarAnchorPane {
-    -fx-background-color: #dddddd;
+    -fx-background-color: #01aece;
 }
 
 #profileAnchorPane {
-
+ -fx-background-color: #d3d3d3;
 }
 
 .sideBarButton {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -42,29 +43,31 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtIdNo" layoutX="213.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
-      <TextField fx:id="txtTtile" layoutX="213.0" layoutY="175.0" prefHeight="25.0" prefWidth="297.0" />
-      <TextField fx:id="txtFirstname" layoutX="213.0" layoutY="217.0" prefHeight="25.0" prefWidth="297.0" />
-      <TextField fx:id="txtOccupation" layoutX="691.0" layoutY="249.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="175.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="217.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="691.0" layoutY="249.0" prefHeight="25.0" prefWidth="297.0" />
       <Label layoutX="592.0" layoutY="214.0" prefHeight="25.0" prefWidth="86.0" text="Gender" textFill="#595959">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <RadioButton fx:id="Male" layoutX="691.0" layoutY="218.0" mnemonicParsing="false" text="Male" />
-      <RadioButton fx:id="Female" layoutX="810.0" layoutY="218.0" mnemonicParsing="false" text="Female" />
-      <DatePicker fx:id="DOB" layoutX="691.0" layoutY="176.0" />
+      <RadioButton layoutX="691.0" layoutY="218.0" mnemonicParsing="false" text="Male" />
+      <RadioButton layoutX="810.0" layoutY="218.0" mnemonicParsing="false" text="Female" />
+      <RadioButton layoutX="927.0" layoutY="218.0" mnemonicParsing="false" text="Other" />
+      <DatePicker layoutX="691.0" layoutY="176.0" />
       <Label layoutX="592.0" layoutY="249.0" prefHeight="25.0" prefWidth="86.0" text="Occupation" textFill="#595959">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtContactNo" layoutX="213.0" layoutY="377.0" prefHeight="25.0" prefWidth="306.0" />
-      <Label layoutX="592.0" layoutY="297.0" prefHeight="25.0" prefWidth="86.0" text="Civil Status" textFill="#595959">
+      <TextField layoutX="213.0" layoutY="377.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="592.0" layoutY="284.0" prefHeight="25.0" prefWidth="86.0" text="Civil Status" textFill="#595959">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
+      <ComboBox layoutX="691.0" layoutY="284.0" prefWidth="150.0" visibleRowCount="4" />
       <Label layoutX="64.0" layoutY="332.0" prefHeight="25.0" prefWidth="86.0" text="Contact Info" textFill="#595959">
          <font>
             <Font size="13.0" />
@@ -80,6 +83,9 @@
             <Font size="13.0" />
          </font>
       </Label>
+      <Button layoutX="773.0" layoutY="554.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Cancel" textFill="#595959" />
+      <Button layoutX="852.0" layoutY="554.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Back" textFill="#595959" />
+      <Button layoutX="928.0" layoutY="554.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="156.0" styleClass="bottomButton" text="Next" textFill="#595959" />
       <Label layoutX="264.0" layoutY="660.0" prefHeight="25.0" prefWidth="100.0" text="Personal Details" textFill="#595959">
          <font>
             <Font size="13.0" />
@@ -102,13 +108,13 @@
       </Label>
       <Separator layoutX="141.0" layoutY="109.0" prefHeight="14.0" prefWidth="873.0" />
       <Separator layoutX="152.0" layoutY="338.0" prefHeight="14.0" prefWidth="873.0" />
-      <TextField fx:id="txtCity" layoutX="692.0" layoutY="383.0" prefHeight="25.0" prefWidth="306.0" />
+      <TextField layoutX="692.0" layoutY="383.0" prefHeight="25.0" prefWidth="306.0" />
       <Label layoutX="594.0" layoutY="383.0" prefHeight="25.0" prefWidth="86.0" text="City" textFill="#595959">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtDistrict" layoutX="690.0" layoutY="418.0" prefHeight="25.0" prefWidth="306.0" />
+      <TextField layoutX="690.0" layoutY="418.0" prefHeight="25.0" prefWidth="306.0" />
       <Label layoutX="592.0" layoutY="418.0" prefHeight="25.0" prefWidth="86.0" text="District" textFill="#595959">
          <font>
             <Font size="13.0" />
@@ -119,18 +125,13 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLastname" layoutX="213.0" layoutY="257.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextField layoutX="213.0" layoutY="257.0" prefHeight="25.0" prefWidth="297.0" />
       <Label layoutX="592.0" layoutY="137.0" prefHeight="25.0" prefWidth="148.0" text="NIC" textFill="#595959">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNic" layoutX="688.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
-      <TextArea fx:id="txtAddress" layoutX="214.0" layoutY="418.0" prefHeight="121.0" prefWidth="306.0" />
-      <Button fx:id="nextButton" layoutX="940.0" layoutY="559.0" mnemonicParsing="false" text="Next" />
-      <Button fx:id="backButton" layoutX="740.0" layoutY="559.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" text="Back" />
-      <Button fx:id="CancelButton" layoutX="853.0" layoutY="559.0" mnemonicParsing="false" text="Cancel" />
-      <RadioButton fx:id="rbtnMarried" layoutX="692.0" layoutY="299.0" mnemonicParsing="false" text="Married" />
-      <RadioButton fx:id="rbtnUnmarried" layoutX="804.0" layoutY="299.0" mnemonicParsing="false" text="UnMarried" />
+      <TextField layoutX="688.0" layoutY="137.0" prefHeight="25.0" prefWidth="297.0" />
+      <TextArea layoutX="214.0" layoutY="418.0" prefHeight="121.0" prefWidth="306.0" />
    </children>
 </AnchorPane>

@@ -57,7 +57,10 @@ public class PatientHistoryController implements Controller{
 
     }
 
+
     public void showPatient(Patient patient) {
         this.patient = patient;
     }
+
+
 }
