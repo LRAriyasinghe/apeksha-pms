@@ -25,6 +25,12 @@ public class Patient {
     private String consultantId;
     private String details;
 
+    public Patient(String id, String title, String firstName, String lastName, String nic, String dob, String gender, String occupation, String civilStatus, String moreInfo) {
+    }
+
+    public Patient() {
+
+    }
 
 
     public String getId() {

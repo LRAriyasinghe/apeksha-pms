@@ -63,7 +63,7 @@ public class NewPatientController implements Controller {
     @FXML
     private RadioButton rbtnUnmarried;
 
-    private Patient patient;
+    public Patient patient;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

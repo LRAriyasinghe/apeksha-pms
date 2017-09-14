@@ -1,14 +1,82 @@
 package com.apekshapms.database.connector;
 
+import com.mysql.jdbc.PreparedStatement;
 import com.apekshapms.database.Connector;
 import com.apekshapms.model.Patient;
 import javafx.scene.control.Alert;
-
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static com.apekshapms.controller.SearchPatientController.txtSearchPatient;
+import static com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.XmlToken.Name;
+import static com.apekshapms.controller.SearchPatientController.*;
+
 public class PatientConnector extends Connector {
+
+    public PatientConnector() {
+
+
+        try
+
+        {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT patient_Id,title,first_name,last_name,nic_No,dob,gender,occupation,civil_Status,additional_Details FROM patient WHERE patient_Id = '"+txtSearchPatient+"'" );
+            searchPatient(preparedStatement);
+
+        } catch (
+                SQLException e)
+
+        {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void searchPatient(PreparedStatement preparedStatement){
+
+
+            try {
+
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()){
+                    String id = resultSet.getString("patient.patient_Id");
+                    String title = resultSet.getString("patient.title");
+                    String firstName = resultSet.getString("patient.first_name");
+                    String lastName = resultSet.getString("patient.last_name");
+                    String nic = resultSet.getString("patient.nic_No");
+                    String dob = resultSet.getString("patient.dob");
+                    String gender= resultSet.getString("patient.gender");
+                    String occupation = resultSet.getString("patient.occupation");
+                    String civilStatus = resultSet.getString("patient.civil_Status");
+                    String moreInfo = resultSet.getString("patient.additional_Details");
+
+                    //Patient patient = new Patient(id, title, firstName, lastName, nic, dob, gender, occupation,civilStatus,moreInfo);
+
+                    if(id.equals(txtSearchPatient.getText()))
+                    {
+
+                        tblColoumnId.setHeaderValue(id);
+                        tblColoumnTitle.setHeaderValue(title);
+                        tblColoumnFirsName.setHeaderValue(firstName);
+                        tblColoumnLastName.setHeaderValue(lastName);
+                        tblColoumnNic.setHeaderValue(nic);
+                        tblColoumnDob.setHeaderValue(dob);
+                        tblColoumnGender.setHeaderValue(gender);
+                        tblColoumnOccupation.setHeaderValue(occupation);
+                        tblColoumnStatus.setHeaderValue(civilStatus);
+                        tblColoumnInfo.setHeaderValue(moreInfo);
+                    }
+                }
+
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+
+
+    }
+
+
+
     public void newPatient(Patient patient){
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +

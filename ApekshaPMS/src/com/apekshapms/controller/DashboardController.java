@@ -23,6 +23,8 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.ResourceBundle;
 
+import static com.apekshapms.ui.UIName.SEARCH_PATIENT;
+
 public class DashboardController implements Controller{
 
     @FXML
@@ -72,12 +74,7 @@ public class DashboardController implements Controller{
 
         newPatientButton.setOnAction(event -> UIFactory.launchUI(UIName.NEW_PATIENT, true));
 
-        searchPatientButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                UIFactory.launchUI(UIName.SEARCH_PATIENT, true);
-            }
-        });
+        searchPatientButton.setOnAction(event -> UIFactory.launchUI(UIName.SEARCH_PATIENT,true));
 
         issueDiagnizationCardButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

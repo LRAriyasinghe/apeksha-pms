@@ -1,5 +1,6 @@
 package com.apekshapms.database;
 
+import java.awt.*;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,6 +17,8 @@ public class Connector{
         userName = "root";
         password = "";
         dbName = "apeksha_hospital_maharagama";
+
+
 
         try {
             connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);

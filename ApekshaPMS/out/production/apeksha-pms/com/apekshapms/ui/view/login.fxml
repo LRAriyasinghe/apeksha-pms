@@ -16,9 +16,9 @@
             <Font name="System Bold" size="29.0" />
          </font>
       </Label>
-      <PasswordField layoutX="79.0" layoutY="216.0" prefHeight="38.0" prefWidth="341.0" promptText="Password" />
-      <TextField layoutX="79.0" layoutY="157.0" prefHeight="38.0" prefWidth="341.0" promptText="Username" />
-      <Button layoutX="67.0" layoutY="303.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="364.0" style="-fx-background-color: #01aece;" text="LOGIN" textFill="WHITE">
+      <PasswordField fx:id="passwdfieldPassWord" layoutX="79.0" layoutY="216.0" prefHeight="38.0" prefWidth="341.0" promptText="Password" />
+      <TextField fx:id="txtUserName" layoutX="79.0" layoutY="157.0" prefHeight="38.0" prefWidth="341.0" promptText="Username" />
+      <Button fx:id="btnLogIn" layoutX="67.0" layoutY="303.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="364.0" style="-fx-background-color: #01aece;" text="LOGIN" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
