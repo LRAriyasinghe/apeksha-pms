@@ -1,79 +1,94 @@
 package com.apekshapms.database.connector;
 
-import com.mysql.jdbc.PreparedStatement;
 import com.apekshapms.database.Connector;
+import com.apekshapms.main.Main;
 import com.apekshapms.model.Patient;
-import javafx.scene.control.Alert;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 import static com.apekshapms.controller.SearchPatientController.txtSearchPatient;
-import static com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.XmlToken.Name;
-import static com.apekshapms.controller.SearchPatientController.*;
 
 public class PatientConnector extends Connector {
+    public HashMap<Integer, Patient> getPatientHashMap() {
+        HashMap<Integer, Patient> patientHashMap = new HashMap<>();
 
-    public PatientConnector() {
+
+        //public void checkPatientConnection() {
 
 
         try
 
         {
-            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT patient_Id,title,first_name,last_name,nic_No,dob,gender,occupation,civil_Status,additional_Details FROM patient WHERE patient_Id = '"+txtSearchPatient+"'" );
-            searchPatient(preparedStatement);
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT patient_Id,title,first_name,last_name,nic_No,dob,gender,occupation,civil_Status,additional_Details FROM patient WHERE patient_Id = '" + txtSearchPatient + "'");
+            searchPatient(preparedStatement, patientHashMap);
+        } catch (SQLException e) {
 
-        } catch (
-                SQLException e)
-
-        {
             e.printStackTrace();
         }
+        return patientHashMap;
 
 
     }
 
-    public void searchPatient(PreparedStatement preparedStatement){
+    public void searchPatient(PreparedStatement preparedStatement , HashMap<Integer, Patient> patientHashMap) {
+
+        //PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT patient_Id,title,first_name,last_name,nic_No,dob,gender,occupation,civil_Status,additional_Details FROM patient WHERE patient_Id = '" + txtSearchPatient + "'");
+
+        //searchPatient(preparedStatement);
+
+        try {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            // ObservableList<Patient> data = FXCollections.observableArrayList();
+            System.out.println(("Lalanga"));
 
 
-            try {
+            while (resultSet.next()) {
 
-                ResultSet resultSet = preparedStatement.executeQuery();
-                while (resultSet.next()){
-                    String id = resultSet.getString("patient.patient_Id");
-                    String title = resultSet.getString("patient.title");
-                    String firstName = resultSet.getString("patient.first_name");
-                    String lastName = resultSet.getString("patient.last_name");
-                    String nic = resultSet.getString("patient.nic_No");
-                    String dob = resultSet.getString("patient.dob");
-                    String gender= resultSet.getString("patient.gender");
-                    String occupation = resultSet.getString("patient.occupation");
-                    String civilStatus = resultSet.getString("patient.civil_Status");
-                    String moreInfo = resultSet.getString("patient.additional_Details");
 
-                    //Patient patient = new Patient(id, title, firstName, lastName, nic, dob, gender, occupation,civilStatus,moreInfo);
+                String pat_id = resultSet.getString(1);
+                String pat_title = resultSet.getString(2);
+                String pat_firstName = resultSet.getString(3);
+                String pat_lastName = resultSet.getString(4);
+                String pat_nic = resultSet.getString(5);
+                String pat_dob = resultSet.getString(6);
+                String pat_gender = resultSet.getString(7);
+                String pat_occupation = resultSet.getString(8);
+                String pat_civilStatus = resultSet.getString(9);
+                String pat_moreInfo = resultSet.getString(10);
 
-                    if(id.equals(txtSearchPatient.getText()))
-                    {
+                Patient patient1 = new Patient(pat_id, pat_title, pat_firstName, pat_lastName, pat_nic, pat_dob, pat_gender, pat_occupation, pat_civilStatus, pat_moreInfo);
+                patientHashMap.put(Integer.parseInt(pat_id), patient1);
 
-                        tblColoumnId.setHeaderValue(id);
-                        tblColoumnTitle.setHeaderValue(title);
-                        tblColoumnFirsName.setHeaderValue(firstName);
-                        tblColoumnLastName.setHeaderValue(lastName);
-                        tblColoumnNic.setHeaderValue(nic);
-                        tblColoumnDob.setHeaderValue(dob);
-                        tblColoumnGender.setHeaderValue(gender);
-                        tblColoumnOccupation.setHeaderValue(occupation);
-                        tblColoumnStatus.setHeaderValue(civilStatus);
-                        tblColoumnInfo.setHeaderValue(moreInfo);
-                    }
-                }
-
-            } catch (SQLException e1) {
-                e1.printStackTrace();
             }
 
 
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
     }
+
+                       /* tblColoumnId.setCellValueFactory(new PropertyValueFactory<>(pat_id));
+                        tblColoumnTitle.setCellValueFactory(new PropertyValueFactory<>(pat_title));
+                        tblColoumnFirsName.setCellValueFactory(new PropertyValueFactory<>(pat_firstName));
+                        tblColoumnLastName.setCellValueFactory(new PropertyValueFactory<>(pat_lastName));
+                        tblColoumnNic.setCellValueFactory(new PropertyValueFactory<>(pat_nic));
+                        tblColoumnDob.setCellValueFactory(new PropertyValueFactory<>(pat_dob));
+                        tblColoumnGender.setCellValueFactory(new PropertyValueFactory<>(pat_gender));
+                        tblColoumnOccupation.setCellValueFactory(new PropertyValueFactory<>(pat_occupation));
+                        tblColoumnStatus.setCellValueFactory(new PropertyValueFactory<>(pat_civilStatus));
+                        tblColoumnInfo.setCellValueFactory(new PropertyValueFactory<>(pat_moreInfo));*/
+
+
+
+
+
+
 
 
 
@@ -101,12 +116,14 @@ public class PatientConnector extends Connector {
             preparedStatement.setString(15, patient.getDetails());
             preparedStatement.setString(16, patient.getConsultantId());
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+            /*Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Message");
             alert.setHeaderText("");
             alert.setContentText("Succussfully Added");
             alert.showAndWait();
             alert.setOnCloseRequest(e -> alert.close());
+            */
 
             preparedStatement.execute();
 

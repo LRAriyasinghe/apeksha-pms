@@ -1,16 +1,24 @@
 package com.apekshapms.controller;
 
 import com.apekshapms.model.Patient;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import javax.swing.table.TableColumn;
-import javax.swing.text.TabableView;
-import java.awt.*;
 import java.net.URL;
+
+import java.util.Date;
 import java.util.ResourceBundle;
 
-public class SearchPatientController implements Controller{
+import static javafx.scene.input.KeyCode.T;
+
+//import com.apekshapms.database.connector.PatientConnector.pat_id;
+
+public class SearchPatientController implements Controller<Patient>{
 
     @FXML
     private Label lblSearchPatient;
@@ -19,37 +27,37 @@ public class SearchPatientController implements Controller{
     public static TextField txtSearchPatient;
 
     @FXML
-    public static TabableView tableSearchPatient;
+    private TableView<Patient> tableSearch;
 
     @FXML
-    public static TableColumn tblColoumnId;
+    private TableColumn<Patient , String> tblColoumnId;
 
     @FXML
-    public static TableColumn tblColoumnTitle;
+    private TableColumn<Patient , String> tblColoumnTitle;
 
     @FXML
-    public static TableColumn tblColoumnFirsName;
+    private TableColumn<Patient , String> tblColoumnFirsName;
 
     @FXML
-    public static TableColumn tblColoumnLastName;
+    private TableColumn<Patient , String> tblColoumnLastName;
 
     @FXML
-    public static TableColumn tblColoumnNic;
+    private TableColumn<Patient , String> tblColoumnNic;
 
     @FXML
-    public static TableColumn tblColoumnDob;
+    private TableColumn<Patient , Date> tblColoumnDob;
 
     @FXML
-    public static TableColumn tblColoumnGender;
+    private TableColumn<Patient , String> tblColoumnGender;
 
     @FXML
-    public static TableColumn tblColoumnOccupation;
+    private TableColumn<Patient , String> tblColoumnOccupation;
 
     @FXML
-    public static TableColumn tblColoumnStatus;
+    private TableColumn<Patient , String> tblColoumnStatus;
 
     @FXML
-    public static TableColumn tblColoumnInfo;
+    private TableColumn<Patient , String> tblColoumnInfo;
 
 
 
@@ -63,6 +71,7 @@ public class SearchPatientController implements Controller{
     @FXML
     private Button btnSavePatient;
 
+
     @FXML
     private Button btnSearchPatient;
 
@@ -75,23 +84,51 @@ public class SearchPatientController implements Controller{
     public void refreshView() {
 
     }
-    public void refreshView(Patient patient){
-        tblColoumnId.setHeaderValue(patient.getId());
-        tblColoumnTitle.setHeaderValue(patient.getTitle());
-        tblColoumnFirsName.setHeaderValue(patient.getFirstName());
-        tblColoumnLastName.setHeaderValue(patient.getLastName());
-        tblColoumnNic.setHeaderValue(patient.getNicNo());
-        tblColoumnDob.setHeaderValue(patient.getDob());
-        tblColoumnGender.setHeaderValue(patient.isMale());
-        tblColoumnOccupation.setHeaderValue(patient.getOccupation());
-        tblColoumnStatus.setHeaderValue(patient.isCivil());
-        tblColoumnInfo.setHeaderValue(patient.getDetails());
+
+   public void refreshView(Patient patient1){
+
+       public ObservableList<Patient> list = FXCollections.observableArrayList()(
+
+       tblColoumnId.setCellValueFactory(new PropertyValueFactory<>(patient1.getId()));
+       tblColoumnTitle.setCellValueFactory(new PropertyValueFactory<>(patient1.getTitle()));
+       tblColoumnFirsName.setCellValueFactory(new PropertyValueFactory<>(patient1.getFirstName()));
+       tblColoumnLastName.setCellValueFactory(new PropertyValueFactory<>(patient1.getLastName()));
+       tblColoumnNic.setCellValueFactory(new PropertyValueFactory<>(patient1.getNicNo()));
+       tblColoumnDob.setCellValueFactory(new PropertyValueFactory<T>,ObservableValue<T>(patient1.getDob()));
+       tblColoumnGender.setCellValueFactory(new PropertyValueFactory<>(patient1.isMale()));
+       tblColoumnOccupation.setCellValueFactory(new PropertyValueFactory<>(patient1.getOccupation()));
+       tblColoumnStatus.setCellValueFactory(new PropertyValueFactory<>(patient1.isCivil()));
+       tblColoumnInfo.setCellValueFactory(new PropertyValueFactory<>(patient1.getDetails()));
+       )
+   }
 
 
-    }
+   /* private boolean isInputValid() {
+        String errorMessage = "";
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+        if (txtSearchPatient.getText() == null || txtSearchPatient.getText().length() == 0) {
+            errorMessage += "No valid ID!\n";
+        }
+        if (errorMessage.length() == 0) {
+                return true;
+        } else {
 
-    }
+
+                // Show the error message
+                //Dialogs.showErrorDialog(dialogStage, errorMessage,
+                //"Please correct invalid fields", "Invalid Fields")
+            System.out.println("Successfully Fail");
+            //Alert alert = new Alert(Alert.AlertType.WARNING);
+            //alert.setTitle("Warning Dialog");
+            //alert.setHeaderText("Look, a Warning Dialog");
+            //alert.setContentText(errorMessage);
+
+            //alert.showAndWait();
+                // Dialogs.showWarningDialog(new Stage(), "Careful with the next step!", "Warning Dialog", "title");
+
+            return false;
+
+            }
+
+    }*/
 }
