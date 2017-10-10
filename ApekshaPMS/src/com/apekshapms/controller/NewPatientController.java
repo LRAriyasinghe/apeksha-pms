@@ -75,6 +75,11 @@ public class NewPatientController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        txtNic.setPrefColumnCount(10);
+        DOB.setPromptText("mm-dd-yyyy");
+        txtNic.setPromptText("xxxxxxxxxV/E");
+        txtTtile.setPromptText("Mr/Mrs/Miss");
+
 
         patient = new Patient();
 

@@ -1,4 +1,4 @@
-package com.apekshapms.validation;
+package com.apekshapms.validation.Patient_Registration;
 
 import java.sql.*;
 
