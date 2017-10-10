@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.admin.TreatmentDashboardController">
+   <children>
+      <Button layoutX="88.0" layoutY="77.0" mnemonicParsing="false" text="Add New Treatment" />
+      <Button layoutX="263.0" layoutY="77.0" mnemonicParsing="false" text="View Treatment" />
+   </children>
+</AnchorPane>

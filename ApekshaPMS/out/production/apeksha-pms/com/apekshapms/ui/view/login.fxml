@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="loginBackground" fx:id="loginBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="loginBackground" fx:id="loginBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.login.LoginController">
    <children>
       <Label prefHeight="104.0" prefWidth="498.0" style="-fx-background-color: #01aece;" />
       <Label layoutX="198.0" layoutY="9.0" prefHeight="86.0" prefWidth="102.0" text="LOGIN" textFill="WHITE">
@@ -16,9 +16,9 @@
             <Font name="System Bold" size="29.0" />
          </font>
       </Label>
-      <PasswordField layoutX="79.0" layoutY="216.0" prefHeight="38.0" prefWidth="341.0" promptText="Password" />
-      <TextField layoutX="79.0" layoutY="157.0" prefHeight="38.0" prefWidth="341.0" promptText="Username" />
-      <Button layoutX="67.0" layoutY="303.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="364.0" style="-fx-background-color: #01aece;" text="LOGIN" textFill="WHITE">
+      <PasswordField fx:id="txtpassword" layoutX="79.0" layoutY="216.0" prefHeight="38.0" prefWidth="341.0" promptText="Password" />
+      <TextField fx:id="txtusername" layoutX="79.0" layoutY="157.0" prefHeight="38.0" prefWidth="341.0" promptText="Username" />
+      <Button fx:id="btnlogin" layoutX="67.0" layoutY="303.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="364.0" style="-fx-background-color: #01aece;" text="LOGIN" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
