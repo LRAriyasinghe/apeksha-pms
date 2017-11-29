@@ -4,6 +4,7 @@ import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Patient;
 import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -46,7 +47,7 @@ public class PatientHistoryController implements Controller{
             UI ui = UIFactory.getUI(UIName.ASSIGNING);
             Parent parent = ui.getParent();
             AssigningController controller = (AssigningController) ui.getController();
-            controller.showPatient(patient);
+            controller.showPatient(parent);
             DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
             dashboardController.setWorkspace(parent);
         });
@@ -60,6 +61,17 @@ public class PatientHistoryController implements Controller{
 
     public void showPatient(Patient patient) {
         this.patient = patient;
+    }
+
+    @FXML
+    void handleBackToButton(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.NEW_PATIENT);
+        Parent parent = ui.getParent();
+        NewPatientController newPatientController = (NewPatientController) ui.getController();
+        //controller.showPatient(patient);
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
     }
 
 

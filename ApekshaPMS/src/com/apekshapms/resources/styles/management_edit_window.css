@@ -1,0 +1,35 @@
+@import "palatte.css";
+@import "common.css";
+@import "validation.css";
+
+#backgroundAnchorPane {
+    -fx-background-color: -default-background-color;
+    -fx-padding: 30px;
+}
+
+#navigationPane {
+    /*-fx-background-color: #ee818b;*/
+    -fx-padding: 0px 30px 0px 30px;
+}
+
+#managePane {
+    /*-fx-background-color: cornflowerblue;*/
+    -fx-padding: 10px 30px 10px 30px;
+}
+
+#editPane {
+    /*-fx-background-color: green;*/
+    -fx-padding: 10px 30px 30px 30px;
+}
+
+#searchPane .label {
+    -fx-font-family: 'Calibri';
+}
+
+#searchPane #clearButton {
+    -fx-background-image: url("../../icons/close_dark.png");
+}
+
+#searchPane #clearButton:hover {
+    -fx-background-image: url("../../icons/close_light.png");
+}

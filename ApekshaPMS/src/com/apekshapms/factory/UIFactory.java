@@ -2,6 +2,12 @@ package com.apekshapms.factory;
 
 import com.apekshapms.controller.Controller;
 import com.apekshapms.controller.DashboardController;
+import com.apekshapms.controller.login.LoginController;
+import com.apekshapms.controller.main.AdminDashboardController;
+import com.apekshapms.controller.main.ConsultantDashboardController;
+import com.apekshapms.controller.main.LabAssistantDashboardController;
+import com.apekshapms.controller.main.RegisterDoctorDashboardController;
+import com.apekshapms.services.SystemServices;
 import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
 import javafx.fxml.FXMLLoader;
@@ -64,7 +70,25 @@ public class UIFactory {
             Controller controller = ui.getController();
             controller.refreshView();
         }
+
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
+
+        /*
+        RegisterDoctorDashboardController registerDoctorDashboardController = ((RegisterDoctorDashboardController) (UIFactory.getUI(UIName.REGISTER_DOCTOR_DASHBOARD).getController()));
+        registerDoctorDashboardController.setWorkspace(parent);
+
+
+        LabAssistantDashboardController labAssistantDashboardController = ((LabAssistantDashboardController) (UIFactory.getUI(UIName.LAB_ASSISTANT_DASHBOARD).getController()));
+        labAssistantDashboardController.setWorkspace(parent);
+
+        ConsultantDashboardController consultantDashboardController = ((ConsultantDashboardController) (UIFactory.getUI(UIName.CONSULTANT_DASHBOARD).getController()));
+        consultantDashboardController.setWorkspace(parent);
+
+
+        AdminDashboardController adminDashboardController = ((AdminDashboardController) (UIFactory.getUI(UIName.ADMIN_DASHBOARD).getController()));
+        adminDashboardController.setWorkspace(parent);
+        */
+
     }
 }

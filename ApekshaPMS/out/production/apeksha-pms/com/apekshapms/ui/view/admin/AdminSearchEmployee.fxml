@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.admin.AdminSearchEmployeeController">
+   <children>
+      <SplitPane dividerPositions="0.3939828080229226" layoutX="275.0" layoutY="66.0" orientation="VERTICAL" prefHeight="634.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="employeeTable" layoutX="296.0" layoutY="14.0" prefHeight="246.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="empIDColumn" minWidth="0.0" prefWidth="56.0" text="EMP ID" />
+                      <TableColumn fx:id="fnameColumn" prefWidth="75.0" text="First Name" />
+                      <TableColumn fx:id="lnameColumn" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="nicColumn" prefWidth="75.0" text="NIC" />
+                        <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="doorNuColumn" prefWidth="100.0" text="Door Number" />
+                        <TableColumn fx:id="streetColumn" prefWidth="68.0" text="Street" />
+                        <TableColumn fx:id="cityColumn" prefWidth="76.0" text="City" />
+                        <TableColumn fx:id="districColumn" prefWidth="98.0" text="Distric" />
+                        <TableColumn fx:id="contactColumn" prefWidth="98.0" text="Contact Nu" />
+                        <TableColumn fx:id="departmentColumn" prefWidth="78.0" text="Department" />
+                        <TableColumn fx:id="bankColumn" minWidth="0.0" prefWidth="68.0" text="Bank" />
+                        <TableColumn fx:id="branchColumn" minWidth="0.0" prefWidth="89.0" text="Branch" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+      <HBox fx:id="buttonHBox" layoutX="884.0" layoutY="23.0" spacing="15.0" AnchorPane.leftAnchor="884.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Button fx:id="newButton" mnemonicParsing="false" text="New" />
+            <Button fx:id="updateButton" mnemonicParsing="false" text="Update" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
+         </children>
+      </HBox>
+      <TextField fx:id="searchEmpNameTextField" layoutX="241.0" layoutY="23.0" text="Employee Name" />
+   </children>
+</AnchorPane>

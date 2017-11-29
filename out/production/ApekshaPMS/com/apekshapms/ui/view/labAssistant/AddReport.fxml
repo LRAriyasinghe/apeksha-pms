@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.labAssistant.AddReportController">
+   <children>
+      <Button  layoutX="62.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleaddNewReportButtonAction" text="Add New Report" />
+   </children>
+</AnchorPane>

@@ -1,6 +1,5 @@
 package com.apekshapms.database;
 
-import java.awt.*;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,8 +16,6 @@ public class Connector{
         userName = "root";
         password = "";
         dbName = "apekshahospitalmaharagama";
-
-
 
         try {
             connection  =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama", "root", "");

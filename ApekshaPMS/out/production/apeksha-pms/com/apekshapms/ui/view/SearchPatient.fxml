@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
     <children>
         <AnchorPane fx:id="navigationPane" layoutX="48.0" layoutY="14.0" prefHeight="50.0" prefWidth="1100.0">
             <children>
@@ -17,37 +17,43 @@
                         <Label fx:id="lblSearch" text="Search" />
                         <HBox alignment="CENTER_LEFT" spacing="5.0">
                             <children>
-                                <TextField fx:id="txtSearchPatient" prefHeight="25.0" prefWidth="250.0" promptText="Enter Patient ID" />
+                                <TextField fx:id="patientIdTextField" prefHeight="25.0" prefWidth="112.0" promptText="Enter Patient ID" />
+                        <TextField fx:id="patientNameTextField" layoutX="10.0" layoutY="20.0" prefHeight="25.0" prefWidth="114.0" promptText="Enter Patient Name" />
                             </children>
                         </HBox>
                     </children>
                 </HBox>
-            <Button fx:id="btnSearchPatient" layoutX="371.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="138.0" text="Search" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="managePane" layoutY="72.0" prefHeight="512.0" prefWidth="1148.0">
             <children>
                 <TableView fx:id="tableSearch" layoutX="17.0" layoutY="13.0" prefHeight="512.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="13.0">
                     <columns>
-                        <TableColumn fx:id="tblColoumnId" prefWidth="100.0" text="ID" />
-                        <TableColumn fx:id="tblColoumnTitle" prefWidth="104.0" text="Title" />
-                        <TableColumn fx:id="tblColoumnFirsName" prefWidth="114.0" text="First Name" />
-                        <TableColumn fx:id="tblColoumnLastName" prefWidth="110.0" text="Last name" />
-                        <TableColumn fx:id="tblColoumnNic" prefWidth="92.0" text="NIC" />
-                        <TableColumn fx:id="tblColoumnDob" prefWidth="106.0" text="DOB" />
-                        <TableColumn fx:id="tblColoumnGender" prefWidth="120.0" text="Gender" />
-                        <TableColumn fx:id="tblColoumnOccupation" prefWidth="108.0" text="Occupation" />
-                  <TableColumn fx:id="tblColoumnStatus" prefWidth="117.0" text="Civil Status" />
-                  <TableColumn fx:id="tblColoumnInfo" prefWidth="128.0" text="More info" />
+                        <TableColumn fx:id="idTableColumn" prefWidth="69.0" text="ID" />
+                        <TableColumn fx:id="titleTableColumn" prefWidth="60.0" text="Title" />
+                        <TableColumn fx:id="firstNameTableColumn" prefWidth="71.0" text="First Name" />
+                        <TableColumn fx:id="lastNameTableColumn" prefWidth="89.0" text="Last name" />
+                        <TableColumn fx:id="nicTableColumn" prefWidth="63.0" text="NIC" />
+                        <TableColumn fx:id="dobTableColumn" prefWidth="69.0" text="DOB" />
+                        <TableColumn fx:id="genderTableColumn" prefWidth="72.0" text="Gender" />
+                        <TableColumn fx:id="occupationTableColumn" prefWidth="86.0" text="Occupation" />
+                  <TableColumn fx:id="civilTableColumn" prefWidth="79.0" text="Civil Status" />
+                  <TableColumn fx:id="contactTableColumn" prefWidth="71.0" text="Contact Nu" />
+                  <TableColumn fx:id="addressTableColumn" prefWidth="60.0" text="Address" />
+                  <TableColumn fx:id="cityTableColumn" prefWidth="57.0" text="City" />
+                  <TableColumn fx:id="districtTableColumn" prefWidth="52.0" text="District" />
+                  <TableColumn fx:id="regDocTableColumn" prefWidth="71.0" text="Reg_Doc_ID" />
+                  <TableColumn fx:id="consultantTableColumn" prefWidth="67.0" text="Consultant" />
+                  <TableColumn fx:id="detailsTableColumn" prefWidth="63.0" text="Details" />
                     </columns>
                 </TableView>
             </children>
         </AnchorPane>
         <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
          <children>
-            <Button fx:id="btnSavePatient" layoutX="886.0" layoutY="164.0" mnemonicParsing="false" prefWidth="98.0" styleClass="sideBarButton" text="Save" />
-            <Button fx:id="btnEditPatient" layoutX="782.0" layoutY="164.0" mnemonicParsing="false" styleClass="sideBarButton" text="Edit" />
-            <Button fx:id="btnCancelPatient" layoutX="667.0" layoutY="164.0" mnemonicParsing="false" styleClass="sideBarButton" text="Cancel" />
+            <Button fx:id="btnSavePatient" layoutX="886.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleSaveButton" prefWidth="98.0" styleClass="sideBarButton" text="Save" />
+            <Button fx:id="btnEditPatient" layoutX="782.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleEditButton" styleClass="sideBarButton" text="Edit" />
+            <Button fx:id="btnCancelPatient" layoutX="667.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleCancelButton" styleClass="sideBarButton" text="Cancel" />
          </children>
         </AnchorPane>
     </children>

@@ -63,19 +63,28 @@ public class NewPatientController implements Controller {
     @FXML
     private RadioButton rbtnUnmarried;
 
-    public Patient patient;
+    @FXML
+    private Button backButton;
+
+    private Patient patient;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        txtNic.setPrefColumnCount(10);
+        DOB.setPromptText("mm-dd-yyyy");
+        txtNic.setPromptText("xxxxxxxxxV/E");
+        txtTtile.setPromptText("Mr/Mrs/Miss");
+
+
         patient = new Patient();
+
 
         nextButton.setOnAction(new EventHandler<ActionEvent>() {
 
-
-
-
             @Override
             public void handle(ActionEvent event) {
+                //if (isInputValid()) {
+
                 patient.setId(txtIdNo.getText());
                 patient.setTitle(txtTtile.getText());
                 patient.setFirstName(txtFirstname.getText());
@@ -91,19 +100,89 @@ public class NewPatientController implements Controller {
                 patient.setCivil(rbtnMarried.isSelected());
 
 
-
                 UI ui = UIFactory.getUI(UIName.PATIENT_HISTORY);
                 Parent parent = ui.getParent();
                 PatientHistoryController controller = (PatientHistoryController) ui.getController();
                 controller.showPatient(patient);
                 DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
                 dashboardController.setWorkspace(parent);
+            //}
             }
         });
+
+
     }
+
 
     @Override
     public void refreshView() {
 
     }
+
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (txtIdNo.getText() == null || txtIdNo.getText().length() == 0) {
+            errorMessage += "No valid ID!\n";
+        }
+        if (txtTtile.getText() == null || txtTtile.getText().length() == 0) {
+            errorMessage += "No valid Titlle!\n";
+        }
+        if (txtFirstname.getText() == null || txtFirstname.getText().length() == 0) {
+            errorMessage += "No valid First Namer!\n";
+        }
+        if (txtLastname.getText() == null || txtLastname.getText().length() == 0) {
+            errorMessage += "No valid Last Name!\n";
+        }
+        if (txtNic.getText() == null || txtNic.getText().length() == 0) {
+            errorMessage += "No valid NIC!\n";
+        }
+        if (DOB.getValue() == null || DOB.getValue().lengthOfYear() == 0) {
+            errorMessage += "No valid Date Of Birth!\n";
+        }
+        if (!Male.isSelected() ) {
+            errorMessage += "No valid Male or Female!\n";
+        }
+        if (txtOccupation.getText() == null || txtOccupation.getText().length() == 0) {
+            errorMessage += "No valid Occupation!\n";
+        }
+        if (txtContactNo.getText() == null || txtContactNo.getText().length() == 0) {
+            errorMessage += "No valid Contact Number!\n";
+        }
+        if (txtCity.getText() == null || txtCity.getText().length() == 0) {
+            errorMessage += "No valid City!\n";
+        }
+        if (txtDistrict.getText() == null || txtDistrict.getText().length() == 0) {
+            errorMessage += "No valid District!\n";
+        }
+        if (txtAddress.getText() == null || txtAddress.getText().length() == 0) {
+            errorMessage += "No valid Address!\n";
+        }
+        if (!rbtnMarried.isSelected()) {
+            errorMessage += "No valid Married Or UnMarried!\n";
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+
+
+            // Show the error message
+            //Dialogs.showErrorDialog(dialogStage, errorMessage,
+                    //"Please correct invalid fields", "Invalid Fields");
+            System.out.println("Successfully Fail");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Dialog");
+            alert.setHeaderText("Look, a Warning Dialog");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+           // Dialogs.showWarningDialog(new Stage(), "Careful with the next step!", "Warning Dialog", "title");
+
+            return false;
+
+        }
+    }
+
 }

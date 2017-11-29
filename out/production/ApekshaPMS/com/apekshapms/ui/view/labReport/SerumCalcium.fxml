@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Laboratory.SerumCalciumController">
+   <children>
+      <Label layoutX="169.0" layoutY="14.0" text="NATIONAL CANCER INSTITUTE MAHARAGAMA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DateTextField" layoutX="109.0" layoutY="93.0" prefHeight="25.0" prefWidth="173.0" />
+      <TextField fx:id="PatientIDTextField" layoutX="383.0" layoutY="49.0" />
+      <TextField fx:id="PatientNameTextField" layoutX="383.0" layoutY="84.0" />
+      <Label layoutX="42.0" layoutY="97.0" text="Date" />
+      <Label layoutX="44.0" layoutY="53.0" text="Report " />
+      <Label layoutX="305.0" layoutY="53.0" text="PatientID" />
+      <Label layoutX="304.0" layoutY="88.0" text="Patient Name" />
+      <Label layoutX="214.0" layoutY="173.0" text="BIOCHEMISTRY" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FreeCalciumTextField" layoutX="183.0" layoutY="239.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="TotalCalciumTextField" layoutX="183.0" layoutY="278.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="56.0" layoutY="243.0" text="Free Calcium" />
+      <Button fx:id="SubmitButton" layoutX="28.0" layoutY="412.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="100.0" layoutY="412.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="32.0" layoutY="356.0" text="Remarks" />
+      <TextArea fx:id="RemarksTextField" layoutX="95.0" layoutY="336.0" prefHeight="57.0" prefWidth="433.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+      <Label fx:id="ReportTypeLabel" layoutX="112.0" layoutY="53.0" prefHeight="17.0" prefWidth="180.0" text="Serum Calcium" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ReferenceTextField" layoutX="383.0" layoutY="126.0" />
+      <Label layoutX="305.0" layoutY="130.0" text="Reference By" />
+      <Label layoutX="57.0" layoutY="282.0" text="Total Calcium" />
+      <Label layoutX="348.0" layoutY="211.0" text="Units" />
+      <Label layoutX="340.0" layoutY="251.0" text="m/molL" />
+      <Label layoutX="42.0" layoutY="190.0" />
+      <Label layoutX="192.0" layoutY="211.0" text="Value" />
+      <Label layoutX="340.0" layoutY="282.0" text="m/molL" />
+   </children>
+</AnchorPane>

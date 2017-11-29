@@ -11,7 +11,7 @@
 <AnchorPane fx:id="backgroundHistoryAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.PatientHistoryController">
    <children>
       <Button layoutX="770.0" layoutY="556.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Cancel" textFill="#595959" />
-      <Button layoutX="849.0" layoutY="556.0" mnemonicParsing="false"  prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Back" textFill="#595959" />
+      <Button layoutX="849.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleBackToButton" prefHeight="49.0" prefWidth="76.0" styleClass="bottomButton" text="Back" textFill="#595959" />
       <Button fx:id="nextButton" layoutX="925.0" layoutY="556.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="156.0" styleClass="bottomButton" text="Next" textFill="#595959" />
       <Label layoutX="64.0" layoutY="50.0" prefHeight="40.0" prefWidth="297.0" text="History" textFill="#595959">
          <font>
