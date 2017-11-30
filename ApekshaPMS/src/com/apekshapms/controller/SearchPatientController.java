@@ -1,8 +1,12 @@
 package com.apekshapms.controller;
 
+import com.apekshapms.database.Connector;
 import com.apekshapms.model.Patient;
+import com.sun.org.apache.xpath.internal.operations.String;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -14,21 +18,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
+import java.awt.event.KeyEvent;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class SearchPatientController implements Controller{
-    ObservableList<Patient> data = FXCollections.observableArrayList();
+    ObservableList<Patient> data = FXCollections.observableArrayList(); //Create Array for store patient data
     PreparedStatement preparedStatement = null;
     ResultSet rs= null;
-
-    private Connection connection;
-    private String url;
-    private String userName;
-    private String password;
-    private String dbName;
+    FilteredList<Patient> filteredList = new FilteredList<>(data,e->true); //Create list for the Patient store while searching Patient
 
     @FXML
     private AnchorPane navigationPane;
@@ -113,66 +114,53 @@ public class SearchPatientController implements Controller{
 
     @FXML
     void handleCancelButton(ActionEvent event) {
-
     }
 
     @FXML
     void handleEditButton(ActionEvent event) {
-
     }
 
     @FXML
     void handleSaveButton(ActionEvent event) {
-
     }
 
     @Override
     public void refreshView() {
-
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Select Table Column
+
         idTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        titleTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        firstNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        lastNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        nicTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        dobTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,LocalDate>("patient_Id"));
-        genderTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        occupationTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        civilTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        contactTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        addressTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        cityTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        districtTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        regDocTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        consultantTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-        detailsTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
-
-
-
-
+        titleTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("title"));
+        firstNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("first_name"));
+        lastNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("last_name"));
+        nicTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("nic_No"));
+        dobTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,LocalDate>("dob"));
+        genderTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("gender"));
+        occupationTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("occupation"));
+        civilTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("civil_Status"));
+        contactTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("contact_No"));
+        addressTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("address"));
+        cityTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("city"));
+        districtTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("distric"));
+        regDocTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("registerDoctor_emp_Id"));
+        consultantTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("consultant_emp_Id"));
+        detailsTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("additional_Details"));
+        loadDatabasePatient(); //Load patient into the TableView
+        searchPatient(); //Searching Patient by ID,Name
+        searchPatientName(); //Searching Patient by FName,Lname,City,District,Address
     }
-    /*
 
-    public void loadDatabasePatient(){
+
+    public void loadDatabasePatient(){ //Select Patient and add to TableView
+
+
         try {
-            url = "jdbc:mysql://" + "localhost" + ":3306/";
-            userName = "root";
-            password = "";
-            dbName = "apekshahospitalmaharagama";
-
-            try {
-                connection  =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama", "root", "");
-                //connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            Connection connection = new Connector().getConnection();
             preparedStatement = connection.prepareStatement("select * from patient");
-            //preparedStatement = preparedStatement.getConnection().prepareStatement("select * from employee");
             rs=preparedStatement.executeQuery();
-
             while (rs.next()){
                 data.add(new Patient(
                         rs.getString("patient_Id"),
@@ -180,24 +168,87 @@ public class SearchPatientController implements Controller{
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getString("nic_No"),
-                        //rs.getString("dob"),
-                        //rs.getString("gender"),
+                        rs.getDate("dob").toLocalDate(),
+                        rs.getBoolean("gender"),
                         rs.getString("occupation"),
-                        //rs.getString("civil_Status"),
+                        rs.getBoolean("civil_Status"),
                         rs.getString("contact_No"),
                         rs.getString("address"),
                         rs.getString("city"),
-                        rs.getString("distric"),
+                        rs.getString("district"),
                         rs.getString("registerDoctor_emp_Id"),
                         rs.getString("consultant_emp_Id"),
                         rs.getString("additional_Details")
-
                 ));
+                tableSearch.setItems(data);
+                tableSearch.setTableMenuButtonVisible(true);
             }
+            preparedStatement.close(); //Close the Connection
+            rs.close();
 
         }catch (Exception e){
             System.err.println(e);
         }
     }
-    */
+
+    @FXML
+    public void searchPatient() { //This methos for use Searching Patient by ID,Name
+        patientIdTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate((Predicate<? super Patient>)patient->{
+                if (newValue==null||newValue.isEmpty()){
+                    return true;
+                }
+                java.lang.String lowerCaseFilter = newValue.toLowerCase();
+                if (patient.getId().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getFirstName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                return false;
+            });
+
+        });
+        SortedList<Patient> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(tableSearch.comparatorProperty());
+        tableSearch.setItems(sortedList);
+
+    }
+
+    @FXML
+    public void searchPatientName() { //This methos for use Searching Patient by FName,Lname,City,District,Address...
+        patientNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate((Predicate<? super Patient>)patient->{
+                if (newValue==null||newValue.isEmpty()){
+                    return true;
+                }
+                java.lang.String lowerCaseFilter = newValue.toLowerCase();
+                if (patient.getFirstName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getLastName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getAddress().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getCity().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getDistrict().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(patient.getNicNo().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                return false;
+            });
+
+        });
+        SortedList<Patient> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(tableSearch.comparatorProperty());
+        tableSearch.setItems(sortedList);
+
+    }
+
 }

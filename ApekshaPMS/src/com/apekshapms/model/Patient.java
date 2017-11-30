@@ -3,6 +3,10 @@ package com.apekshapms.model;
 import java.time.LocalDate;
 
 public class Patient {
+    public Patient(){
+
+    }
+
     private String id;
     private String title;
     private String firstName;
@@ -24,7 +28,28 @@ public class Patient {
     private String registerDocId;
     private String consultantId;
     private String details;
-    
+
+    public Patient(String patient_id, String title, String first_name, String last_name, String nic_no, LocalDate dob, boolean gender, String occupation, boolean civil_status, String contact_no, String address, String city, String distric, String registerDoctor_emp_id, String consultant_emp_id, String additional_details) {
+    super();
+    this.id=patient_id;
+    this.title=title;
+    this.firstName=first_name;
+    this.lastName=last_name;
+    this.nicNo=nic_no;
+    this.dob=dob;
+    this.isMale=gender;
+    this.occupation=occupation;
+    this.isCivil=civil_status;
+    this.telephone=contact_no;
+    this.address=address;
+    this.city=city;
+    this.district=distric;
+    this.registerDocId=registerDoctor_emp_id;
+    this.consultantId=consultant_emp_id;
+    this.details=additional_details;
+
+
+    }
 
 
     public String getId() {
