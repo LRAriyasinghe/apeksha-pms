@@ -21,6 +21,9 @@ public enum UIName {
 
     //Report
     LAB_OVERVIEW("/com/apekshapms/ui/view/LabOverview.fxml"),
+    BONEMARROW_REPORT("/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml"),
+    CREACTIVEPROTEIN_REPORT("/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml"),
+    FULLBLOODCOUNT_REPORT("/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml"),
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),
@@ -42,7 +45,8 @@ public enum UIName {
     //Side Bar
     REGISTOR_DOCTOR_SIDEBAR("/com/apekshapms/ui/view/sidebar/RegisterDoctorSideBar.fxml"),
     LAB_ASSISTANT_SIDEBAR("/com/apekshapms/ui/view/sidebar/LabAssistantSideBar.fxml"),
-    CONSULTANT_DOCTOR_SIDEBAR("/com/apekshapms/ui/view/sidebar/ConsultantDoctorSideBar.fxml");
+    CONSULTANT_DOCTOR_SIDEBAR("/com/apekshapms/ui/view/sidebar/ConsultantDoctorSideBar.fxml"),
+    ADMIN_SIDEBAR("/com/apekshapms/ui/view/sidebar/AdminSideBar.fxml");
 
     private final String location;
 

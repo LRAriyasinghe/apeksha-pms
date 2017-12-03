@@ -196,4 +196,11 @@ public class DashboardController implements Controller{
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setSideBar(parent);
     }
+
+    public static void loadSideBarAdmin(){
+        UI ui = UIFactory.getUI(UIName.ADMIN_SIDEBAR);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setSideBar(parent);
+    }
 }

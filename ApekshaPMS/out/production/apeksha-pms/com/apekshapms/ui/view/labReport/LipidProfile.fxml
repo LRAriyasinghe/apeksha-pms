@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Laboratory.LipidProfileController">
+   <children>
+      <Label layoutX="169.0" layoutY="14.0" text="NATIONAL CANCER INSTITUTE MAHARAGAMA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DateTextField" layoutX="109.0" layoutY="93.0" />
+      <TextField fx:id="PatientIDTextField" layoutX="383.0" layoutY="49.0" />
+      <TextField fx:id="PatientNameTextField" layoutX="383.0" layoutY="84.0" />
+      <Label layoutX="42.0" layoutY="97.0" text="Date" />
+      <Label layoutX="44.0" layoutY="53.0" text="Report " />
+      <Label layoutX="305.0" layoutY="53.0" text="PatientID" />
+      <Label layoutX="304.0" layoutY="88.0" text="Patient Name" />
+      <Label layoutX="217.0" layoutY="159.0" text="BIOCHEMISTRY" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="183.0" text="Component" />
+      <Label layoutX="231.0" layoutY="183.0" text="Value" />
+      <Label layoutX="361.0" layoutY="183.0" text="Unit" />
+      <Label layoutX="476.0" layoutY="183.0" text="Range" />
+      <TextField fx:id="SerumCholestrolTextField" layoutX="215.0" layoutY="215.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="SerumTriglyceridesTextField" layoutX="215.0" layoutY="247.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="HDLCholestrolTextField" layoutX="215.0" layoutY="281.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="LDLCholestrolTextField" layoutX="215.0" layoutY="314.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="VLDLTextField" layoutX="215.0" layoutY="346.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="CHOLHDLTextField" layoutX="215.0" layoutY="382.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="42.0" layoutY="219.0" text="Serum Cholestrol" />
+      <Label fx:id="SGPT" layoutX="42.0" layoutY="251.0" prefHeight="17.0" prefWidth="115.0" text="Serum Triglycerides" />
+      <Label layoutX="43.0" layoutY="285.0" text="HDL Cholestrol" />
+      <Label layoutX="45.0" layoutY="318.0" text="LDL Cholestrol" />
+      <Label layoutX="45.0" layoutY="350.0" text="VLDL" />
+      <Label layoutX="44.0" layoutY="382.0" prefHeight="17.0" prefWidth="80.0" text="CHOL/HDL" />
+      <Label layoutX="359.0" layoutY="210.0" text="mg/dl" />
+      <Label layoutX="359.0" layoutY="242.0" text="mg/dl" />
+      <Label layoutX="359.0" layoutY="276.0" text="mg/dl" />
+      <Label layoutX="359.0" layoutY="309.0" text="mg/dl" />
+      <Label layoutX="471.0" layoutY="210.0" text="130-200" />
+      <Label layoutX="471.0" layoutY="242.0" text="30-200" />
+      <Label layoutX="471.0" layoutY="276.0" text="40-65" />
+      <Label layoutX="471.0" layoutY="309.0" text="Up to 150" />
+      <Button fx:id="SubmitButton" layoutX="40.0" layoutY="528.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="112.0" layoutY="528.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="44.0" layoutY="472.0" text="Remarks" />
+      <TextArea fx:id="RemarksTextField" layoutX="107.0" layoutY="452.0" prefHeight="57.0" prefWidth="433.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+      <Label fx:id="ReportTypeLabel" layoutX="112.0" layoutY="53.0" prefHeight="17.0" prefWidth="142.0" text="Lipid Profile" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ReferenceTextField" layoutX="383.0" layoutY="126.0" />
+      <Label layoutX="305.0" layoutY="130.0" text="Reference By" />
+      <Label layoutX="48.0" layoutY="420.0" prefHeight="17.0" prefWidth="80.0" text="LDL/HDL" />
+      <TextField fx:id="LDLHDLTextField" layoutX="215.0" layoutY="416.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="360.0" layoutY="350.0" text="mg/dl" />
+      <Label layoutX="468.0" layoutY="350.0" text="12-30" />
+   </children>
+</AnchorPane>

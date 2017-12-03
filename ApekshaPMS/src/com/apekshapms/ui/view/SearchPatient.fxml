@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
     <children>
         <AnchorPane fx:id="navigationPane" layoutX="48.0" layoutY="14.0" prefHeight="50.0" prefWidth="1100.0">
             <children>
@@ -27,7 +27,7 @@
         </AnchorPane>
         <AnchorPane fx:id="managePane" layoutY="72.0" prefHeight="512.0" prefWidth="1148.0">
             <children>
-                <TableView fx:id="tableSearch" layoutX="17.0" layoutY="13.0" prefHeight="512.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="13.0">
+                <TableView fx:id="tableSearch" layoutX="6.0" layoutY="14.0" prefHeight="512.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="14.0">
                     <columns>
                         <TableColumn fx:id="idTableColumn" prefWidth="69.0" text="ID" />
                         <TableColumn fx:id="titleTableColumn" prefWidth="60.0" text="Title" />

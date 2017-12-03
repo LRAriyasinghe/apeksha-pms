@@ -23,6 +23,8 @@ public class WardDashboardController implements Controller {
     private Button newWardButton;
     @FXML
     private Button wardManagementButton;
+    @FXML
+    private Button wardDeleteButton;
 
     @Override
     public void refreshView() {

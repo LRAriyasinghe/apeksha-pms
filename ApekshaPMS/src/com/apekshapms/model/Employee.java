@@ -37,6 +37,7 @@ public class Employee {
         this.contactNu = new SimpleStringProperty(contact_no);
         this.department = new SimpleStringProperty(department);
         this.type = new SimpleStringProperty(type);
+        //this.dob = new dob;
         this.id = new SimpleStringProperty(emp_id);
         this.bank = new SimpleStringProperty(bank);
         this.branch = new SimpleStringProperty(branch);

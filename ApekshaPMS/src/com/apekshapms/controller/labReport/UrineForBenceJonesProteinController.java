@@ -60,7 +60,7 @@ public class UrineForBenceJonesProteinController implements Controller{
                 labReport.setAlbumine(AlbumineTextField.getText());
                 labReport.setBenceJones(BenceJonesProteinTextField.getText());
 
-                LabReportServices.addLabReportUrine(labReport);
+                //LabReportServices.addLabReportUrine(labReport);
 
             }});}
 

@@ -21,10 +21,36 @@ import java.util.ResourceBundle;
 public class AddReportController implements Controller {
     @FXML
     private Button addNewReportButton;
+    //@FXML
+    //private Button btnCreactiveReport;
 
     @FXML
     void handleaddNewReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.LAB_OVERVIEW);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleBoneMarrowReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.BONEMARROW_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleCeativeReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.CREACTIVEPROTEIN_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleFullBloodReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.FULLBLOODCOUNT_REPORT);
         Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);

@@ -51,6 +51,44 @@ public class PatientConnector extends Connector {
         }
     }
 
+    public void searchPatient(Patient patient){
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient");
+            preparedStatement.setString(1, patient.getId());
+            preparedStatement.setString(2, patient.getTitle());
+            preparedStatement.setString(3, patient.getFirstName());
+            preparedStatement.setString(4, patient.getLastName());
+            preparedStatement.setString(5, patient.getNicNo());
+            preparedStatement.setString(6, String.valueOf(patient.getDob()));
+            preparedStatement.setString(7, String.valueOf(patient.isMale()));
+            preparedStatement.setString(8, patient.getOccupation());
+            preparedStatement.setString(9, String.valueOf(patient.isCivil()));
+            preparedStatement.setString(10, patient.getTelephone());
+            preparedStatement.setString(11, patient.getAddress());
+            preparedStatement.setString(12, patient.getCity());
+            preparedStatement.setString(13, patient.getDistrict());
+            preparedStatement.setString(14, patient.getRegisterDocId());
+            preparedStatement.setString(15, patient.getDetails());
+            preparedStatement.setString(16, patient.getConsultantId());
+
+
+            /*Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Message");
+            alert.setHeaderText("");
+            alert.setContentText("Succussfully Added");
+            alert.showAndWait();
+            alert.setOnCloseRequest(e -> alert.close());
+            */
+
+            preparedStatement.execute();
+
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+    }
+
     public void deletePatient(Patient patient) {
         try {
             com.mysql.jdbc.PreparedStatement preparedStatement = (com.mysql.jdbc.PreparedStatement) getConnection().prepareStatement("DELETE FROM patient " +

@@ -5,8 +5,10 @@ import java.time.LocalDate;
 
 public class LabReport {
 
-    private  String ID ;
-    private  String Name ;
+    private  String Patient_ID ;
+    private String Test_ID;
+    private  String Patient_Name ;
+    private String Type;
     private LocalDate Date ;
     private  String Reference;
     private String Remarks;
@@ -119,24 +121,12 @@ public class LabReport {
     //End Variables
 
 
+    public LabReport(){
 
 
-
-    public String getID() {
-        return ID;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
-    }
 
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        this.Name = name;
-    }
 
     public LocalDate getDate() {
         return Date;
@@ -563,6 +553,37 @@ public String getSerChol() {
         this.Platelet = platelet;
     }
 
+    public String getPatient_ID() {
+        return Patient_ID;
+    }
+
+    public void setPatient_ID(String patient_ID) {
+        Patient_ID = patient_ID;
+    }
+
+    public String getID() {
+        return Test_ID;
+    }
+
+    public void setID(String test_ID) {
+        Test_ID = test_ID;
+    }
+
+    public String getName() {
+        return Patient_Name;
+    }
+
+    public void setName(String patient_Name) {
+        Patient_Name = patient_Name;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
+    }
 
 
     //End Full Blood Count Methods

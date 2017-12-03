@@ -2,8 +2,7 @@ package com.apekshapms.database.connector;
 
 import com.apekshapms.database.Connector;
 import com.apekshapms.main.Main;
-import com.apekshapms.model.LabReport;
-import com.apekshapms.model.LabReport2;
+import com.apekshapms.model.*;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,31 +13,145 @@ import java.sql.SQLException;
  */
 public class LabReportConnector extends Connector {
     private Main mainApp;
-    public void newLabReport(LabReport labReport){
+    public void newBoneMarrowReport(BonemarrowReport bonemarrowreport) {
         try {
-            PreparedStatement preparedStatement = (PreparedStatement)getConnection().prepareStatement("INSERT INTO " +
-                    "report(patient_Id,title, first_name, last_name,nic_No, dob,gender, " +
-                    "occupation, civil_Status) " +
-                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
 
-            preparedStatement.setString(1, labReport.getID());
-            preparedStatement.setString(2, labReport.getName());
-            preparedStatement.setString(3, String.valueOf(labReport.getDate()));
-            preparedStatement.setString(4, labReport.getSerB());
-            preparedStatement.setString(5, labReport.getSGOT());
-            preparedStatement.setString(6, labReport.getSGPT());
-            preparedStatement.setString(7, labReport.getSerAlk());
-            preparedStatement.setString(8, labReport.getSerCre());
-            preparedStatement.setString(9, labReport.getSerCal());
+            preparedStatement.setString(1, bonemarrowreport.getTestID());
+            preparedStatement.setString(2, bonemarrowreport.getPatientID());
+            preparedStatement.setString(3, bonemarrowreport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(bonemarrowreport.getDate()));
+            preparedStatement.setString(5, bonemarrowreport.getTestType());
+            preparedStatement.setString(6, bonemarrowreport.getReference());
+            preparedStatement.setString(7, bonemarrowreport.getRemarks());
+
             preparedStatement.execute();
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "bonemarrow_report(TestID,Patient_Id, BMBx, TrephineBMBx) " +
+                    "VALUES(?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, bonemarrowreport.getTestID());
+            preparedStatement2.setString(2, bonemarrowreport.getPatientID());
+            preparedStatement2.setString(3, bonemarrowreport.getBMBx());
+            preparedStatement2.setString(4, bonemarrowreport.getTrephineBMBx());
+
+            preparedStatement2.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
     }
 
-    public void newLabReportUrine(LabReport labReport){
+
+    public void newCreactiveProteinReport(CreactiveproteinReport creactiveproteinReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, creactiveproteinReport.getTestID());
+            preparedStatement.setString(2, creactiveproteinReport.getPatientID());
+            preparedStatement.setString(3, creactiveproteinReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(creactiveproteinReport.getDate()));
+            preparedStatement.setString(5, creactiveproteinReport.getTestType());
+            preparedStatement.setString(6, creactiveproteinReport.getReference());
+            preparedStatement.setString(7, creactiveproteinReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "c_reactiveprotein_report(TestID,Patient_Id, c_reactive) " +
+                    "VALUES(?, ?, ?)");
+
+            preparedStatement2.setString(1, creactiveproteinReport.getTestID());
+            preparedStatement2.setString(2, creactiveproteinReport.getPatientID());
+            preparedStatement2.setString(3, creactiveproteinReport.getCreactiveprotein());
+
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void newFullBloodReport(FullBloodReport fullBloodReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, fullBloodReport.getTestID());
+            preparedStatement.setString(2, fullBloodReport.getPatientID());
+            preparedStatement.setString(3, fullBloodReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(fullBloodReport.getDate()));
+            preparedStatement.setString(5, fullBloodReport.getTestType());
+            preparedStatement.setString(6, fullBloodReport.getReference());
+            preparedStatement.setString(7, fullBloodReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "fullblood_report(TestID,Patient_Id, WBC,NE,Himoglobin,Platlets) " +
+                    "VALUES(?, ?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, fullBloodReport.getTestID());
+            preparedStatement2.setString(2, fullBloodReport.getPatientID());
+            preparedStatement2.setString(3, fullBloodReport.getWBC());
+            preparedStatement2.setString(4, fullBloodReport.getNE());
+            preparedStatement2.setString(5, fullBloodReport.getHimoglobin());
+            preparedStatement2.setString(6, fullBloodReport.getPlateletes());
+
+
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public void newLabReportUrine(LabReport labReport){
         try {
             PreparedStatement preparedStatement = (PreparedStatement)getConnection().prepareStatement("INSERT INTO " +
                     "urine_for_bence_jones_protein_report(patient_id,patient_name, reference, date,albumine, bencejones,remarks, " +
@@ -58,5 +171,5 @@ public class LabReportConnector extends Connector {
             e.printStackTrace();
         }
 
-    }
+    }*/
 }

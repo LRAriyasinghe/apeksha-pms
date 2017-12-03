@@ -6,6 +6,7 @@ package com.apekshapms.controller.admin;
  */
 import com.apekshapms.controller.Controller;
 import com.apekshapms.model.Employee;
+//import com.sun.jdi.connect.Connector;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -108,7 +109,7 @@ public class AdminSearchEmployeeController implements Controller {
         contactColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("contact_No"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("department"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("type"));
-        //dobColumn.setCellValueFactory(new PropertyValueFactory<Employee,LocalDate>("dob"));
+        dobColumn.setCellValueFactory(new PropertyValueFactory<Employee,LocalDate>("dob"));
         empIDColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("emp_Id"));
         bankColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("bank"));
         branchColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("Branch"));
@@ -125,21 +126,10 @@ public class AdminSearchEmployeeController implements Controller {
 
     public void loadDatabaseData() throws SQLException {
         try {
-            url = "jdbc:mysql://" + "localhost" + ":3306/";
-            userName = "root";
-            password = "";
-            dbName = "apekshahospitalmaharagama";
-
-            try {
-                connection  =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama", "root", "");
-                //connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            Connection connection = new com.apekshapms.database.Connector().getConnection();
+            //connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
             preparedStatement = connection.prepareStatement("select * from employee");
-            //preparedStatement = preparedStatement.getConnection().prepareStatement("select * from employee");
             rs=preparedStatement.executeQuery();
-
             while (rs.next()){
                 data.add(new Employee(
                         rs.getString("firstName"),
@@ -152,11 +142,10 @@ public class AdminSearchEmployeeController implements Controller {
                         rs.getString("contact_No"),
                         rs.getString("department"),
                         rs.getString("type"),
+                        //rs.getDate("dob").toLocalDate(),
                         rs.getString("emp_Id"),
                         rs.getString("bank"),
                         rs.getString("Branch")
-
-
                         ));
                 employeeTable.setItems(data);
                 employeeTable.setTableMenuButtonVisible(true);
