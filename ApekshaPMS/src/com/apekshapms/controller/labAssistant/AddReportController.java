@@ -56,6 +56,14 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    @FXML
+    void handleLipidProfileReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.LIPIDPROFILE_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
     @Override
     public void refreshView() {
 

@@ -128,6 +128,48 @@ public class LabReportConnector extends Connector {
     }
 
 
+    public void newLipidProfileReport(LipidProfileReport lipidProfileReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, lipidProfileReport.getTestID());
+            preparedStatement.setString(2, lipidProfileReport.getPatientID());
+            preparedStatement.setString(3, lipidProfileReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(lipidProfileReport.getDate()));
+            preparedStatement.setString(5, lipidProfileReport.getTestType());
+            preparedStatement.setString(6, lipidProfileReport.getReference());
+            preparedStatement.setString(7, lipidProfileReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "lipidprofile_report(TestID,Patient_Id, Serum_Cholostrol,Serum_Triglycer,HDL,LDL,VLDL,CHOL,LDLHDL) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, lipidProfileReport.getTestID());
+            preparedStatement2.setString(2, lipidProfileReport.getPatientID());
+            preparedStatement2.setString(3, lipidProfileReport.getSerium_Colostrol());
+            preparedStatement2.setString(4, lipidProfileReport.getSerium_Triglycerides());
+            preparedStatement2.setString(5, lipidProfileReport.getHDL());
+            preparedStatement2.setString(6, lipidProfileReport.getLDL());
+            preparedStatement2.setString(7, lipidProfileReport.getVLDL());
+            preparedStatement2.setString(8, lipidProfileReport.getCHOL());
+            preparedStatement2.setString(9, lipidProfileReport.getLDLHDL());
+
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 

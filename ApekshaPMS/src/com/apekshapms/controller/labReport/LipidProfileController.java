@@ -2,20 +2,28 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
+import com.apekshapms.model.LipidProfileReport;
+import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class LipidProfileController implements Controller{
-
+    @FXML
+    private TextField TestIDTextField;
+    @FXML
+    private TextField TypeTextField;
 
     @FXML
-    private DatePicker date;
+    private DatePicker dateDatePicker;
 
     @FXML
     private TextField PatientIDTextField;
@@ -59,28 +67,50 @@ public class LipidProfileController implements Controller{
     @FXML
     private Button CancelButton;
 
-    private LabReport labReport;
+    private LipidProfileReport lipidProfileReport;
 
     public void initialize(URL location, ResourceBundle resources) {
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                labReport.setID(PatientIDTextField.getText());
-                labReport.setName(PatientNameTextField.getText());
-                labReport.setDate(date.getValue());
-                labReport.setReference(ReferenceTextField.getText());
-                labReport.setRemarks(RemarksTextField.getText());
-                labReport.setSerChol(SerumCholestrolTextField.getText());
-                labReport.setSerTri(SerumTriglyceridesTextField.getText());
-                labReport.setHDLChol(HDLCholestrolTextField.getText());
-                labReport.setLDLChol(LDLCholestrolTextField.getText());
-                labReport.setVLDL(VLDLTextField.getText());
-                labReport.setCHOLHDL(CHOLHDLTextField.getText());
-                labReport.setLDLHDL(LDLHDLTextField.getText());
+                if (isInputValid()) {
+                    try {
+                        lipidProfileReport.setTestID(TestIDTextField.getText());
+                        lipidProfileReport.setPatientID(PatientIDTextField.getText());
+                        lipidProfileReport.setPatientName(PatientNameTextField.getText());
+                        lipidProfileReport.setDate(dateDatePicker.getValue());
+                        lipidProfileReport.setTestType(TypeTextField.getText());
+                        lipidProfileReport.setReference(ReferenceTextField.getText());
+                        lipidProfileReport.setRemarks(RemarksTextField.getText());
+                        lipidProfileReport.setSerium_Colostrol(SerumCholestrolTextField.getText());
+                        lipidProfileReport.setSerium_Triglycerides(SerumTriglyceridesTextField.getText());
+                        lipidProfileReport.setHDL(HDLCholestrolTextField.getText());
+                        lipidProfileReport.setLDL(LDLCholestrolTextField.getText());
+                        lipidProfileReport.setVLDL(VLDLTextField.getText());
+                        lipidProfileReport.setCHOL(CHOLHDLTextField.getText());
+                        lipidProfileReport.setLDLHDL(LDLHDLTextField.getText());
 
 
-                //LabReportServices.addLabReport(labReport);
 
+                    }catch (Exception e){
+                        System.err.println(e);
+                    }
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
+                    alert.setTitle("Confirmation Dialog");
+                    alert.setHeaderText("Look, a Confirmation Dialog");
+                    alert.setContentText("Are you ok with this?");
+
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.get() == ButtonType.OK) {
+
+                        System.out.println("Yes");
+                        LabReportServices.addLipidProfileReport(lipidProfileReport);
+                    }else {
+                        UIFactory.launchUI(UIName.LIPIDPROFILE_REPORT, true);
+                        // ... user chose CANCEL or closed the dialog
+                    }
+
+                }
 
             }
         });
@@ -90,4 +120,33 @@ public class LipidProfileController implements Controller{
     public void refreshView() {
 
     }
-}
+
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (PatientIDTextField.getText() == null || PatientIDTextField.getText().length() == 0) {
+            errorMessage += "Not a valid Patient ID!\n";
+        }
+        if (PatientNameTextField.getText() == null || PatientNameTextField.getText().length() == 0) {
+            errorMessage += "No valid Patient name ID!\n";
+        }
+        if (TestIDTextField.getText() == null || TestIDTextField.getText().length() == 0) {
+            errorMessage += "No valid TestId ID!\n";
+        }
+        if (errorMessage.length() == 0) {
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Dialog");
+            alert.setHeaderText("Look, a Warning Dialog");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            System.out.println("Successfully Fail");
+
+            return false;
+        }
+    }
+
+}//Class Finish

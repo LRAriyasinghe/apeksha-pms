@@ -23,7 +23,8 @@ public enum UIName {
     LAB_OVERVIEW("/com/apekshapms/ui/view/LabOverview.fxml"),
     BONEMARROW_REPORT("/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml"),
     CREACTIVEPROTEIN_REPORT("/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml"),
-    FULLBLOODCOUNT_REPORT("/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml"),
+    FULLBLOODCOUNT_REPORT("/com/apekshapms/ui/view/labReport/FullBloodCount.fxml"),
+    LIPIDPROFILE_REPORT("/com/apekshapms/ui/view/labReport/LipidProfile.fxml"),
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),

@@ -9,5 +9,6 @@
       <Button fx:id="btnBoneMarrow" layoutX="62.0" layoutY="154.0" mnemonicParsing="false" onAction="#handleBoneMarrowReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Bone Marrow Report" />
       <Button fx:id="btnCreactiveReport" layoutX="62.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleCeativeReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="CreactiveProtein Report" />
       <Button fx:id="btnFullBloodReport" layoutX="62.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleFullBloodReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Full Blood Report" />
+      <Button fx:id="btnLipidProfile" layoutX="62.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleLipidProfileReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Lipid Profile Report" />
    </children>
 </AnchorPane>

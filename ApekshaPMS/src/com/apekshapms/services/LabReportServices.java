@@ -20,5 +20,9 @@ public class LabReportServices {
 
         Session.labReportConnector.newFullBloodReport(fullBloodReport);
     }
+    public static void addLipidProfileReport(LipidProfileReport lipidProfileReport) {
+
+        Session.labReportConnector.newLipidProfileReport(lipidProfileReport);
+    }
 }
 
