@@ -26,6 +26,9 @@ public enum UIName {
     FULLBLOODCOUNT_REPORT("/com/apekshapms/ui/view/labReport/FullBloodCount.fxml"),
     LIPIDPROFILE_REPORT("/com/apekshapms/ui/view/labReport/LipidProfile.fxml"),
 
+    //Report Analysis
+    STATISTICAL_ANALYSIS_GRAPHICAL("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml"),
+
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),
     ADD_DETAILS("/com/apekshapms/ui/view/labAssistant/AddDetails.fxml"),
