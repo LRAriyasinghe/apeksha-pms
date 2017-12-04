@@ -3,6 +3,7 @@ package com.apekshapms.database.connector;
 import com.apekshapms.database.Connector;
 import com.apekshapms.main.Main;
 import com.apekshapms.model.Patient;
+import javafx.scene.control.Alert;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -34,13 +35,13 @@ public class PatientConnector extends Connector {
             preparedStatement.setString(16, patient.getConsultantId());
 
 
-            /*Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Message");
             alert.setHeaderText("");
             alert.setContentText("Succussfully Added");
             alert.showAndWait();
             alert.setOnCloseRequest(e -> alert.close());
-            */
+
 
             preparedStatement.execute();
 

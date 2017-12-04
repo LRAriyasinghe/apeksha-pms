@@ -2,95 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e881dd1-c077-4fd2-b977-62bf1f400c2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/TextualAnalysis.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_36_bin.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/Controller.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/DashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/DashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/LabOverviewController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/LabOverviewController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/LabOverviewController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/LabOverviewController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/PatientHistoryController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/PatientHistoryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SomeLoginController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SomeLoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/EmployeeDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/EmployeeDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ExampleController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ExampleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/PatientDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/PatientDashboardController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/TreatmentDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/TreatmentDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController$2.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/AddDetailsController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/AddDetailsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/AddReportController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/AddReportController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/ChechReportController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/labAssistant/ChechReportController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$2.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$3.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$4.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/AdminDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController$2.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/ConsultantDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController$2.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/LabAssistantDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController$2.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/main/RegisterDoctorDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/ConsultantDoctorSideBarController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/ConsultantDoctorSideBarController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/LabAssistantSideBarController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/LabAssistantSideBarController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/RegisterDoctorSideBarController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/sidebar/RegisterDoctorSideBarController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/WardManagementController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/WardManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/Connector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/Connector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/LabReportConnector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/LabReportConnector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/PatientConnector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/PatientConnector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/factory/UIFactory.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/factory/UIFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Main.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Session.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Session.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Consultant.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Consultant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Employee.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/LabReport.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/LabReport.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Patient.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Patient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/RegisterDocter.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/RegisterDocter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/User.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/LabReportServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/LabReportServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/PatientServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/PatientServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/SystemServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/SystemServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UI.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UIName.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UIName.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/AlertDialog$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/AlertDialog$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/AlertDialog.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/AlertDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValidateSearchConsultant.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValidateSearchConsultant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValidateSearchRegisterDoctor.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValidateSearchRegisterDoctor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValideEmployee.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/validation/Patient_Registration/ValideEmployee.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.41-bin.jar" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.41-bin.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/apeksha-pms.iml" afterPath="$PROJECT_DIR$/.idea/apeksha-pms.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/NewPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/NewPatient.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/ReportDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/ReportDashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/Creactive protein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/Creactive protein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LipidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LipidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LiverFunction.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LiverFunction.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UFR.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UFR.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/EmployeeDashboardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/EmployeeDashboardController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LabOverviewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/LabOverviewController.java">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="324">
+              <caret line="67" column="16" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -115,94 +48,95 @@
       <file leaf-file-name="PatientConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+            <state relative-caret-position="305">
+              <caret line="143" column="34" lean-forward="true" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java">
+      <file leaf-file-name="EmployeeDashboardController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/EmployeeDashboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+            <state relative-caret-position="330">
+              <caret line="34" column="97" lean-forward="true" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportDashboardController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabReportServices.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/LabReportServices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabReportConnector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/LabReportConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIName.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="111" lean-forward="false" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewPatientController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-856">
-              <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsultantDetails.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ConsultantDetails.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="AdminSearchEmployee.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoneMarrowReport.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminSearchEmployeeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticalMaleFemaleDistrictController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <caret line="58" column="150" lean-forward="false" selection-start-line="58" selection-start-column="150" selection-end-line="58" selection-end-column="150" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientHistoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-97">
+              <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchPatientController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1124">
+              <caret line="218" column="33" lean-forward="false" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ExampleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-790">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -245,7 +179,6 @@
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/EditPatientController.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/PatientHistory.fxml" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java" />
-        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Assigning.fxml" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/alert.css" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/validation/AlertDialog.java" />
@@ -256,9 +189,7 @@
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/dashboard.css" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Dashboard.fxml" />
-        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/login.fxml" />
-        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/LogInController.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java" />
@@ -268,16 +199,26 @@
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/SystemServices.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/DashboardController.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/SearchPatient.fxml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java" />
         <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java" />
-        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" />
-        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/EmployeeDashboardController.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1265" />
     <option name="height" value="773" />
   </component>
   <component name="ProjectView">
@@ -296,8 +237,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,6 +286,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="labAssistant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apeksha-Hospital-Maharagama" type="462c0819:PsiDirectoryNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -381,7 +329,7 @@
               <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
@@ -418,21 +366,18 @@
               <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="labReport" type="462c0819:PsiDirectoryNode" />
+              <item name="reportAnalysis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -444,7 +389,14 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.apekshapms.controller.reportAnalysis" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector" />
       <recent name="D:\2nd Year\Group Project\A Project\Final Group_Project\ApekshaPMS\src\com\apekshapms\ui\Image" />
     </key>
   </component>
@@ -599,7 +551,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="1" y="23" width="1265" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -607,14 +560,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26248217" sideWeight="0.5027668" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26248217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26248217" sideWeight="0.4972332" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21953125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22213438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -667,382 +620,478 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Assigning.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/main/LabAssistantDashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        <state relative-caret-position="60">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/ApekshaPMS.iml">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/main/RegisterDoctorDashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/AlertBox.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/event/EventHandler.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/validation/AlertDialog.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/TextualAnalysisController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/AssigningController.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/sidebar/AdminSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/sidebar/ConsultantDoctorSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/sidebar/RegisterDoctorSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="60">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/SomeLogin.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="264" lean-forward="false" selection-start-line="7" selection-start-column="245" selection-end-line="7" selection-end-column="264" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SomeLoginController.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/sidebar/LabAssistantSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="60">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/DashboardRegistrarDoctor.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/NewWardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-603">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/patientManagement.css">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/LabReportConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/mycss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/editpatientdetails.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/resources/styles/alert.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/DashboardAdminDoctor.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/validation/validator.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Dashboard.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/login.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/LogInController.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/UserConnector.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="-2194">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/WardManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="44" />
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/PatientServices.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/BoneMarrowConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/UserServices.java" />
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/factory/UIFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/SystemServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="462">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/PatientServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#249#250#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/SearchPatient.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/LabReportServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/EmployeeDashboard.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/Example.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/PatientDashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/TreatmentDashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/WardDashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labAssistant/AddDetails.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labAssistant/CheckReport.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/Creactive protein.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-414">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/FullBloodCount.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/LabOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-856">
-          <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ConsultantDetails.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LipidProfile.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LiverFunction.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/labAssistant/AddDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/labAssistant/ChechReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labAssistant/AddReport.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="124" lean-forward="false" selection-start-line="8" selection-start-column="124" selection-end-line="8" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/PatientDashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/LabReportServices.java">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-894">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/labAssistant/AddReportController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/LabReportConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="69" />
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="111" lean-forward="false" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
+        <state relative-caret-position="184">
+          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="157" lean-forward="false" selection-start-line="12" selection-start-column="157" selection-end-line="12" selection-end-column="157" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="81" column="91" lean-forward="false" selection-start-line="81" selection-start-column="91" selection-end-line="81" selection-end-column="91" />
+          <folding>
+            <marker date="1512412812000" expanded="true" signature="3242:3323" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="3258:3308" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="3443:3524" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="3459:3509" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="3730:3811" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="3746:3796" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="4017:4098" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="4033:4083" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="4304:4385" ph="..." />
+            <marker date="1512412812000" expanded="true" signature="4320:4370" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisGraphicalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="72" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="36" column="69" lean-forward="false" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="82" column="43" lean-forward="false" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/PatientConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="143" column="34" lean-forward="true" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="67" column="16" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ExampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-790">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/EmployeeDashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="97" lean-forward="true" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1124">
+          <caret line="218" column="33" lean-forward="false" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="58" column="150" lean-forward="false" selection-start-line="58" selection-start-column="150" selection-end-line="58" selection-end-column="150" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

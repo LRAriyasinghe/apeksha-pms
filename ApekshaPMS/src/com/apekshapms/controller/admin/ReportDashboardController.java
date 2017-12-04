@@ -24,6 +24,9 @@ public class ReportDashboardController implements Controller {
     @FXML
     private Button addReportButton;
 
+    @FXML
+    private Button statisticalMaleFemaleDistrictButoon;
+
     @Override
     public void refreshView() {
 
@@ -38,6 +41,14 @@ public class ReportDashboardController implements Controller {
 
     }
 
+    @FXML
+    void handleMaleFemaleDistrictOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addReportButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -45,7 +56,7 @@ public class ReportDashboardController implements Controller {
             public void handle(ActionEvent event) {
                 UI ui = UIFactory.getUI(UIName.LAB_OVERVIEW);
                 Parent parent = ui.getParent();
-                AdminDashboardController adminDashboardController = ((AdminDashboardController) (UIFactory.getUI(UIName.ADMIN_DASHBOARD).getController()));
+                DashboardController adminDashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
                 adminDashboardController.setWorkspace(parent);
             }
         });

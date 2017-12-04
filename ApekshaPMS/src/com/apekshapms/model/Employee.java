@@ -26,24 +26,6 @@ public class Employee {
     private SimpleStringProperty type;
     private LocalDate dob;
 
-    public Employee(String firstName, String lastName, String door_no, String street, String city, String district, String nic_no, String contact_no, String department, String type, String emp_id, String bank, String branch) {
-        this.firstName = new SimpleStringProperty(firstName);
-        this.lastName = new SimpleStringProperty(lastName);
-        this.doorNu = new SimpleStringProperty(door_no);
-        this.street = new SimpleStringProperty(street);
-        this.city = new SimpleStringProperty(city);
-        this.distric = new SimpleStringProperty(district);
-        this.nic = new SimpleStringProperty(nic_no);
-        this.contactNu = new SimpleStringProperty(contact_no);
-        this.department = new SimpleStringProperty(department);
-        this.type = new SimpleStringProperty(type);
-        //this.dob = new dob;
-        this.id = new SimpleStringProperty(emp_id);
-        this.bank = new SimpleStringProperty(bank);
-        this.branch = new SimpleStringProperty(branch);
-
-    }
-
     public Employee(String emp_id, String firstName, String lastName, String type) {
         this.id = new SimpleStringProperty(emp_id);
         this.firstName = new SimpleStringProperty(firstName);
@@ -51,9 +33,18 @@ public class Employee {
         this.type = new SimpleStringProperty(type);
     }
 
-    public Employee(String emp_id) {
-        this.id = new SimpleStringProperty(emp_id);
+    public Employee(String emp_id, String firstName, String lastName, String nic_no, String type, String city, String district, String contact_no, String department) {
+    this.id= new SimpleStringProperty(emp_id);
+    this.firstName = new SimpleStringProperty(firstName);
+    this.lastName = new SimpleStringProperty(lastName);
+    this.nic = new SimpleStringProperty(nic_no);
+    this.type = new SimpleStringProperty(type);
+    this.city = new SimpleStringProperty(city);
+    this.distric = new SimpleStringProperty(district);
+    this.contactNu = new SimpleStringProperty(contact_no);
+    this.department = new SimpleStringProperty(department);
     }
+
 
     public String getId() {
         return id.get();

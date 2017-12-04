@@ -28,6 +28,7 @@ public enum UIName {
 
     //Report Analysis
     STATISTICAL_ANALYSIS_GRAPHICAL("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml"),
+    STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT("/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml"),
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),

@@ -5,10 +5,14 @@ package com.apekshapms.controller.admin;
  * Univercity of Colombo School of Computing
  */
 import com.apekshapms.controller.Controller;
+import com.apekshapms.database.Connector;
 import com.apekshapms.model.Employee;
 //import com.sun.jdi.connect.Connector;
+import com.apekshapms.model.Patient;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -19,24 +23,23 @@ import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class AdminSearchEmployeeController implements Controller {
 
     ObservableList<Employee> data = FXCollections.observableArrayList();
     PreparedStatement preparedStatement = null;
     ResultSet rs = null;
-
-    private Connection connection;
-    private String url;
-    private String userName;
-    private String password;
-    private String dbName;
+    FilteredList<Employee> filteredList = new FilteredList<>(data, e->true); //Create list for the Employee store while searching Employee
 
     private Employee employee;
 
 
     @FXML
     private TableView<Employee> employeeTable;
+
+    @FXML
+    private TableColumn<Employee, String> empIDColumn;
 
     @FXML
     private TableColumn<Employee, String> fnameColumn;
@@ -51,12 +54,6 @@ public class AdminSearchEmployeeController implements Controller {
     private TableColumn<Employee, String> typeColumn;
 
     @FXML
-    private TableColumn<Employee, String> doorNuColumn;
-
-    @FXML
-    private TableColumn<Employee, String> streetColumn;
-
-    @FXML
     private TableColumn<Employee, String> cityColumn;
 
     @FXML
@@ -67,18 +64,6 @@ public class AdminSearchEmployeeController implements Controller {
 
     @FXML
     private TableColumn<Employee, String> departmentColumn;
-
-    @FXML
-    private TableColumn<Employee, LocalDate> dobColumn;
-
-    @FXML
-    private TableColumn<Employee, String> bankColumn;
-
-    @FXML
-    private TableColumn<Employee, String> branchColumn;
-
-    @FXML
-    private TableColumn<Employee, String> empIDColumn;
 
     @FXML
     private HBox buttonHBox;
@@ -95,26 +80,25 @@ public class AdminSearchEmployeeController implements Controller {
     @FXML
     private TextField searchEmpNameTextField;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         employeeTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
+        empIDColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("emp_Id"));
         fnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("firstName"));
         lnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("lastName"));
-        doorNuColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("door_No"));
-        streetColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("street"));
+        nicColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("nic_No"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("type"));
         cityColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("city"));
         districColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("district"));
-        nicColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("nic_No"));
         contactColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("contact_No"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("department"));
-        typeColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("type"));
-        dobColumn.setCellValueFactory(new PropertyValueFactory<Employee,LocalDate>("dob"));
-        empIDColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("emp_Id"));
-        bankColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("bank"));
-        branchColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("Branch"));
+
         try {
-            loadDatabaseData();
+            loadDatabaseData(); //Load to data to TableView
+            searchEmployee(); //Search Employee
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -124,28 +108,23 @@ public class AdminSearchEmployeeController implements Controller {
 
     }
 
-    public void loadDatabaseData() throws SQLException {
+    public void loadDatabaseData() throws SQLException { //Load Data In to TableView
         try {
-            Connection connection = new com.apekshapms.database.Connector().getConnection();
-            //connection = (Connection) DriverManager.getConnection(url + dbName, userName, password);
+            Connection connection = new Connector().getConnection();
             preparedStatement = connection.prepareStatement("select * from employee");
             rs=preparedStatement.executeQuery();
             while (rs.next()){
                 data.add(new Employee(
+                        rs.getString("emp_Id"),
                         rs.getString("firstName"),
                         rs.getString("lastName"),
-                        rs.getString("door_No"),
-                        rs.getString("street"),
+                        rs.getString("nic_No"),
+                        rs.getString("type"),
                         rs.getString("city"),
                         rs.getString("district"),
-                        rs.getString("nic_No"),
                         rs.getString("contact_No"),
-                        rs.getString("department"),
-                        rs.getString("type"),
-                        //rs.getDate("dob").toLocalDate(),
-                        rs.getString("emp_Id"),
-                        rs.getString("bank"),
-                        rs.getString("Branch")
+                        rs.getString("department")
+
                         ));
                 employeeTable.setItems(data);
                 employeeTable.setTableMenuButtonVisible(true);
@@ -178,6 +157,42 @@ public class AdminSearchEmployeeController implements Controller {
 
     @Override
     public void refreshView() {
+
+    }
+
+    @FXML
+    public void searchEmployee() { //This methos for use Searching Patient by FName,Lname,City,District,Address...
+        searchEmpNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate((Predicate<? super Employee>) employee->{
+                if (newValue==null||newValue.isEmpty()){
+                    return true;
+                }
+                java.lang.String lowerCaseFilter = newValue.toLowerCase();
+                if (employee.getFirstName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(employee.getLastName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(employee.getCity().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(employee.getId().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(employee.getDistric().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(employee.getNic().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                return false;
+            });
+
+        });
+        SortedList<Employee> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(employeeTable.comparatorProperty());
+        employeeTable.setItems(sortedList);
 
     }
 

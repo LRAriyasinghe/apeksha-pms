@@ -4,6 +4,8 @@ import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Patient;
 import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -55,6 +57,9 @@ public class NewPatientController implements Controller {
     private TextField txtDistrict;
 
     @FXML
+    private ChoiceBox<String> districtChoiceBox;
+
+    @FXML
     private TextArea txtAddress;
 
     @FXML
@@ -68,12 +73,29 @@ public class NewPatientController implements Controller {
 
     private Patient patient;
 
+    private ObservableList distrct = FXCollections.observableArrayList();
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        distrct.addAll("Jaffna","Kilinochchi","Mannar","Mullaitivu","Vavuniya","Puttalam","Kurunegala","Gampaha","Colombo","Kalutara","Anuradhapura","Polonnaruwa","Matale","Kandy","Nuwara Eliya","Kegalle","Ratnapura","Trincomalee","Batticaloa","Ampara","Badulla","Monaragala","Hambantota","Matara","Galle");
+        districtChoiceBox.setItems(distrct);
+        districtChoiceBox.setValue("Colombo");
+
         txtNic.setPrefColumnCount(10);
         DOB.setPromptText("mm-dd-yyyy");
         txtNic.setPromptText("xxxxxxxxxV/E");
         txtTtile.setPromptText("Mr/Mrs/Miss");
+
+        ToggleGroup group = new ToggleGroup();
+        Male.setToggleGroup(group);
+        Female.setToggleGroup(group);
+        Male.setSelected(true);
+
+        ToggleGroup group1 = new ToggleGroup();
+        rbtnMarried.setSelected(true);
+        rbtnMarried.setToggleGroup(group1);
+        rbtnUnmarried.setToggleGroup(group1);
 
 
         patient = new Patient();
@@ -95,7 +117,7 @@ public class NewPatientController implements Controller {
                 patient.setOccupation(txtOccupation.getText());
                 patient.setTelephone(txtContactNo.getText());
                 patient.setCity(txtCity.getText());
-                patient.setDistrict(txtDistrict.getText());
+                patient.setDistrict(districtChoiceBox.getValue());
                 patient.setAddress(txtAddress.getText());
                 patient.setCivil(rbtnMarried.isSelected());
 

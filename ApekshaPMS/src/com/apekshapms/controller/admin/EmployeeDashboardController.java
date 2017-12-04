@@ -1,6 +1,7 @@
 package com.apekshapms.controller.admin;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.controller.main.AdminDashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.ui.UI;
@@ -22,8 +23,8 @@ public class EmployeeDashboardController implements Controller {
     void handleSearchEmployeeButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.ADMIN_SEARCH_EMPLOYEE);
         Parent parent = ui.getParent();
-        AdminDashboardController adminDashboardController = ((AdminDashboardController) (UIFactory.getUI(UIName.ADMIN_DASHBOARD).getController()));
-        adminDashboardController.setWorkspace(parent);
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
 
     }
 
@@ -31,8 +32,8 @@ public class EmployeeDashboardController implements Controller {
     void handleExampleButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.EXAMPLE);
         Parent parent = ui.getParent();
-        AdminDashboardController adminDashboardController = ((AdminDashboardController) (UIFactory.getUI(UIName.ADMIN_DASHBOARD).getController()));
-        adminDashboardController.setWorkspace(parent);
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
 
     }
 
