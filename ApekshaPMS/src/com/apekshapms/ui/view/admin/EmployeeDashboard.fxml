@@ -12,5 +12,6 @@
       <Button layoutX="87.0" layoutY="77.0" mnemonicParsing="false" text="Admin" />
       <Button layoutX="87.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleSearchEmployeeButton" text="Employee Search" />
       <Button layoutX="263.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleExampleButton" text="Button" />
+      <Button fx:id="" layoutX="107.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleAddEmployeeOnAction" text="Add Employee" />
    </children>
 </AnchorPane>

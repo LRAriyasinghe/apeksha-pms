@@ -20,6 +20,18 @@ import java.util.ResourceBundle;
  */
 public class EmployeeDashboardController implements Controller {
     @FXML
+    private Button addEmployeeButton;
+
+    @FXML
+    void handleAddEmployeeOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.ADD_NEW_EMPLOYEE);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+    @FXML
     void handleSearchEmployeeButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.ADMIN_SEARCH_EMPLOYEE);
         Parent parent = ui.getParent();

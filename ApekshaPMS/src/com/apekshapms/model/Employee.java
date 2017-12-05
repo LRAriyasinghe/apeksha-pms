@@ -26,6 +26,10 @@ public class Employee {
     private String type;
     private LocalDate dob;
 
+    public Employee(){
+
+    }
+
     public Employee(String emp_id, String firstName, String lastName, String type) {
         this.id = emp_id;
         this.firstName = firstName;
