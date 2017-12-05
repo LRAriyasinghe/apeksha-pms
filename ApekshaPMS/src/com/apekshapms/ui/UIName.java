@@ -25,10 +25,8 @@ public enum UIName {
     CREACTIVEPROTEIN_REPORT("/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml"),
     FULLBLOODCOUNT_REPORT("/com/apekshapms/ui/view/labReport/FullBloodCount.fxml"),
     LIPIDPROFILE_REPORT("/com/apekshapms/ui/view/labReport/LipidProfile.fxml"),
-
-    //Report Analysis
-    STATISTICAL_ANALYSIS_GRAPHICAL("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml"),
-    STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT("/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml"),
+    LIVERFUNCTION_REPORT("/com/apekshapms/ui/view/labReport/LiverFunction.fxml"),
+    SERUMCALCIUM_REPORT("/com/apekshapms/ui/view/labReport/SerumCalcium.fxml"),
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),
