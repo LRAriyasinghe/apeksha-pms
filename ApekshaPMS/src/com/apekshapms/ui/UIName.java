@@ -28,6 +28,13 @@ public enum UIName {
     LIVERFUNCTION_REPORT("/com/apekshapms/ui/view/labReport/LiverFunction.fxml"),
     SERUMCALCIUM_REPORT("/com/apekshapms/ui/view/labReport/SerumCalcium.fxml"),
 
+
+
+    //Analysis Reports
+    STATISTICAL_ANALYSIS_GRAPHICAL("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml"),
+    STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT("/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml"),
+    STATISTICAL_ANALYSIS_GRAPHICAL_CANCERTYPE_COUNT("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml"),
+
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),
     ADD_DETAILS("/com/apekshapms/ui/view/labAssistant/AddDetails.fxml"),
@@ -50,6 +57,8 @@ public enum UIName {
     LAB_ASSISTANT_SIDEBAR("/com/apekshapms/ui/view/sidebar/LabAssistantSideBar.fxml"),
     CONSULTANT_DOCTOR_SIDEBAR("/com/apekshapms/ui/view/sidebar/ConsultantDoctorSideBar.fxml"),
     ADMIN_SIDEBAR("/com/apekshapms/ui/view/sidebar/AdminSideBar.fxml");
+
+
 
     private final String location;
 
