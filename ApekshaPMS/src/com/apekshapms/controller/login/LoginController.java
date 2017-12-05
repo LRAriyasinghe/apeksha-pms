@@ -62,10 +62,10 @@ public class LoginController implements Controller {
                     */
                 Stage primaryStage = (Stage) btnlogin.getScene().getWindow();
                 SystemServices.loadDashboard(primaryStage);
-                //DashboardController.loadSideBarRegisterDoctor();
+                DashboardController.loadSideBarRegisterDoctor();
                 //DashboardController.loadSideBarConsultantDoctor();
                 //DashboardController.loadSideBarLabAssistant();
-                DashboardController.loadSideBarAdmin();
+                //DashboardController.loadSideBarAdmin();
 
 
 

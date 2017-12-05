@@ -11,142 +11,142 @@ import java.util.Date;
  */
 public class Employee {
 
-    private SimpleStringProperty id;
-    private SimpleStringProperty firstName;
-    private SimpleStringProperty lastName;
-    private SimpleStringProperty doorNu;
-    private SimpleStringProperty city;
-    private SimpleStringProperty distric;
-    private SimpleStringProperty street;
-    private SimpleStringProperty nic;
-    private SimpleStringProperty contactNu;
-    private SimpleStringProperty bank;
-    private SimpleStringProperty branch;
-    private SimpleStringProperty department;
-    private SimpleStringProperty type;
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String doorNu;
+    private String city;
+    private String distric;
+    private String street;
+    private String nic;
+    private String contactNu;
+    private String bank;
+    private String branch;
+    private String department;
+    private String type;
     private LocalDate dob;
 
     public Employee(String emp_id, String firstName, String lastName, String type) {
-        this.id = new SimpleStringProperty(emp_id);
-        this.firstName = new SimpleStringProperty(firstName);
-        this.lastName = new SimpleStringProperty(lastName);
-        this.type = new SimpleStringProperty(type);
+        this.id = emp_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.type = type;
     }
 
     public Employee(String emp_id, String firstName, String lastName, String nic_no, String type, String city, String district, String contact_no, String department) {
-    this.id= new SimpleStringProperty(emp_id);
-    this.firstName = new SimpleStringProperty(firstName);
-    this.lastName = new SimpleStringProperty(lastName);
-    this.nic = new SimpleStringProperty(nic_no);
-    this.type = new SimpleStringProperty(type);
-    this.city = new SimpleStringProperty(city);
-    this.distric = new SimpleStringProperty(district);
-    this.contactNu = new SimpleStringProperty(contact_no);
-    this.department = new SimpleStringProperty(department);
+    this.id= emp_id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.nic = nic_no;
+    this.type = type;
+    this.city = city;
+    this.distric = district;
+    this.contactNu = contact_no;
+    this.department = department;
     }
 
 
     public String getId() {
-        return id.get();
+        return id;
     }
 
-    public void setId(SimpleStringProperty id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     public String getFirstName() {
-        return firstName.get();
+        return firstName;
     }
 
-    public void setFirstName(SimpleStringProperty firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
     public String getLastName() {
-        return lastName.get();
+        return lastName;
     }
 
-    public void setLastName(SimpleStringProperty lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     public String getDoorNu() {
-        return doorNu.get();
+        return doorNu;
     }
 
-    public void setDoorNu(SimpleStringProperty doorNu) {
+    public void setDoorNu(String doorNu) {
         this.doorNu = doorNu;
     }
 
     public String getCity() {
-        return city.get();
+        return city;
     }
 
-    public void setCity(SimpleStringProperty city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
     public String getDistric() {
-        return distric.get();
+        return distric;
     }
 
-    public void setDistric(SimpleStringProperty distric) {
+    public void setDistric(String distric) {
         this.distric = distric;
     }
 
     public String getStreet() {
-        return street.get();
+        return street;
     }
 
-    public void setStreet(SimpleStringProperty street) {
+    public void setStreet(String street) {
         this.street = street;
     }
 
     public String getNic() {
-        return nic.get();
+        return nic;
     }
 
-    public void setNic(SimpleStringProperty nic) {
+    public void setNic(String nic) {
         this.nic = nic;
     }
 
     public String getContactNu() {
-        return contactNu.get();
+        return contactNu;
     }
 
-    public void setContactNu(SimpleStringProperty contactNu) {
+    public void setContactNu(String contactNu) {
         this.contactNu = contactNu;
     }
 
     public String getBank() {
-        return bank.get();
+        return bank;
     }
 
-    public void setBank(SimpleStringProperty bank) {
+    public void setBank(String bank) {
         this.bank = bank;
     }
 
     public String getBranch() {
-        return branch.get();
+        return branch;
     }
 
-    public void setBranch(SimpleStringProperty branch) {
+    public void setBranch(String branch) {
         this.branch = branch;
     }
 
     public String getDepartment() {
-        return department.get();
+        return department;
     }
 
-    public void setDepartment(SimpleStringProperty department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 
     public String getType() {
-        return type.get();
+        return type;
     }
 
-    public void setType(SimpleStringProperty type) {
+    public void setType(String type) {
         this.type = type;
     }
 
