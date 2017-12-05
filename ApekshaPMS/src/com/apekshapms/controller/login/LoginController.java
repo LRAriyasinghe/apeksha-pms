@@ -65,7 +65,9 @@ public class LoginController implements Controller {
                 //DashboardController.loadSideBarRegisterDoctor();
                 //DashboardController.loadSideBarConsultantDoctor();
                 //DashboardController.loadSideBarLabAssistant();
-                DashboardController.loadSideBarAdmin();
+                DashboardController.loadSideBarLabAssistant();
+
+                //DashboardController.loadSideBarAdmin();
 
 
 
