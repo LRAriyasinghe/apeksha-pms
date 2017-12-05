@@ -36,6 +36,7 @@ public class FullBloodReport {
         this.Plateletes=Platlets;
 
     }
+    public FullBloodReport(){}
 
 
     //Declaration of getters and setters

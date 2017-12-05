@@ -57,6 +57,14 @@ public class ReportDashboardController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    @FXML
+    void handleCancerTypePieChartOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addReportButton.setOnAction(new EventHandler<ActionEvent>() {

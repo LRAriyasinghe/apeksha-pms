@@ -64,6 +64,38 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    @FXML
+    void handleLiverFunctionReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.LIVERFUNCTION_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleSerumCalciumReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.SERUMCALCIUM_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleSerumElectrolytesReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.SERUM_ELECTROLYTES_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+    @FXML
+    void handleSerumProteinReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.SERUM_PROTEIN_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+
     @Override
     public void refreshView() {
 

@@ -6,9 +6,13 @@
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.labAssistant.AddReportController">
    <children>
       <Button layoutX="62.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleaddNewReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Add New Report" />
-      <Button fx:id="btnBoneMarrow" layoutX="62.0" layoutY="154.0" mnemonicParsing="false" onAction="#handleBoneMarrowReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Bone Marrow Report" />
-      <Button fx:id="btnCreactiveReport" layoutX="62.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleCeativeReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="CreactiveProtein Report" />
-      <Button fx:id="btnFullBloodReport" layoutX="62.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleFullBloodReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Full Blood Report" />
-      <Button fx:id="btnLipidProfile" layoutX="62.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleLipidProfileReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Lipid Profile Report" />
+      <Button fx:id="btnBoneMarrow" layoutX="62.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleBoneMarrowReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Bone Marrow Report" />
+      <Button fx:id="btnCreactiveReport" layoutX="62.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleCeativeReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="CreactiveProtein Report" />
+      <Button fx:id="btnFullBloodReport" layoutX="62.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleFullBloodReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Full Blood Report" />
+      <Button fx:id="btnLipidProfile" layoutX="62.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleLipidProfileReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Lipid Profile Report" />
+      <Button fx:id="btnLiverFunction" layoutX="62.0" layoutY="386.0" mnemonicParsing="false" onAction="#handleLiverFunctionReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Liver Function Report" />
+      <Button fx:id="btnSerumCalciumReport" layoutX="62.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleSerumCalciumReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Calcium Report" />
+      <Button layoutX="62.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleSerumElectrolytesReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Electrolytes Report" />
+      <Button layoutX="62.0" layoutY="603.0" mnemonicParsing="false" onAction="#handleSerumProteinReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Protein Report" />
    </children>
 </AnchorPane>

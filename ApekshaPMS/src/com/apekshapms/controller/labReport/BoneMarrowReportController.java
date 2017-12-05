@@ -52,7 +52,7 @@ public class BoneMarrowReportController implements Controller {
     @FXML
     private Button CancelButton;
 
-    private BonemarrowReport bonemarrowreport;
+    private BonemarrowReport bonemarrowreport = new BonemarrowReport();
 
     public void initialize(URL location, ResourceBundle resources) {
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -60,17 +60,26 @@ public class BoneMarrowReportController implements Controller {
             public void handle(ActionEvent event) {
                 if (isInputValid()) {
                     try {
+                        System.out.printf("1");
                         bonemarrowreport.setPatientID(PatientIDTextField.getText());
+                        System.out.printf("2");
                         bonemarrowreport.setTestType(TypeTextField.getText());
+                        System.out.printf("3");
                         bonemarrowreport.setTestID(TestIDTextField.getText());
                         bonemarrowreport.setPatientName(PatientNameTextField.getText());
+                        System.out.println("4");
                         bonemarrowreport.setDate(date.getValue());
+                        System.out.println("5");
                         bonemarrowreport.setReference(ReferenceTextField.getText());
+                        System.out.println("6");
                         bonemarrowreport.setRemarks(RemarksTextField.getText());
+                        System.out.println("7");
                         bonemarrowreport.setBMBx(BMBxTextField.getText());
+                        System.out.println("8");
                         bonemarrowreport.setTrephineBMBx(TrephineBMBxTextField.getText());
+                        System.out.println("9");
                     }catch (Exception e){
-                        System.err.println(e);
+                        e.printStackTrace();
                     }
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
                     alert.setTitle("Confirmation Dialog");

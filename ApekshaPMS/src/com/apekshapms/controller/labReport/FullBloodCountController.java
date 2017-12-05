@@ -56,7 +56,7 @@ public class FullBloodCountController implements Controller{
     @FXML
     private Button CancelButton;
 
-    private FullBloodReport fullBloodReport;
+    private FullBloodReport fullBloodReport = new FullBloodReport();
 
     public void initialize(URL location, ResourceBundle resources) {
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
