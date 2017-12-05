@@ -15,6 +15,7 @@ public enum UIName {
     WARD_DASHBOARD("/com/apekshapms/ui/view/admin/WardDashboard.fxml"),
     TREATMENT_DASHBOARD("/com/apekshapms/ui/view/admin/TreatmentDashboard.fxml"),
     EXAMPLE("/com/apekshapms/ui/view/admin/Example.fxml"),
+    ADD_NEW_EMPLOYEE("/com/apekshapms/ui/view/admin/AddNewEmployee.fxml"),
 
     ADMIN_SEARCH_EMPLOYEE("/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml"),
 

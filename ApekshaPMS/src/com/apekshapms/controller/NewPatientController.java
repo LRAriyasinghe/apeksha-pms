@@ -122,6 +122,7 @@ public class NewPatientController implements Controller {
                 patient.setCivil(rbtnMarried.isSelected());
 
 
+
                 UI ui = UIFactory.getUI(UIName.PATIENT_HISTORY);
                 Parent parent = ui.getParent();
                 PatientHistoryController controller = (PatientHistoryController) ui.getController();

@@ -26,6 +26,10 @@ public class Employee {
     private SimpleStringProperty type;
     private LocalDate dob;
 
+    public Employee(){
+
+    }
+
     public Employee(String emp_id, String firstName, String lastName, String type) {
         this.id = new SimpleStringProperty(emp_id);
         this.firstName = new SimpleStringProperty(firstName);
