@@ -7,9 +7,8 @@ import com.apekshapms.database.connector.PatientConnector;
 import com.apekshapms.database.connector.WardConnector;
 
 public class Session {
-    public static PatientConnector patientConnector;
-    public static LabReportConnector labReportConnector;
-    public static EmployeeConnector employeeConnector;
-    public static WardConnector wardConnector;
-    //public static BoneMarrowConnector boneMarrowConnector;
+    public static PatientConnector patientConnector = new PatientConnector();
+    public static LabReportConnector labReportConnector = new LabReportConnector();
+    public static WardConnector wardConnector = new WardConnector();
+    public static EmployeeConnector employeeConnector = new EmployeeConnector();
 }
