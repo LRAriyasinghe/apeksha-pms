@@ -41,5 +41,9 @@ public class LabReportServices {
 
         Session.labReportConnector.newSerumProteinReport(serumProteinReport);
     }
+    public static void addThyroidProfileReport(ThyroidProfileReport thyroidProfileReport) {
+
+        Session.labReportConnector.newThyroidProfileReport(thyroidProfileReport);
+    }
 }
 

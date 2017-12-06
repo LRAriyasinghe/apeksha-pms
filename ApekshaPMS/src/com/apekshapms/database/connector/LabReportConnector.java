@@ -332,6 +332,44 @@ public class LabReportConnector extends Connector {
     }
 
 
+    public void newThyroidProfileReport(ThyroidProfileReport thyroidProfileReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, thyroidProfileReport.getTestID());
+            preparedStatement.setString(2, thyroidProfileReport.getPatientID());
+            preparedStatement.setString(3, thyroidProfileReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(thyroidProfileReport.getDate()));
+            preparedStatement.setString(5, thyroidProfileReport.getTestType());
+            preparedStatement.setString(6, thyroidProfileReport.getReference());
+            preparedStatement.setString(7, thyroidProfileReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "thyroid_report(Testid,Patient_ID,TSH,FreeT4,FreeT3) " +
+                    "VALUES(?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, thyroidProfileReport.getTestID());
+            preparedStatement2.setString(2, thyroidProfileReport.getPatientID());
+            preparedStatement2.setString(3, thyroidProfileReport.getTSH());
+            preparedStatement2.setString(4, thyroidProfileReport.getFreeT3());
+            preparedStatement2.setString(5, thyroidProfileReport.getFreeT4());
+
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 

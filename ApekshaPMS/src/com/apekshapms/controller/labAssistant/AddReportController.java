@@ -95,6 +95,14 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    @FXML
+    void handleThyroidReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.THYROID_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
 
     @Override
     public void refreshView() {

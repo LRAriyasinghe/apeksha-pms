@@ -14,5 +14,6 @@
       <Button fx:id="btnSerumCalciumReport" layoutX="62.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleSerumCalciumReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Calcium Report" />
       <Button layoutX="62.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleSerumElectrolytesReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Electrolytes Report" />
       <Button layoutX="62.0" layoutY="603.0" mnemonicParsing="false" onAction="#handleSerumProteinReportButtonAction" prefHeight="31.0" prefWidth="211.0" text="Serum Protein Report" />
+      <Button layoutX="412.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleThyroidReportButtonAction" prefHeight="31.0" prefWidth="256.0" text="Thyroid Report" />
    </children>
 </AnchorPane>
