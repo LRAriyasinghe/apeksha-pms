@@ -39,6 +39,8 @@ public enum UIName {
     STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT("/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml"),
     STATISTICAL_ANALYSIS_GRAPHICAL_CANCERTYPE_COUNT("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml"),
     STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART("/com/apekshapms/ui/view/reportAnalysis/PieChartExample.fxml"),
+    EXAMPLE_REPORT("/com/apekshapms/ui/view/reportAnalysis/Example.fxml"),
+
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),

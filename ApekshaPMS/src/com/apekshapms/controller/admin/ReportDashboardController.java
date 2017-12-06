@@ -65,6 +65,16 @@ public class ReportDashboardController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    @FXML
+    void handleExampleOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EXAMPLE_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addReportButton.setOnAction(new EventHandler<ActionEvent>() {
