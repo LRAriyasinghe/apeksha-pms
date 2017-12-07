@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Laboratory.CreactiveproteinController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.labReport.CreactiveproteinController">
    <children>
       <Label layoutX="169.0" layoutY="14.0" text="NATIONAL CANCER INSTITUTE MAHARAGAMA">
          <font>

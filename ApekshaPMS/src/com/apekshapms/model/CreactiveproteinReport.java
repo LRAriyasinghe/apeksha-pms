@@ -30,6 +30,7 @@ public class CreactiveproteinReport {
         this.creactiveprotein=c_reactive;
 
     }
+    public CreactiveproteinReport(){}
 
 
     //Declaration of getters and setters

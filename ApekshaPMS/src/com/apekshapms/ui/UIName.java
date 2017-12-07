@@ -31,6 +31,9 @@ public enum UIName {
     LIPIDPROFILE_REPORT("/com/apekshapms/ui/view/labReport/LipidProfile.fxml"),
     LIVERFUNCTION_REPORT("/com/apekshapms/ui/view/labReport/LiverFunction.fxml"),
     SERUMCALCIUM_REPORT("/com/apekshapms/ui/view/labReport/SerumCalcium.fxml"),
+    SERUM_ELECTROLYTES_REPORT("/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml"),
+    SERUM_PROTEIN_REPORT("/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml"),
+    THYROID_REPORT("/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml"),
 
 
 
@@ -38,6 +41,9 @@ public enum UIName {
     STATISTICAL_ANALYSIS_GRAPHICAL("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml"),
     STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT("/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml"),
     STATISTICAL_ANALYSIS_GRAPHICAL_CANCERTYPE_COUNT("/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml"),
+    STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART("/com/apekshapms/ui/view/reportAnalysis/PieChartExample.fxml"),
+    STATISTICAL_ANALYSIS_ALL_GRAPHICAL_EXAMPLE("/com/apekshapms/ui/view/reportAnalysis/Example.fxml"),
+
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),

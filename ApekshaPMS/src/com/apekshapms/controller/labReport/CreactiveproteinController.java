@@ -50,7 +50,7 @@ public class CreactiveproteinController implements Controller{
     @FXML
     private Button CancelButton;
 
-    private CreactiveproteinReport creactiveproteinReport;
+    private CreactiveproteinReport creactiveproteinReport = new CreactiveproteinReport();
 
     public void initialize(URL location, ResourceBundle resources) {
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -67,7 +67,7 @@ public class CreactiveproteinController implements Controller{
                         creactiveproteinReport.setRemarks(RemarksTextField.getText());
                         creactiveproteinReport.setCreactiveprotein(CreactiveproteinTextField.getText());
                     }catch (Exception e){
-                        System.err.println(e);
+                        e.printStackTrace();
                     }
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
                     alert.setTitle("Confirmation Dialog");

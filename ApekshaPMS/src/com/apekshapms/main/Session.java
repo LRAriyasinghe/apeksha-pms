@@ -20,9 +20,4 @@ public class Session {
                     ec.newEmployee(employee);
         }
 
-
-
-
-
-
 }

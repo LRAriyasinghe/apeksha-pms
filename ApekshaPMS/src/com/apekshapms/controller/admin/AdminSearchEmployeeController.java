@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
@@ -66,10 +67,40 @@ public class AdminSearchEmployeeController implements Controller {
     private TableColumn<Employee, String> departmentColumn;
 
     @FXML
+    private Label empIdLabel;
+
+    @FXML
+    private TextField fisrtNameTextField;
+
+    @FXML
+    private TextField lastNameTextField;
+
+    @FXML
+    private TextField nicTextField;
+
+    @FXML
+    private TextField typeTextField;
+
+    @FXML
+    private TextField cityTextField;
+
+    @FXML
+    private TextField dietrictTextField;
+
+    @FXML
+    private TextField contactNuTextField;
+
+    @FXML
+    private TextField departmentTextField;
+
+    @FXML
     private HBox buttonHBox;
 
     @FXML
-    private Button newButton;
+    private Button canselButton;
+
+    @FXML
+    private Button clearButton;
 
     @FXML
     private Button updateButton;
@@ -193,6 +224,13 @@ public class AdminSearchEmployeeController implements Controller {
         SortedList<Employee> sortedList = new SortedList<>(filteredList);
         sortedList.comparatorProperty().bind(employeeTable.comparatorProperty());
         employeeTable.setItems(sortedList);
+
+    }
+
+    @FXML
+    void displayEmployee(MouseEvent event) {
+        //employeeTable.getSelectionModel().getSelectedItem();
+
 
     }
 

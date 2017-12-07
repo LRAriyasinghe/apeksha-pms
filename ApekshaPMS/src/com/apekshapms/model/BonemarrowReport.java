@@ -17,20 +17,20 @@ public class BonemarrowReport {
     private String BMBx;
     private String TrephineBMBx;
 
-    public BonemarrowReport(String 	type,String test_Id,String patient_Id,String patient_name,LocalDate date, String labAssistaant_emp_Id, String remarks
-    ,String BMBx,String TrephineBMBx){
+    public BonemarrowReport(String test_Id , String patient_Id , String patient_name,LocalDate date, String type,String labAssistaant_emp_Id, String remarks,
+                            String BMBx,String 	TrephineBMBx){
         super();
-        this.TestType=type;
         this.TestID=test_Id;
         this.PatientID=patient_Id;
         this.PatientName=patient_name;
         this.Date=date;
+        this.TestType=type;
         this.Reference=labAssistaant_emp_Id;
         this.Remarks=remarks;
         this.BMBx=BMBx;
         this.TrephineBMBx=TrephineBMBx;
     }
-
+    public BonemarrowReport(){}
 
     //Declaration of getters and setters
     public String getTestType() {

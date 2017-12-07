@@ -11,5 +11,8 @@
       <Button layoutX="613.0" layoutY="77.0" mnemonicParsing="false" text="Update Report" />
       <Button fx:id="statisticGraphicButton" layoutX="67.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleStatisticalOnAction" text="Statistical Analysis Report" />
       <Button fx:id="statisticalMaleFemaleDistrictButoon" layoutX="263.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleMaleFemaleDistrictOnAction" text="Statistical Analysis Report Male Female Between District" />
+      <Button layoutX="56.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleCancerTypeCountOnAction" prefHeight="31.0" prefWidth="298.0" text="Statistical Cancer Type Report" />
+      <Button layoutX="447.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleCancerTypePieChartOnAction" prefHeight="31.0" prefWidth="381.0" text="Statistical Cancer Pie Report" />
+      <Button layoutX="59.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleAnalysisallReportOnAction" text="Example" />
    </children>
 </AnchorPane>

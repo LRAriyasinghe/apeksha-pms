@@ -42,7 +42,7 @@ public class LipidProfileReport {
         this.LDLHDL=LDLHDL;
 
     }
-
+    public LipidProfileReport(){}
 
     //Declaration of getters and setters
     public String getTestType() {

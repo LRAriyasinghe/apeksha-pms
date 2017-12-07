@@ -28,6 +28,7 @@ import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class AddNewEmployeeController implements Controller {
     @FXML
     private AnchorPane backgroundAnchorPane;
@@ -106,7 +107,6 @@ public class AddNewEmployeeController implements Controller {
         dashboardController.setWorkspace(parent);
 
 
-
     }
 
     @Override
@@ -123,47 +123,43 @@ public class AddNewEmployeeController implements Controller {
         type.addAll("Admin", "Consultant", "Lab Assistent", "Register Doctor", "Non Employee");
         typeChoiceBox.setItems(type);
         typeChoiceBox.setValue("Admin");
-
         employee = new Employee();
+        submit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
 
-            submit.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    if (isInputValid()){
+                submit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        if (isInputValid()) {
 
-                        employee.setId(txtIdNo.getText());
-                        employee.setFirstName(txtFirstname.getText());
-                        employee.setLastName(txtLastname.getText());
-                        employee.setDoorNu(txtDoorNo.getText());
-                        employee.setStreet(txtStreet.getText());
-                        employee.setCity(txtCity.getText());
-                        employee.setDistric(districtChoiceBox.getValue());
-                        employee.setNic(txtNic.getText());
-                        employee.setContactNu(txtContactNo.getText());
-                        employee.setBank(txtBank.getText());
-                        employee.setBranch(txtBranch.getText());
-                        employee.setDepartment(txtDepartment.getText());
-                        employee.setType(typeChoiceBox.getValue());
-                        employee.setDob(dobDayePicker.getValue());
+                            employee.setId(txtIdNo.getText());
+                            employee.setFirstName(txtFirstname.getText());
+                            employee.setLastName(txtLastname.getText());
+                            employee.setDoorNu(txtDoorNo.getText());
+                            employee.setStreet(txtStreet.getText());
+                            employee.setCity(txtCity.getText());
+                            employee.setDistric(districtChoiceBox.getValue());
+                            employee.setNic(txtNic.getText());
+                            employee.setContactNu(txtContactNo.getText());
+                            employee.setBank(txtBank.getText());
+                            employee.setBranch(txtBranch.getText());
+                            employee.setDepartment(txtDepartment.getText());
+                            employee.setType(typeChoiceBox.getValue());
+                            employee.setDob(dobDayePicker.getValue());
 
-                        //System.out.println("Ok");
-
-                        EmployeeServices.addEmployee(employee);
-                        //System.out.println("Ok");
+                            //System.out.println("Ok");
+                            EmployeeServices.addEmployee(employee);
+                            //System.out.println("Ok");
+                        }
                     }
-                }
-            });
-
-
-
-
-
+                });
+            }
+        });
     }
 
-    private boolean isInputValid(){
+    private boolean isInputValid() {
         String errorMessage = "";
-
-
 
 
         if (txtIdNo.getText() == null || txtIdNo.getText().length() == 0) {
@@ -180,7 +176,6 @@ public class AddNewEmployeeController implements Controller {
         if (txtLastname.getText() == null || txtLastname.getText().length() == 0) {
             errorMessage += "No valid Last Name!\n";
         }
-
 
 
         if (txtDoorNo.getText() == null || txtDoorNo.getText().length() == 0) {
@@ -203,16 +198,12 @@ public class AddNewEmployeeController implements Controller {
             errorMessage += "No valid Department!\n";
         }
         String regex = "[0-9]+";
-        if (txtContactNo.getText() == null || txtContactNo.getText().length() != 10||txtContactNo.getText().matches(regex)==false) {
+        if (txtContactNo.getText() == null || txtContactNo.getText().length() != 10 || txtContactNo.getText().matches(regex) == false) {
             errorMessage += "No valid Contact Number!\n";
         }
-        if(!txtNic.getText().trim().matches("^[0-9]{9}[V]$") || txtNic.getText() == null || txtNic.getText().length() != 10)
-        {
+        if (!txtNic.getText().trim().matches("^[0-9]{9}[V]$") || txtNic.getText() == null || txtNic.getText().length() != 10) {
             errorMessage += "No valid NIC!\n";
         }
-
-
-
 
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -234,14 +225,8 @@ public class AddNewEmployeeController implements Controller {
 
 
         } catch (ParseException e) {
-           // e.printStackTrace();
+            // e.printStackTrace();
         }
-
-
-
-
-
-
 
 
         if (errorMessage.length() == 0) {
@@ -266,5 +251,5 @@ public class AddNewEmployeeController implements Controller {
 
         }
     }
-
 }
+

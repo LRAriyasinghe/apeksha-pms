@@ -67,7 +67,7 @@ public class LipidProfileController implements Controller{
     @FXML
     private Button CancelButton;
 
-    private LipidProfileReport lipidProfileReport;
+    private LipidProfileReport lipidProfileReport = new LipidProfileReport();
 
     public void initialize(URL location, ResourceBundle resources) {
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {

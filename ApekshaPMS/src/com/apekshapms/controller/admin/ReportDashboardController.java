@@ -3,7 +3,6 @@ package com.apekshapms.controller.admin;
 import com.apekshapms.controller.Controller;
 import com.apekshapms.controller.DashboardController;
 import com.apekshapms.controller.PatientHistoryController;
-import com.apekshapms.controller.main.AdminDashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
@@ -33,6 +32,15 @@ public class ReportDashboardController implements Controller {
     }
 
     @FXML
+    void handleAnalysisallReportOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_ALL_GRAPHICAL_EXAMPLE);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+    @FXML
     void handleStatisticalOnAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL);
         Parent parent = ui.getParent();
@@ -52,6 +60,14 @@ public class ReportDashboardController implements Controller {
     @FXML
     void handleCancerTypeCountOnAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_CANCERTYPE_COUNT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    @FXML
+    void handleCancerTypePieChartOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART);
         Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);

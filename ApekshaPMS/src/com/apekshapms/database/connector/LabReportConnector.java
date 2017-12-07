@@ -11,10 +11,17 @@ import java.sql.SQLException;
  * Created by Thilina on 10/13/2017.
  * Univercity of Colombo School of Computing
  */
+
 public class LabReportConnector extends Connector {
+
     private Main mainApp;
+
+
     public void newBoneMarrowReport(BonemarrowReport bonemarrowreport) {
+
         try {
+            System.out.println("Correct 2");
+
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
                     "VALUES(?, ?, ?, ?, ?, ?, ?)");
@@ -170,6 +177,198 @@ public class LabReportConnector extends Connector {
 
     }
 
+
+    public void newLiverFunctionReport(LiverFunctionReport liverFunctionReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, liverFunctionReport.getTestID());
+            preparedStatement.setString(2, liverFunctionReport.getPatientID());
+            preparedStatement.setString(3, liverFunctionReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(liverFunctionReport.getDate()));
+            preparedStatement.setString(5, liverFunctionReport.getTestType());
+            preparedStatement.setString(6, liverFunctionReport.getReference());
+            preparedStatement.setString(7, liverFunctionReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "liverfunction_report(TestID,Patient_Id, Serum_Bilrubin,SGPT,SGOT,Serum_Alkaline,Serum_Creatinine,Serum_Calcium) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, liverFunctionReport.getTestID());
+            preparedStatement2.setString(2, liverFunctionReport.getPatientID());
+            preparedStatement2.setString(3, liverFunctionReport.getSerum_Bilrubin());
+            preparedStatement2.setString(4, liverFunctionReport.getSGPT());
+            preparedStatement2.setString(5, liverFunctionReport.getSGOT());
+            preparedStatement2.setString(6, liverFunctionReport.getSerum_Alkaline());
+            preparedStatement2.setString(7, liverFunctionReport.getSerum_Creatinine());
+            preparedStatement2.setString(8, liverFunctionReport.getSerum_Calcium());
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void newSerumCalciumReport(SerumCalcuimReport serumCalcuimReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, serumCalcuimReport.getTestID());
+            preparedStatement.setString(2, serumCalcuimReport.getPatientID());
+            preparedStatement.setString(3, serumCalcuimReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(serumCalcuimReport.getDate()));
+            preparedStatement.setString(5, serumCalcuimReport.getTestType());
+            preparedStatement.setString(6, serumCalcuimReport.getReference());
+            preparedStatement.setString(7, serumCalcuimReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "serum_calcium_report(TestID,Patient_Id, Free_calcium,Total_calcium) " +
+                    "VALUES(?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, serumCalcuimReport.getTestID());
+            preparedStatement2.setString(2, serumCalcuimReport.getPatientID());
+            preparedStatement2.setString(3, serumCalcuimReport.getFreeCalcium());
+            preparedStatement2.setString(4, serumCalcuimReport.getTotalCalcium());
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void newSerumElectrolytesReport(SerumElectrolytesReport serumElectrolytesReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, serumElectrolytesReport.getTestID());
+            preparedStatement.setString(2, serumElectrolytesReport.getPatientID());
+            preparedStatement.setString(3, serumElectrolytesReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(serumElectrolytesReport.getDate()));
+            preparedStatement.setString(5, serumElectrolytesReport.getTestType());
+            preparedStatement.setString(6, serumElectrolytesReport.getReference());
+            preparedStatement.setString(7, serumElectrolytesReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "serum_electrolytes(Testid,Patient_ID, Sodium,Potassium) " +
+                    "VALUES(?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, serumElectrolytesReport.getTestID());
+            preparedStatement2.setString(2, serumElectrolytesReport.getPatientID());
+            preparedStatement2.setString(3, serumElectrolytesReport.getSodium());
+            preparedStatement2.setString(4, serumElectrolytesReport.getPotassium());
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void newSerumProteinReport(SerumProteinReport serumProteinReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, serumProteinReport.getTestID());
+            preparedStatement.setString(2, serumProteinReport.getPatientID());
+            preparedStatement.setString(3, serumProteinReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(serumProteinReport.getDate()));
+            preparedStatement.setString(5, serumProteinReport.getTestType());
+            preparedStatement.setString(6, serumProteinReport.getReference());
+            preparedStatement.setString(7, serumProteinReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "serumprotein_report(Testid,Patient_ID,Albumin,Alpha1,Alpha2,Beta,Gamma) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, serumProteinReport.getTestID());
+            preparedStatement2.setString(2, serumProteinReport.getPatientID());
+            preparedStatement2.setString(3, serumProteinReport.getAlbumin());
+            preparedStatement2.setString(4, serumProteinReport.getAlpha1());
+            preparedStatement2.setString(5, serumProteinReport.getAlpha2());
+            preparedStatement2.setString(6, serumProteinReport.getBeta());
+            preparedStatement2.setString(7, serumProteinReport.getGamma());
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void newThyroidProfileReport(ThyroidProfileReport thyroidProfileReport) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)");
+
+            preparedStatement.setString(1, thyroidProfileReport.getTestID());
+            preparedStatement.setString(2, thyroidProfileReport.getPatientID());
+            preparedStatement.setString(3, thyroidProfileReport.getPatientName());
+            preparedStatement.setString(4, String.valueOf(thyroidProfileReport.getDate()));
+            preparedStatement.setString(5, thyroidProfileReport.getTestType());
+            preparedStatement.setString(6, thyroidProfileReport.getReference());
+            preparedStatement.setString(7, thyroidProfileReport.getRemarks());
+
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "thyroid_report(Testid,Patient_ID,TSH,FreeT4,FreeT3) " +
+                    "VALUES(?, ?, ?, ?, ?)");
+
+            preparedStatement2.setString(1, thyroidProfileReport.getTestID());
+            preparedStatement2.setString(2, thyroidProfileReport.getPatientID());
+            preparedStatement2.setString(3, thyroidProfileReport.getTSH());
+            preparedStatement2.setString(4, thyroidProfileReport.getFreeT3());
+            preparedStatement2.setString(5, thyroidProfileReport.getFreeT4());
+
+
+            preparedStatement2.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
 
