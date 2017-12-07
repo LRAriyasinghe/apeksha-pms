@@ -1,6 +1,7 @@
 package com.apekshapms.database.connector;
 
 import com.apekshapms.database.Connector;
+import com.apekshapms.main.Main;
 import com.apekshapms.model.Employee;
 import javafx.scene.control.Alert;
 
@@ -8,47 +9,49 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class EmployeeConnector extends Connector {
+    private Main mainApp;
     public void newEmployee(Employee employee){
-//        try {
-//            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-//                    "patient(patient_Id,title, first_name, last_name,nic_No, dob,gender, " +
-//                    "occupation, civil_Status, contact_No,address,city,district,registerDoctor_emp_Id," +
-//                    "additional_Details,consultant_emp_Id) " +
-//                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-//            preparedStatement.setString(1, employee.getId());
-//            preparedStatement.setString(2, employee.getTitle());
-//            preparedStatement.setString(3, patient.getFirstName());
-//            preparedStatement.setString(4, patient.getLastName());
-//            preparedStatement.setString(5, patient.getNicNo());
-//            preparedStatement.setString(6, String.valueOf(patient.getDob()));
-//            preparedStatement.setString(7, String.valueOf(patient.isMale()));
-//            preparedStatement.setString(8, patient.getOccupation());
-//            preparedStatement.setString(9, String.valueOf(patient.isCivil()));
-//            preparedStatement.setString(10, patient.getTelephone());
-//            preparedStatement.setString(11, patient.getAddress());
-//            preparedStatement.setString(12, patient.getCity());
-//            preparedStatement.setString(13, patient.getDistrict());
-//            preparedStatement.setString(14, patient.getRegisterDocId());
-//            preparedStatement.setString(15, patient.getDetails());
-//            preparedStatement.setString(16, patient.getConsultantId());
-//
-//
-//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//            alert.setTitle("Message");
-//            alert.setHeaderText("");
-//            alert.setContentText("Succussfully Added");
-//            alert.showAndWait();
-//            alert.setOnCloseRequest(e -> alert.close());
-//
-//
-//            preparedStatement.execute();
-//
-//
-//        } catch (SQLException e) {
-//
-//            e.printStackTrace();
-//        }
+        System.out.println("Ok");
+        try {
+            //System.out.println("Ok");
 
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "employee(emp_Id, firstName, lastName,door_No, " +
+                    "street,city,district,nic_No," +
+                    "contact_No,bank,Branch,department,type,dob) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
+            preparedStatement.setString(1, employee.getId());
+            preparedStatement.setString(2, employee.getFirstName());
+            preparedStatement.setString(3, employee.getLastName());
+            preparedStatement.setString(4, employee.getDoorNu());
+            preparedStatement.setString(5, employee.getStreet());
+            preparedStatement.setString(6, employee.getCity());
+            preparedStatement.setString(7, employee.getDistric());
+            preparedStatement.setString(8, employee.getNic());
+            preparedStatement.setString(9, employee.getContactNu());
+            preparedStatement.setString(10, employee.getBank());
+            preparedStatement.setString(11, employee.getBranch());
+            preparedStatement.setString(12, employee.getDepartment());
+            preparedStatement.setString(13, employee.getType());
+            preparedStatement.setString(14, String.valueOf(employee.getDob()));
+
+            System.out.println("Ok");
+
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+           alert.setTitle("Message");
+           alert.setHeaderText("");
+           alert.setContentText("Succussfully Added");
+           alert.showAndWait();alert.setOnCloseRequest(e -> alert.close());
+
+
+            preparedStatement.execute();
+
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
 
     }
 }

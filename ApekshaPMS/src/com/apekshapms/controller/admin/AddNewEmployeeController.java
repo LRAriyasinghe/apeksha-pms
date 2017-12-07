@@ -1,18 +1,32 @@
 package com.apekshapms.controller.admin;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Employee;
 import com.apekshapms.services.EmployeeServices;
-import com.apekshapms.services.PatientServices;
+import com.apekshapms.ui.UI;
+import com.apekshapms.ui.UIName;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import java.net.URL;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ResourceBundle;
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AddNewEmployeeController implements Controller {
     @FXML
@@ -22,22 +36,19 @@ public class AddNewEmployeeController implements Controller {
     private TextField txtIdNo;
 
     @FXML
-    private TextField txtTtile;
-
-    @FXML
     private TextField txtFirstname;
 
     @FXML
-    private TextField txtOccupation;
+    private TextField txtDoorNo;
 
     @FXML
-    private RadioButton Male;
+    private TextField txtStreet;
 
     @FXML
-    private RadioButton Female;
+    private TextField txtBank;
 
     @FXML
-    private DatePicker DOB;
+    private TextField txtBranch;
 
     @FXML
     private TextField txtContactNo;
@@ -52,7 +63,10 @@ public class AddNewEmployeeController implements Controller {
     private TextField txtNic;
 
     @FXML
-    private TextArea txtAddress;
+    private TextField txtDepartment;
+
+    @FXML
+    private DatePicker dobDayePicker;
 
     @FXML
     private Button submit;
@@ -64,22 +78,36 @@ public class AddNewEmployeeController implements Controller {
     private Button CancelButton;
 
     @FXML
-    private RadioButton rbtnMarried;
-
-    @FXML
-    private RadioButton rbtnUnmarried;
-
-    @FXML
     private ChoiceBox<String> districtChoiceBox;
 
     @FXML
-    private ChoiceBox<String> employeeTypeChoiceBox;
+    private ChoiceBox<String> typeChoiceBox;
 
     private ObservableList distrct = FXCollections.observableArrayList();
 
     private ObservableList type = FXCollections.observableArrayList();
 
-    private Employee employee = new Employee();
+    private Employee employee;
+
+    @FXML
+    void handleBackOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMPLOYEE_DASHBOARD);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+
+
+    }
 
     @Override
     public void refreshView() {
@@ -88,198 +116,155 @@ public class AddNewEmployeeController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        distrct.addAll("Jaffna","Kilinochchi","Mannar","Mullaitivu","Vavuniya","Puttalam","Kurunegala","Gampaha","Colombo","Kalutara","Anuradhapura","Polonnaruwa","Matale","Kandy","Nuwara Eliya","Kegalle","Ratnapura","Trincomalee","Batticaloa","Ampara","Badulla","Monaragala","Hambantota","Matara","Galle");
+        distrct.addAll("Jaffna", "Kilinochchi", "Mannar", "Mullaitivu", "Vavuniya", "Puttalam", "Kurunegala", "Gampaha", "Colombo", "Kalutara", "Anuradhapura", "Polonnaruwa", "Matale", "Kandy", "Nuwara Eliya", "Kegalle", "Ratnapura", "Trincomalee", "Batticaloa", "Ampara", "Badulla", "Monaragala", "Hambantota", "Matara", "Galle");
         districtChoiceBox.setItems(distrct);
         districtChoiceBox.setValue("Colombo");
 
-        type.addAll("Admin","Consultant","Lab Assistent","Register Doctor","Non Employee");
-        employeeTypeChoiceBox.setItems(type);
-        employeeTypeChoiceBox.setValue("Admin");
+        type.addAll("Admin", "Consultant", "Lab Assistent", "Register Doctor", "Non Employee");
+        typeChoiceBox.setItems(type);
+        typeChoiceBox.setValue("Admin");
 
-        getSubmit().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
+        employee = new Employee();
 
-                EmployeeServices.addEmployee(employee);
+            submit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    if (isInputValid()){
+
+                        employee.setId(txtIdNo.getText());
+                        employee.setFirstName(txtFirstname.getText());
+                        employee.setLastName(txtLastname.getText());
+                        employee.setDoorNu(txtDoorNo.getText());
+                        employee.setStreet(txtStreet.getText());
+                        employee.setCity(txtCity.getText());
+                        employee.setDistric(districtChoiceBox.getValue());
+                        employee.setNic(txtNic.getText());
+                        employee.setContactNu(txtContactNo.getText());
+                        employee.setBank(txtBank.getText());
+                        employee.setBranch(txtBranch.getText());
+                        employee.setDepartment(txtDepartment.getText());
+                        employee.setType(typeChoiceBox.getValue());
+                        employee.setDob(dobDayePicker.getValue());
+
+                        //System.out.println("Ok");
+
+                        EmployeeServices.addEmployee(employee);
+                        //System.out.println("Ok");
+                    }
+                }
+            });
+
+
+
+
+
+    }
+
+    private boolean isInputValid(){
+        String errorMessage = "";
+
+
+
+
+        if (txtIdNo.getText() == null || txtIdNo.getText().length() == 0) {
+            errorMessage += "No valid ID!\n";
+        }
+        if (dobDayePicker.getValue() == null || dobDayePicker.getValue().lengthOfYear() == 0) {
+            errorMessage += "No valid Date Of Birth!\n";
+        }
+
+
+        if (txtFirstname.getText() == null || txtFirstname.getText().length() == 0) {
+            errorMessage += "No valid First Namer!\n";
+        }
+        if (txtLastname.getText() == null || txtLastname.getText().length() == 0) {
+            errorMessage += "No valid Last Name!\n";
+        }
+
+
+
+        if (txtDoorNo.getText() == null || txtDoorNo.getText().length() == 0) {
+            errorMessage += "No valid Door No!\n";
+        }
+        if (txtStreet.getText() == null || txtStreet.getText().length() == 0) {
+            errorMessage += "No valid Street!\n";
+        }
+        if (txtCity.getText() == null || txtCity.getText().length() == 0) {
+            errorMessage += "No valid City!\n";
+        }
+
+        if (txtBank.getText() == null || txtBank.getText().length() == 0) {
+            errorMessage += "No valid Bank!\n";
+        }
+        if (txtBranch.getText() == null || txtBranch.getText().length() == 0) {
+            errorMessage += "No valid Branch!\n";
+        }
+        if (txtDepartment.getText() == null || txtDepartment.getText().length() == 0) {
+            errorMessage += "No valid Department!\n";
+        }
+        String regex = "[0-9]+";
+        if (txtContactNo.getText() == null || txtContactNo.getText().length() != 10||txtContactNo.getText().matches(regex)==false) {
+            errorMessage += "No valid Contact Number!\n";
+        }
+        if(!txtNic.getText().trim().matches("^[0-9]{9}[V]$") || txtNic.getText() == null || txtNic.getText().length() != 10)
+        {
+            errorMessage += "No valid NIC!\n";
+        }
+
+
+
+
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //get current date time with Date()
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
+        System.out.println(dobDayePicker.getValue());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1, date2;
+        try {
+            date1 = sdf.parse(dateFormat.format(date));
+            date2 = sdf.parse(String.valueOf(dobDayePicker.getValue()));
+
+            if (date2.compareTo(date1) > 0) {
+                //System.out.println("Date1 is after Date2");
+                errorMessage += "No valid Date!\n";
             }
-        });
 
 
+        } catch (ParseException e) {
+           // e.printStackTrace();
+        }
+
+
+
+
+
+
+
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+
+
+            // Show the error message
+            //Dialogs.showErrorDialog(dialogStage, errorMessage,
+            //"Please correct invalid fields", "Invalid Fields");
+            System.out.println("Successfully Fail");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Dialog");
+            alert.setHeaderText("Look, a Warning Dialog");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+            // Dialogs.showWarningDialog(new Stage(), "Careful with the next step!", "Warning Dialog", "title");
+
+            return false;
+
+        }
     }
 
-    public AnchorPane getBackgroundAnchorPane() {
-        return backgroundAnchorPane;
-    }
-
-    public void setBackgroundAnchorPane(AnchorPane backgroundAnchorPane) {
-        this.backgroundAnchorPane = backgroundAnchorPane;
-    }
-
-    public TextField getTxtIdNo() {
-        return txtIdNo;
-    }
-
-    public void setTxtIdNo(TextField txtIdNo) {
-        this.txtIdNo = txtIdNo;
-    }
-
-    public TextField getTxtTtile() {
-        return txtTtile;
-    }
-
-    public void setTxtTtile(TextField txtTtile) {
-        this.txtTtile = txtTtile;
-    }
-
-    public TextField getTxtFirstname() {
-        return txtFirstname;
-    }
-
-    public void setTxtFirstname(TextField txtFirstname) {
-        this.txtFirstname = txtFirstname;
-    }
-
-    public TextField getTxtOccupation() {
-        return txtOccupation;
-    }
-
-    public void setTxtOccupation(TextField txtOccupation) {
-        this.txtOccupation = txtOccupation;
-    }
-
-    public RadioButton getMale() {
-        return Male;
-    }
-
-    public void setMale(RadioButton male) {
-        Male = male;
-    }
-
-    public RadioButton getFemale() {
-        return Female;
-    }
-
-    public void setFemale(RadioButton female) {
-        Female = female;
-    }
-
-    public DatePicker getDOB() {
-        return DOB;
-    }
-
-    public void setDOB(DatePicker DOB) {
-        this.DOB = DOB;
-    }
-
-    public TextField getTxtContactNo() {
-        return txtContactNo;
-    }
-
-    public void setTxtContactNo(TextField txtContactNo) {
-        this.txtContactNo = txtContactNo;
-    }
-
-    public TextField getTxtCity() {
-        return txtCity;
-    }
-
-    public void setTxtCity(TextField txtCity) {
-        this.txtCity = txtCity;
-    }
-
-    public TextField getTxtLastname() {
-        return txtLastname;
-    }
-
-    public void setTxtLastname(TextField txtLastname) {
-        this.txtLastname = txtLastname;
-    }
-
-    public TextField getTxtNic() {
-        return txtNic;
-    }
-
-    public void setTxtNic(TextField txtNic) {
-        this.txtNic = txtNic;
-    }
-
-    public TextArea getTxtAddress() {
-        return txtAddress;
-    }
-
-    public void setTxtAddress(TextArea txtAddress) {
-        this.txtAddress = txtAddress;
-    }
-
-    public Button getSubmit() {
-        return submit;
-    }
-
-    public void setSubmit(Button submit) {
-        this.submit = submit;
-    }
-
-    public Button getBackButton() {
-        return backButton;
-    }
-
-    public void setBackButton(Button backButton) {
-        this.backButton = backButton;
-    }
-
-    public Button getCancelButton() {
-        return CancelButton;
-    }
-
-    public void setCancelButton(Button cancelButton) {
-        CancelButton = cancelButton;
-    }
-
-    public RadioButton getRbtnMarried() {
-        return rbtnMarried;
-    }
-
-    public void setRbtnMarried(RadioButton rbtnMarried) {
-        this.rbtnMarried = rbtnMarried;
-    }
-
-    public RadioButton getRbtnUnmarried() {
-        return rbtnUnmarried;
-    }
-
-    public void setRbtnUnmarried(RadioButton rbtnUnmarried) {
-        this.rbtnUnmarried = rbtnUnmarried;
-    }
-
-    public ChoiceBox<String> getDistrictChoiceBox() {
-        return districtChoiceBox;
-    }
-
-    public void setDistrictChoiceBox(ChoiceBox<String> districtChoiceBox) {
-        this.districtChoiceBox = districtChoiceBox;
-    }
-
-    public ChoiceBox<String> getEmployeeTypeChoiceBox() {
-        return employeeTypeChoiceBox;
-    }
-
-    public void setEmployeeTypeChoiceBox(ChoiceBox<String> employeeTypeChoiceBox) {
-        this.employeeTypeChoiceBox = employeeTypeChoiceBox;
-    }
-
-    public ObservableList getDistrct() {
-        return distrct;
-    }
-
-    public void setDistrct(ObservableList distrct) {
-        this.distrct = distrct;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
 }

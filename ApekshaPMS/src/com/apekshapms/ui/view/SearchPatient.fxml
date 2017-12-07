@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../resources/styles/dashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.SearchPatientController">
     <children>
         <AnchorPane fx:id="navigationPane" layoutX="48.0" layoutY="14.0" prefHeight="50.0" prefWidth="1100.0">
             <children>
@@ -53,7 +53,7 @@
          <children>
             <Button fx:id="btnSavePatient" layoutX="886.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleSaveButton" prefWidth="98.0" styleClass="sideBarButton" text="Save" />
             <Button fx:id="btnEditPatient" layoutX="782.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleEditButton" styleClass="sideBarButton" text="Edit" />
-            <Button fx:id="btnCancelPatient" layoutX="667.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleCancelButton" styleClass="sideBarButton" text="Cancel" />
+            <Button layoutX="667.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleCancelOnAction" styleClass="sideBarButton" text="Cancel" />
          </children>
         </AnchorPane>
     </children>
