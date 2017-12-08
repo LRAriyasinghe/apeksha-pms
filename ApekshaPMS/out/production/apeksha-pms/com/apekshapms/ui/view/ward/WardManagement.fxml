@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,40 +9,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.ward.WardManagementController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.ward.SearchWardController">
     <children>
-        <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/management_edit_window.css">
-            <children>
-                <HBox fx:id="searchPane" alignment="CENTER_LEFT" layoutY="3.0" prefHeight="45.0" prefWidth="350.0" spacing="20.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
-                    <children>
-                        <Label text="Search" />
-                        <HBox alignment="CENTER_LEFT" spacing="5.0">
-                            <children>
-                                <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="180.0" />
-                                <Button fx:id="clearButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" styleClass="mini-button" text="OK" />
-                            </children>
-                        </HBox>
-                    </children>
-                </HBox>
-            </children>
-        </AnchorPane>
         <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
-            <children>
-                <TableView fx:id="wardTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+                <TableView fx:id="wardTableView" layoutY="10.0" prefHeight="400.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
                     <columns>
                         <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id" />
-                        <TableColumn fx:id="nameTableColumn" prefWidth="200.0" text="Name" />
-                        <TableColumn fx:id="descriptionTableColumn" prefWidth="200.0" text="Description" />
-                        <TableColumn fx:id="maxPatientCountTableColumn" prefWidth="130.0" text="Max patient count" />
-                        <TableColumn fx:id="currentPatientCountTableColumn" prefWidth="130.0" text="Current patient count" />
-                        <TableColumn fx:id="genderTableColumn" prefWidth="100.0" text="Gender" />
-                        <TableColumn fx:id="supervisorTableColumn" prefWidth="180.0" text="Supervisor" />
+                        <TableColumn fx:id="nameTableColumn" prefWidth="194.0" text="Name" />
+                        <TableColumn fx:id="descriptionTableColumn" prefWidth="296.0" text="Description" />
+                        <TableColumn fx:id="maxPatientCountTableColumn" prefWidth="154.0" text="Max patient count" />
+                        <TableColumn fx:id="genderTableColumn" prefWidth="216.0" text="Gender Acceptance" />
+                  <TableColumn fx:id="supervisorTableColumn" prefWidth="139.0" text="Supervisor" />
                     </columns>
                 </TableView>
-            </children>
+         </children>
         </AnchorPane>
         <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
             <children>
@@ -67,7 +49,7 @@
                         </AnchorPane>
                         <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <children>
-                                <TextArea fx:id="descriptionTextArea" layoutX="-35.0" layoutY="-65.0" prefHeight="70.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-71.0" AnchorPane.topAnchor="0.0" />
+                                <TextArea fx:id="descriptionTextArea" layoutX="-35.0" layoutY="-65.0" prefHeight="114.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-71.0" AnchorPane.topAnchor="0.0" />
                             </children>
                         </AnchorPane>
                         <Label text="Id" />
@@ -91,25 +73,18 @@
                     </rowConstraints>
                     <children>
                         <Label text="Max patient count" />
-                        <Label text="Current patient count" GridPane.rowIndex="1" />
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
-                            <children>
-                                <TextField fx:id="currentPatientCountTextField" layoutY="11.0" prefWidth="100.0" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
-                            <children>
-                                <ComboBox fx:id="genderComboBox" layoutY="11.0" prefHeight="25.0" prefWidth="100.0" />
-                            </children>
-                        </AnchorPane>
-                        <Label text="Gender" GridPane.rowIndex="2" />
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label text="Supervisor id" GridPane.rowIndex="3" />
                         <AnchorPane GridPane.columnIndex="1">
                             <children>
                                 <TextField fx:id="maxPatientCountTextField" layoutY="12.0" prefWidth="100.0" />
                             </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="supervisorAnchorPane" maxHeight="25.0" minWidth="250.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <AnchorPane fx:id="supervisorAnchorPane" maxHeight="25.0" minWidth="250.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="supervisorTextField" layoutX="6.0" layoutY="-3.0" prefWidth="100.0" />
+                     </children></AnchorPane>
                     </children>
                 </GridPane>
                 <Button fx:id="saveButton" layoutX="842.0" layoutY="183.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="158.0" />
@@ -117,5 +92,7 @@
                 <Button fx:id="deleteButton" layoutX="978.0" layoutY="131.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Delete" AnchorPane.bottomAnchor="84.0" AnchorPane.rightAnchor="22.0" />
             </children>
         </AnchorPane>
+      <Label layoutX="25.0" layoutY="14.0" text="Search" />
+      <TextField fx:id="searchTextField" editable="false" layoutX="95.0" layoutY="9.0" prefHeight="31.0" prefWidth="154.0" promptText="Ward id, Ward name" />
     </children>
 </AnchorPane>

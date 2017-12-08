@@ -6,7 +6,7 @@
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.admin.WardDashboardController">
    <children>
       <Button fx:id="newWardButton" layoutX="88.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleNewWardButtonAction" stylesheets="@../../../resources/styles/patientManagement.css" text="New Ward" />
-      <Button fx:id="wardManagementButton" layoutX="263.0" layoutY="77.0" mnemonicParsing="false" text="Ward Managment" />
+      <Button fx:id="wardManagementButton" layoutX="263.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleWardButtonAction" text="Ward Managment" />
       <Button fx:id="wardDeleteButton" layoutX="430.0" layoutY="77.0" mnemonicParsing="false" text="Delete Ward" />
    </children>
 </AnchorPane>

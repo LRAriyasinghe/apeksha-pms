@@ -40,6 +40,10 @@ public class NewWardController implements Controller {
     private Ward ward = new Ward();
 
     public void initialize(URL location, ResourceBundle resources) {
+        ToggleGroup group = new ToggleGroup();
+        radiobtnMale.setToggleGroup(group);
+        radiobtnFemale.setToggleGroup(group);
+        radiobtnMale.setSelected(true);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent event) {
@@ -49,7 +53,7 @@ public class NewWardController implements Controller {
                         ward.setWardName(wardNameTextField.getText());
                         ward.setDescription(descriptionTextArea.getText());
                         ward.setMaxPatient_Count(maxPatientCountTextField.getText());
-                        ward.setGenderaccept(radiobtnMale.isSelected());
+                        ward.setMale(radiobtnMale.isSelected());
                         ward.setSupervisor(headID.getText());
 
                     }catch (Exception e){
