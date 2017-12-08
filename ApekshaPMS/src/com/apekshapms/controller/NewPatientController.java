@@ -13,6 +13,10 @@ import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class NewPatientController implements Controller {
@@ -75,6 +79,24 @@ public class NewPatientController implements Controller {
 
     private ObservableList distrct = FXCollections.observableArrayList();
 
+    @FXML
+    void handleBackOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -98,7 +120,11 @@ public class NewPatientController implements Controller {
         rbtnUnmarried.setToggleGroup(group1);
 
 
+
+
         patient = new Patient();
+
+
 
 
         nextButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -137,6 +163,7 @@ public class NewPatientController implements Controller {
     }
 
 
+
     @Override
     public void refreshView() {
 
@@ -157,9 +184,11 @@ public class NewPatientController implements Controller {
         if (txtLastname.getText() == null || txtLastname.getText().length() == 0) {
             errorMessage += "No valid Last Name!\n";
         }
-        if (txtNic.getText() == null || txtNic.getText().length() == 0) {
+        if(!txtNic.getText().trim().matches("^[0-9]{9}[V]$") || txtNic.getText() == null || txtNic.getText().length() != 10)
+        {
             errorMessage += "No valid NIC!\n";
         }
+
         if (DOB.getValue() == null || DOB.getValue().lengthOfYear() == 0) {
             errorMessage += "No valid Date Of Birth!\n";
         }
@@ -169,9 +198,14 @@ public class NewPatientController implements Controller {
         if (txtOccupation.getText() == null || txtOccupation.getText().length() == 0) {
             errorMessage += "No valid Occupation!\n";
         }
-        if (txtContactNo.getText() == null || txtContactNo.getText().length() == 0) {
+        String regex = "[0-9]+";
+        if (txtContactNo.getText() == null || txtContactNo.getText().length() != 10||txtContactNo.getText().matches(regex)==false) {
             errorMessage += "No valid Contact Number!\n";
         }
+       if (txtContactNo.getText().length() != 10) {
+            errorMessage += "No valid Contact Number!\n";
+        }
+
         if (txtCity.getText() == null || txtCity.getText().length() == 0) {
             errorMessage += "No valid City!\n";
         }
@@ -183,6 +217,27 @@ public class NewPatientController implements Controller {
         }
         if (!rbtnMarried.isSelected()) {
             errorMessage += "No valid Married Or UnMarried!\n";
+        }
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //get current date time with Date()
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
+        System.out.println(DOB.getValue());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1, date2;
+        try {
+            date1 = sdf.parse(dateFormat.format(date));
+            date2 = sdf.parse(String.valueOf(DOB.getValue()));
+
+            if (date2.compareTo(date1) > 0) {
+                System.out.println("Date1 is after Date2");
+                errorMessage += "No valid Date!\n";
+
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
 
         if (errorMessage.length() == 0) {
@@ -206,6 +261,7 @@ public class NewPatientController implements Controller {
             return false;
 
         }
+
     }
 
 }

@@ -9,7 +9,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Laboratory.SerumElectrolytesController">
+=======
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.labReport.SerumElectrolytesController">
+>>>>>>> 7a35f6b52f00ce15cb0d77017df76d1eda5af1ef
    <children>
       <Label layoutX="169.0" layoutY="14.0" text="NATIONAL CANCER INSTITUTE MAHARAGAMA">
          <font>
@@ -27,6 +31,17 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+<<<<<<< HEAD
+      <TextField fx:id="SodiumTextField" layoutX="183.0" layoutY="239.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="PotassiumTextField" layoutX="183.0" layoutY="278.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="56.0" layoutY="243.0" text="Sodium " />
+      <Button fx:id="SubmitButton" layoutX="28.0" layoutY="412.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="100.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
+      <Label layoutX="32.0" layoutY="356.0" text="Remarks" />
+      <TextArea fx:id="RemarksTextField" layoutX="95.0" layoutY="336.0" prefHeight="57.0" prefWidth="433.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+      <Label fx:id="ReportTypeLabel" layoutX="112.0" layoutY="53.0" prefHeight="17.0" prefWidth="180.0" text="Serum Electrolytes" textAlignment="JUSTIFY">
+=======
       <TextField fx:id="SodiumTextField" layoutX="198.0" layoutY="343.0" prefHeight="25.0" prefWidth="63.0" />
       <TextField fx:id="PotassiumTextField" layoutX="198.0" layoutY="390.0" prefHeight="25.0" prefWidth="63.0" />
       <Label layoutX="66.0" layoutY="348.0" text="Sodium " />
@@ -36,6 +51,7 @@
       <TextArea fx:id="RemarksTextField" layoutX="192.0" layoutY="447.0" prefHeight="57.0" prefWidth="433.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="491.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
       <Label fx:id="ReportTypeLabel" layoutX="512.0" layoutY="14.0" prefHeight="17.0" prefWidth="180.0" text="Serum Electrolytes" textAlignment="JUSTIFY">
+>>>>>>> 7a35f6b52f00ce15cb0d77017df76d1eda5af1ef
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

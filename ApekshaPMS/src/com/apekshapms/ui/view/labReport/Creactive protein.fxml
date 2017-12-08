@@ -36,7 +36,7 @@
       <Label layoutX="359.0" layoutY="210.0" text="mg/dl" />
       <Label layoutX="471.0" layoutY="210.0" text="0.3-1.2" />
       <Button fx:id="SubmitButton" layoutX="36.0" layoutY="371.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="CancelButton" layoutX="112.0" layoutY="371.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="CancelButton" layoutX="112.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
       <Label layoutX="40.0" layoutY="311.0" text="Remarks" />
       <TextArea fx:id="RemarksTextField" layoutX="122.0" layoutY="299.0" prefHeight="41.0" prefWidth="416.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="184.0" />

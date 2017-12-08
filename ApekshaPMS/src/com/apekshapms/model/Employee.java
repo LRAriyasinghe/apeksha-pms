@@ -1,16 +1,12 @@
 package com.apekshapms.model;
 
-import javafx.beans.property.SimpleStringProperty;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  * Created by Thilina on 10/21/2017.
  * Univercity of Colombo School of Computing
  */
 public class Employee {
-
     private String id;
     private String firstName;
     private String lastName;
@@ -25,7 +21,6 @@ public class Employee {
     private String department;
     private String type;
     private LocalDate dob;
-
     public Employee(){
 
     }
@@ -153,6 +148,7 @@ public class Employee {
     public void setType(String type) {
         this.type = type;
     }
+
 
     public LocalDate getDob() {
         return dob;

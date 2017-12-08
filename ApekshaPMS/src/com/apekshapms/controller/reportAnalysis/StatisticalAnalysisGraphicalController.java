@@ -51,6 +51,15 @@ public class StatisticalAnalysisGraphicalController implements Controller {
 
     }
 
+    @FXML
+    void handleCancelOnAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
     @Override
     public void refreshView() {
 

@@ -66,6 +66,8 @@ public class AssigningController implements Controller {
 
     private Patient patient;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         fillListView1();
@@ -293,6 +295,14 @@ public class AssigningController implements Controller {
         Parent parent = ui.getParent();
         PatientHistoryController controller = (PatientHistoryController) ui.getController();
         //controller.showPatient(patient);
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+    @FXML
+    void handleBackOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
 

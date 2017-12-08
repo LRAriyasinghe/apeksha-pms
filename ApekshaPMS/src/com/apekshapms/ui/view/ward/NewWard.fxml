@@ -13,10 +13,12 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../resources/styles/patientManagement.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.ward.NewWardController">
     <children>
-        <GridPane layoutX="43.0" prefHeight="388.0" prefWidth="479.0" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="0.0">
+        <GridPane layoutX="43.0" prefHeight="470.0" prefWidth="863.0" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="0.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="142.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="252.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="1.0" prefWidth="223.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="1.0" prefWidth="223.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="581.0" minWidth="10.0" prefWidth="498.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
@@ -26,8 +28,8 @@
                 <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label text="Name" GridPane.rowIndex="1" />
                 <Label text="Description" GridPane.rowIndex="1" />
+                <Label text="Name" />
                 <Label text="Max patient count" GridPane.rowIndex="2" />
                 <TextField fx:id="wardNameTextField" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" />
                 <TextArea fx:id="descriptionTextArea" maxHeight="150.0" maxWidth="250.0" prefHeight="88.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -38,15 +40,23 @@
                <children>
                   <TextField fx:id="headID" layoutX="29.0" layoutY="2.0" maxWidth="100.0" prefWidth="100.0" />
                </children></AnchorPane>
+<<<<<<< HEAD
+=======
+            <RadioButton fx:id="radiobtnMale" mnemonicParsing="false" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton fx:id="radiobtnFemale" mnemonicParsing="false" text="Female" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+>>>>>>> 37cfed48f33e8a87a7b86e52f38e36011ad10b9d
             </children>
         </GridPane>
         <Button fx:id="SubmitButton" layoutX="942.0" layoutY="610.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Submit" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="58.0" />
       <Label layoutX="533.0" layoutY="28.0" prefHeight="21.0" prefWidth="121.0" text="Ward ID" />
       <TextField fx:id="wardIdTextField" layoutX="619.0" layoutY="23.0" maxWidth="250.0" prefWidth="250.0" />
+<<<<<<< HEAD
       <RadioButton fx:id="radiobtnFemale" layoutX="619.0" layoutY="304.0" mnemonicParsing="false" text="Female">
          <toggleGroup>
             <ToggleGroup fx:id="Mygroup" />
          </toggleGroup></RadioButton>
       <RadioButton fx:id="radiobtnMale" layoutX="761.0" layoutY="306.0" mnemonicParsing="false" text="Male" toggleGroup="$Mygroup" />
+=======
+>>>>>>> 37cfed48f33e8a87a7b86e52f38e36011ad10b9d
     </children>
 </AnchorPane>

@@ -3,7 +3,11 @@ package com.apekshapms.controller;
 import com.apekshapms.database.Connector;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Patient;
+<<<<<<< HEAD
 import com.apekshapms.services.LabReportServices;
+=======
+import com.apekshapms.ui.UI;
+>>>>>>> 37cfed48f33e8a87a7b86e52f38e36011ad10b9d
 import com.apekshapms.ui.UIName;
 import com.sun.org.apache.xpath.internal.operations.String;
 import javafx.collections.FXCollections;
@@ -13,7 +17,16 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+<<<<<<< HEAD
 import javafx.scene.control.*;
+=======
+import javafx.scene.Parent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+>>>>>>> 37cfed48f33e8a87a7b86e52f38e36011ad10b9d
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -134,6 +147,16 @@ public class SearchPatientController implements Controller{
     @Override
     public void refreshView() {
     }
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

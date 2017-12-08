@@ -35,6 +35,16 @@ public class PatientHistoryController implements Controller{
 
     private Patient patient;
 
+
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nextButton.setOnAction(event -> {

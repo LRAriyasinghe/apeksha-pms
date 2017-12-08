@@ -16,8 +16,11 @@ public enum UIName {
     TREATMENT_DASHBOARD("/com/apekshapms/ui/view/admin/TreatmentDashboard.fxml"),
     EXAMPLE("/com/apekshapms/ui/view/admin/Example.fxml"),
     ADD_NEW_EMPLOYEE("/com/apekshapms/ui/view/admin/AddNewEmployee.fxml"),
-
     ADMIN_SEARCH_EMPLOYEE("/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml"),
+
+    //Home
+
+    EMTY("/com/apekshapms/ui/view/Home/empty.fxml"),
 
 
     //Report

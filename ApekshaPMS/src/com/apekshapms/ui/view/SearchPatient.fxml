@@ -49,6 +49,7 @@
                 </TableView>
             </children>
         </AnchorPane>
+<<<<<<< HEAD
       <Label layoutX="24.0" layoutY="638.0" prefHeight="21.0" prefWidth="98.0" text="Address :" />
       <Label layoutX="24.0" layoutY="586.0" text="Contact Number :" />
       <Label layoutX="31.0" layoutY="431.0" text="First Name : " />
@@ -65,5 +66,14 @@
       <TextField fx:id="occupationTextField" layoutX="159.0" layoutY="532.0" />
       <Button fx:id="saveButton" layoutX="872.0" layoutY="453.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" text="Save" />
       <Button fx:id="deleteButton" layoutX="872.0" layoutY="522.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" text="Delete" />
+=======
+        <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
+         <children>
+            <Button fx:id="btnSavePatient" layoutX="886.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleSaveButton" prefWidth="98.0" styleClass="sideBarButton" text="Save" />
+            <Button fx:id="btnEditPatient" layoutX="782.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleEditButton" styleClass="sideBarButton" text="Edit" />
+            <Button layoutX="667.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleCancelOnAction" styleClass="sideBarButton" text="Cancel" />
+         </children>
+        </AnchorPane>
+>>>>>>> 37cfed48f33e8a87a7b86e52f38e36011ad10b9d
     </children>
 </AnchorPane>
