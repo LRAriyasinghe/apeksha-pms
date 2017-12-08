@@ -1,12 +1,24 @@
 package com.apekshapms.main;
 
 import com.apekshapms.database.connector.*;
+import com.apekshapms.model.Employee;
 import com.apekshapms.model.SystemMessage;
+import com.apekshapms.database.connector.BoneMarrowConnector;
+import com.apekshapms.database.connector.EmployeeConnector;
+import com.apekshapms.database.connector.LabReportConnector;
+import com.apekshapms.database.connector.PatientConnector;
+import com.apekshapms.database.connector.WardConnector;
+import com.apekshapms.model.Employee;
+import com.apekshapms.model.Patient;
+public class Session{
 
-public class Session {
-    public static PatientConnector patientConnector = new PatientConnector();
-    public static LabReportConnector labReportConnector = new LabReportConnector();
-    public static WardConnector wardConnector = new WardConnector();
-    public static EmployeeConnector employeeConnector = new EmployeeConnector();
-    public static MessageConnector messageConnector;
+    public static PatientConnector patientConnector;
+    public static LabReportConnector labReportConnector;
+    public static EmployeeConnector employeeConnector;
+    public static WardConnector wardConnector;
+    //public static BoneMarrowConnector boneMarrowConnector;
+        public static void addEmployee(Employee employee){
+            EmployeeConnector ec = new EmployeeConnector();
+                    ec.newEmployee(employee);
+        }
 }

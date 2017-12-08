@@ -53,12 +53,21 @@
       <Label layoutX="471.0" layoutY="309.0" text="50-270" />
       <Label layoutX="471.0" layoutY="341.0" text="71-115" />
       <Label layoutX="469.0" layoutY="373.0" text="2.15-2.57" />
+<<<<<<< HEAD
+      <Button fx:id="SubmitButton" layoutX="36.0" layoutY="502.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="114.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
+      <Label layoutX="41.0" layoutY="443.0" text="Remarks" />
+      <TextArea fx:id="RemarksTextField" layoutX="110.0" layoutY="431.0" prefHeight="41.0" prefWidth="416.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+      <Label fx:id="ReportTypeLabel" layoutX="112.0" layoutY="53.0" prefHeight="17.0" prefWidth="142.0" text="Liver Function Test" textAlignment="JUSTIFY">
+=======
       <Button fx:id="SubmitButton" layoutX="960.0" layoutY="664.0" mnemonicParsing="false" text="Submit" />
       <Button fx:id="CancelButton" layoutX="875.0" layoutY="664.0" mnemonicParsing="false" text="Cancel" />
       <Label layoutX="141.0" layoutY="619.0" text="Remarks" />
       <TextArea fx:id="RemarksTextField" layoutX="286.0" layoutY="595.0" prefHeight="41.0" prefWidth="416.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="614.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
       <Label fx:id="ReportTypeLabel" layoutX="631.0" layoutY="23.0" prefHeight="17.0" prefWidth="142.0" text="Liver Function Test" textAlignment="JUSTIFY">
+>>>>>>> 7a35f6b52f00ce15cb0d77017df76d1eda5af1ef
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -8,5 +8,7 @@ public class PatientServices {
         Session.patientConnector.newPatient(patient);
         System.out.println("NSNSNSN");
     }
-    public static void searchPatient(Patient patient){Session.patientConnector.searchPatient(patient);}
+    public static void searchPatient(Patient patient) {
+        Session.patientConnector.searchPatient(patient);
+    }
 }

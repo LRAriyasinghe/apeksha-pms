@@ -1,11 +1,16 @@
 package com.apekshapms.controller.reportAnalysis;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.database.Connector;
+import com.apekshapms.factory.UIFactory;
+import com.apekshapms.ui.UI;
+import com.apekshapms.ui.UIName;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -39,6 +44,22 @@ public class StatisticalMaleFemaleDistrictController implements Controller {
     private ChoiceBox<String> genderChoiceBox;
 
     //private ObservableList district = FXCollections.observableArrayList();
+    @FXML
+    void handleBackOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.REPORT_DASHBOARD);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
 
     @Override
     public void refreshView() {

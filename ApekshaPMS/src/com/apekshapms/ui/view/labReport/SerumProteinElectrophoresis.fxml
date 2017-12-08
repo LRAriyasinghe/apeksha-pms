@@ -51,8 +51,13 @@
       <Label layoutX="471.0" layoutY="276.0" text="0-40" />
       <Label layoutX="471.0" layoutY="309.0" text="50-270" />
       <Label layoutX="471.0" layoutY="341.0" text="71-115" />
+<<<<<<< HEAD
+      <Button fx:id="SubmitButton" layoutX="36.0" layoutY="502.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="114.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
+=======
       <Button fx:id="SubmitButton" layoutX="832.0" layoutY="533.0" mnemonicParsing="false" text="Submit" />
       <Button fx:id="CancelButton" layoutX="759.0" layoutY="533.0" mnemonicParsing="false" text="Cancel" />
+>>>>>>> 7a35f6b52f00ce15cb0d77017df76d1eda5af1ef
       <Label layoutX="41.0" layoutY="443.0" text="Remarks" />
       <TextArea fx:id="RemarksTextField" layoutX="110.0" layoutY="431.0" prefHeight="41.0" prefWidth="416.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="556.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="184.0" />

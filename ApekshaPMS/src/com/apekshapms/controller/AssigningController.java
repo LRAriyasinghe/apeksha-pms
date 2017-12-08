@@ -306,4 +306,12 @@ public class AssigningController implements Controller {
         dashboardController.setWorkspace(parent);
 
     }
+    @FXML
+    void handleBackOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
 }

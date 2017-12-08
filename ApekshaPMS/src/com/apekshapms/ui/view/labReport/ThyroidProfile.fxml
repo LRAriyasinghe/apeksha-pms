@@ -42,7 +42,7 @@
       <Label layoutX="567.0" layoutY="211.0" text="0.4-4.2" />
       <Label layoutX="466.0" layoutY="298.0" prefHeight="17.0" prefWidth="63.0" text="4-30 Days" />
       <Button fx:id="SubmitButton" layoutX="24.0" layoutY="558.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="CancelButton" layoutX="107.0" layoutY="558.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="CancelButton" layoutX="107.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
       <Label layoutX="28.0" layoutY="511.0" text="Remarks" />
       <TextArea fx:id="RemarksTextField" layoutX="109.0" layoutY="499.0" prefHeight="41.0" prefWidth="416.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="484.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />

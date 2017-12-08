@@ -1,7 +1,10 @@
 package com.apekshapms.controller;
 
 import com.apekshapms.database.Connector;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Patient;
+import com.apekshapms.ui.UI;
+import com.apekshapms.ui.UIName;
 import com.sun.org.apache.xpath.internal.operations.String;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +12,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Button;
@@ -127,6 +131,16 @@ public class SearchPatientController implements Controller{
     @Override
     public void refreshView() {
     }
+    @FXML
+    void handleCancelOnAction(javafx.event.ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.EMTY);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+
+    }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

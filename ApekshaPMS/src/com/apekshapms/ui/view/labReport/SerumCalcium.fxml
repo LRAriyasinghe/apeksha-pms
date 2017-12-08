@@ -27,6 +27,17 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+<<<<<<< HEAD
+      <TextField fx:id="FreeCalciumTextField" layoutX="183.0" layoutY="239.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="TotalCalciumTextField" layoutX="183.0" layoutY="278.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="56.0" layoutY="243.0" text="Free Calcium" />
+      <Button fx:id="SubmitButton" layoutX="28.0" layoutY="412.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="CancelButton" layoutX="100.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleCancelOnAction" text="Cancel" />
+      <Label layoutX="32.0" layoutY="356.0" text="Remarks" />
+      <TextArea fx:id="RemarksTextField" layoutX="95.0" layoutY="336.0" prefHeight="57.0" prefWidth="433.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="109.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+      <Label fx:id="ReportTypeLabel" layoutX="112.0" layoutY="53.0" prefHeight="17.0" prefWidth="180.0" text="Serum Calcium" textAlignment="JUSTIFY">
+=======
       <TextField fx:id="FreeCalciumTextField" layoutX="171.0" layoutY="309.0" prefHeight="25.0" prefWidth="63.0" />
       <TextField fx:id="TotalCalciumTextField" layoutX="179.0" layoutY="367.0" prefHeight="25.0" prefWidth="63.0" />
       <Label layoutX="51.0" layoutY="303.0" text="Free Calcium" />
@@ -36,6 +47,7 @@
       <TextArea fx:id="RemarksTextField" layoutX="149.0" layoutY="432.0" prefHeight="57.0" prefWidth="433.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#71bbff" height="25.0" layoutX="475.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
       <Label fx:id="ReportTypeLabel" layoutX="511.0" layoutY="23.0" prefHeight="17.0" prefWidth="180.0" text="Serum Calcium" textAlignment="JUSTIFY">
+>>>>>>> 7a35f6b52f00ce15cb0d77017df76d1eda5af1ef
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
