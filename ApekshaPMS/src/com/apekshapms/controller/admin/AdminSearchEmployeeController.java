@@ -6,14 +6,17 @@ package com.apekshapms.controller.admin;
  */
 import com.apekshapms.controller.Controller;
 import com.apekshapms.database.Connector;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Employee;
 //import com.sun.jdi.connect.Connector;
 import com.apekshapms.model.Patient;
+import com.apekshapms.ui.UIName;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -23,6 +26,7 @@ import javafx.scene.layout.HBox;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
@@ -66,8 +70,7 @@ public class AdminSearchEmployeeController implements Controller {
     @FXML
     private TableColumn<Employee, String> departmentColumn;
 
-    @FXML
-    private Label empIdLabel;
+
 
     @FXML
     private TextField fisrtNameTextField;
@@ -85,7 +88,7 @@ public class AdminSearchEmployeeController implements Controller {
     private TextField cityTextField;
 
     @FXML
-    private TextField dietrictTextField;
+    private TextField districtTextField;
 
     @FXML
     private TextField contactNuTextField;
@@ -97,7 +100,7 @@ public class AdminSearchEmployeeController implements Controller {
     private HBox buttonHBox;
 
     @FXML
-    private Button canselButton;
+    private Button backButton;
 
     @FXML
     private Button clearButton;
@@ -126,22 +129,114 @@ public class AdminSearchEmployeeController implements Controller {
         districColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("distric"));
         contactColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("contactNu"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("department"));
+        loadDatabaseData(); //Load to data to TableView
+        searchEmployee(); //Search Employee
 
-        try {
-            loadDatabaseData(); //Load to data to TableView
-            searchEmployee(); //Search Employee
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+        updateButton.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event) {
+
+                java.lang.String query = "update employee set firstName=?, lastName=?, city=?, district=?, contact_No=?, department=? where emp_Id='"+searchEmpNameTextField.getText()+"' or firstName='" + fisrtNameTextField.getText() +"' or lastName='" + lastNameTextField.getText() + "'";
+                try{
+                    Connection connection = new Connector().getConnection();
+                    preparedStatement=connection.prepareStatement(query);
+                    preparedStatement.setString(1,fisrtNameTextField.getText());
+                    preparedStatement.setString(2,lastNameTextField.getText());
+                    preparedStatement.setString(3,cityTextField.getText());
+                    preparedStatement.setString(4,districtTextField.getText());
+                    preparedStatement.setString(5,contactNuTextField.getText());
+                    preparedStatement.setString(6,departmentTextField.getText());
+
+                    preparedStatement.execute();
+                    preparedStatement.close();
+                    loadDatabaseData();
+
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
+                    alert.setTitle("SuccessFul");
+                    alert.setHeaderText("Look, a Confirmation Dialog");
+                    alert.setContentText("Employee Details Successfully Updated");
+
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.get() == ButtonType.OK) {
+
+                        System.out.println("Yes");
+                        // LabReportServices.addFullBloodReport(fullBloodReport);
+                    }else {
+                        UIFactory.launchUI(UIName.ADMIN_SEARCH_EMPLOYEE, true);
+                        // ... user chose CANCEL or closed the dialog
+                    }
+
+
+                }
+                catch (SQLException e){
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+
+        deleteButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                java.lang.String name="null";
+                try{
+                    Connection connection = new Connector().getConnection();
+                    Employee employee=(Employee) employeeTable.getSelectionModel().getSelectedItem();
+                    java.lang.String query = "delete from employee where emp_Id=? or or firstName='" + fisrtNameTextField.getText() + "' or lastName='" + lastNameTextField.getText() + "'";
+                    preparedStatement=connection.prepareStatement(query);
+                    preparedStatement.setString(1,employee.getId());
+
+                    name=employee.getId();
+                    preparedStatement.executeUpdate();
+
+                    preparedStatement.close();
+                    rs.close();
+                    loadDatabaseData();
+
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
+                    alert.setTitle("SuccessFul");
+                    alert.setHeaderText("Look, a Confirmation Dialog");
+                    alert.setContentText("Ready to delete the employee details.Are you Okay?");
+
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.get() == ButtonType.OK) {
+
+                        System.out.println("Yes");
+                        // LabReportServices.addFullBloodReport(fullBloodReport);
+                    }else {
+                        UIFactory.launchUI(UIName.ADMIN_SEARCH_EMPLOYEE, true);
+                        // ... user chose CANCEL or closed the dialog
+                    }
+
+
+
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+
+
+            }
+        });
 
 
 
 
     }
 
-    public void loadDatabaseData() throws SQLException { //Load Data In to TableView
+    public void loadDatabaseData(){ //Load Data In to TableView
         try {
             Connection connection = new Connector().getConnection();
+
+            fisrtNameTextField.clear();
+            lastNameTextField.clear();
+            cityTextField.clear();
+            districtTextField.clear();
+            contactNuTextField.clear();
+            departmentTextField.clear();
+            data.clear();
+
             preparedStatement = connection.prepareStatement("select * from employee");
             rs=preparedStatement.executeQuery();
             while (rs.next()){
@@ -169,6 +264,27 @@ public class AdminSearchEmployeeController implements Controller {
         }
 
 
+    }
+
+
+    public void showOnClick() //Load table view detailsls to text field
+    {
+        try{
+            Connection connection = new Connector().getConnection();
+            Employee employee=(Employee)employeeTable.getSelectionModel().getSelectedItem();
+            java.lang.String query = "select firstName,lastName,city,district,contact_No,department from employee";
+            preparedStatement=connection.prepareStatement(query);
+
+            fisrtNameTextField.setText(employee.getFirstName());
+            lastNameTextField.setText(employee.getLastName());
+            cityTextField.setText(employee.getCity());
+            districtTextField.setText(employee.getDistric());
+            contactNuTextField.setText(employee.getContactNu());
+            departmentTextField.setText(employee.getDepartment());
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     @FXML

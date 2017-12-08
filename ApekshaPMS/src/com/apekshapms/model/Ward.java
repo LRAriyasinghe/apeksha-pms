@@ -9,7 +9,7 @@ public class Ward {
     private  String WardName ;
     private  String Description ;
     private String MaxPatient_Count;
-    private boolean isGenderaccept ;
+    private boolean isMale ;
     private  String Supervisor;
 
     public Ward(String 	Ward_id, String Ward_name, String Description,String Max_patients,boolean Gender_acceptence,String Supervisor){
@@ -18,7 +18,7 @@ public class Ward {
         this.WardName=Ward_name;
         this.Description=Description;
         this.MaxPatient_Count=Max_patients;
-        this.isGenderaccept=Gender_acceptence;
+        this.isMale=Gender_acceptence;
         this.Supervisor=Supervisor;
     }
     public Ward(){}
@@ -58,13 +58,6 @@ public class Ward {
         MaxPatient_Count = maxPatient_Count;
     }
 
-    public boolean isGenderaccept() {
-        return isGenderaccept;
-    }
-
-    public void setGenderaccept(boolean genderaccept) {
-        isGenderaccept = genderaccept;
-    }
 
     public String getSupervisor() {
         return Supervisor;
@@ -72,5 +65,13 @@ public class Ward {
 
     public void setSupervisor(String supervisor) {
         Supervisor = supervisor;
+    }
+
+    public boolean isMale() {
+        return isMale;
+    }
+
+    public void setMale(boolean male) {
+        isMale = male;
     }
 }

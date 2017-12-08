@@ -2,90 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96d20fd6-5cb4-4e69-9297-e60b3d1a6e04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Home/empty.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Home/empty.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/SearchWardController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/SearchWardController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/AssigningController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/NewPatientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/PatientHistoryController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/PatientHistoryController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/alert.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/editpatientdetails.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/management_edit_window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/mycss.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/resources/styles/patientManagement.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/Image/Apeksha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/Image/pamudi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/AdminDetails.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Assigning.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/ConsultantDetails.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Dashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/DashboardAdminDoctor.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/DashboardRegistrarDoctor.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/EditPatientDetails.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Home/empty.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/LabAssistantDetails.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/LabOverview.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/NewPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/PatientHistory.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/SearchEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/SearchPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/SomeLogin.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/StatisticalAnalysisGraphical.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/TextualAnalysis.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/AddNewEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/EmployeeDashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/Example.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/PatientDashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/ReportDashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/TreatmentDashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/WardDashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/consultant/SendMessage.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labAssistant/AddDetails.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labAssistant/AddReport.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labAssistant/CheckReport.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labAssistant/ReceivedMessage.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/Creactive protein.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LipidProfile.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LiverFunction.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UFR.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/login.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/Example.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/PieChartExample.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/TextualAnalysis.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/sidebar/AdminSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/sidebar/ConsultantDoctorSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/sidebar/LabAssistantSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/sidebar/RegisterDoctorSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/ward/NewWard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/ward/WardManagement.fxml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/SearchPatientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AddNewEmployeeController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AddNewEmployeeController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AddNewEmployeeController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AddNewEmployeeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/PatientDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/PatientDashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/login/LoginController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisGraphicalController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisGraphicalController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/EmployeeConnector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/EmployeeConnector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Session.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/main/Session.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Employee.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/EmployeeServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/EmployeeServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/PatientServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/PatientServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/AdminSearchEmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/ReportDashboardController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/admin/WardDashboardController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/ExampleController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/ExampleController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/ExampleController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/reportAnalysis/ExampleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController$1.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/NewWardController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/WardManagementController.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/controller/ward/WardManagementController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/Connector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/Connector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/WardConnector.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/database/connector/WardConnector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Ward.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/model/Ward.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/WardServices.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/services/WardServices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UIName.class" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/UIName.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/apeksha-pms.iml" afterPath="$PROJECT_DIR$/.idea/apeksha-pms.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Assigning.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/Assigning.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/NewPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/NewPatient.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/PatientHistory.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/PatientHistory.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/SearchPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/SearchPatient.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/AddNewEmployee.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/AddNewEmployee.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/PatientDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/admin/PatientDashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/Creactive protein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/Creactive protein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LipidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LipidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LiverFunction.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/LiverFunction.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UFR.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UFR.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/ward/NewWard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/out/production/apeksha-pms/com/apekshapms/ui/view/ward/NewWard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/AssigningController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/AssigningController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/NewPatientController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/PatientHistoryController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AddNewEmployeeController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AddNewEmployeeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/PatientDashboardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/PatientDashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/login/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisGraphicalController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalAnalysisGraphicalController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/StatisticalMaleFemaleDistrictController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/EmployeeConnector.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/EmployeeConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Session.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/EmployeeServices.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/EmployeeServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/PatientServices.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/PatientServices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/AdminSearchEmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/ReportDashboardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/WardDashboardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/admin/WardDashboardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/ExampleController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/ExampleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/NewWardController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/NewWardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/WardManagementController.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/ward/WardManagementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/WardConnector.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/connector/WardConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Ward.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/model/Ward.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/WardServices.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/services/WardServices.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Assigning.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/Assigning.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/NewPatient.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/PatientHistory.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/PatientHistory.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/SearchPatient.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/SearchPatient.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AddNewEmployee.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AddNewEmployee.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/PatientDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/PatientDashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/BoneMarrowReport.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/Creactive protein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/Creactive protein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/CreactiveProtein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/FullBloodCount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LipidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LipidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LiverFunction.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/LiverFunction.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumCalcium.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumElectrolytes.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/SerumProteinElectrophoresis.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/ThyroidProfile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/UFR.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/UFR.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/labReport/UrineForBenceJonesProtein.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisCancerTypeCount.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalAnalysisGraphical.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/StatisticalMaleFemaleDistrict.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/AdminSearchEmployee.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/ReportDashboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/WardDashboard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/admin/WardDashboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/Example.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/reportAnalysis/Example.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ward/NewWard.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ward/NewWard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ward/WardManagement.fxml" afterPath="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/ward/WardManagement.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/ApekshaPMS/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,13 +124,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="195">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/ExampleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-755">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/login.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-78">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -112,15 +172,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java" />
+        <option value="$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java" />
       </list>
     </option>
   </component>
@@ -181,7 +240,36 @@
             <path>
               <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
               <item name="Apeksha-Hospital-Maharagama" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="reportAnalysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apeksha-Hospital-Maharagama" type="462c0819:PsiDirectoryNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apeksha-Hospital-Maharagama" type="462c0819:PsiDirectoryNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apeksha-Hospital-Maharagama" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Apeksha-Hospital-Maharagama" type="462c0819:PsiDirectoryNode" />
+              <item name="ApekshaPMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="apekshapms" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,6 +279,11 @@
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -217,12 +310,15 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="apeksha-pms" />
       <envs />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -233,10 +329,10 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -331,7 +427,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -367,13 +463,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/database/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1512724126000" expanded="true" signature="48848:48863" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding>
+            <marker date="1512723455000" expanded="true" signature="251:273" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/SearchPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/UIName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-755">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/ui/view/login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApekshaPMS/src/com/apekshapms/controller/reportAnalysis/ExampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>apeksha-pms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
