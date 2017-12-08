@@ -28,6 +28,8 @@ public class Patient {
     private String registerDocId;
     private String consultantId;
     private String details;
+    private String cancerType;
+    private LocalDate joinedDate;
 
     public Patient(String patient_id, String title, String first_name, String last_name, String nic_no, LocalDate dob, boolean gender, String occupation, boolean civil_status, String contact_no, String address, String city, String distric, String registerDoctor_emp_id, String consultant_emp_id, String additional_details) {
     super();
@@ -220,5 +222,21 @@ public class Patient {
 
     public void setCivil(boolean civil) {
         isCivil = civil;
+    }
+
+    public String getCancerType() {
+        return cancerType;
+    }
+
+    public void setCancerType(String cancerType) {
+        this.cancerType = cancerType;
+    }
+
+    public LocalDate getJoinedDate() {
+        return joinedDate;
+    }
+
+    public void setJoinedDate(LocalDate joinedDate) {
+        this.joinedDate = joinedDate;
     }
 }

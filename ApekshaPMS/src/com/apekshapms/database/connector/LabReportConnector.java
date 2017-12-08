@@ -37,6 +37,7 @@ public class LabReportConnector extends Connector {
             preparedStatement.execute();
 
         } catch (SQLException e) {
+            System.err.println(e);
             e.printStackTrace();
         }
         try {

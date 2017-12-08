@@ -132,22 +132,22 @@ public class SearchPatientController implements Controller{
     public void initialize(URL location, ResourceBundle resources) {
         //Select Table Column
 
-        idTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("patient_Id"));
+        idTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("id"));
         titleTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("title"));
-        firstNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("first_name"));
-        lastNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("last_name"));
-        nicTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("nic_No"));
+        firstNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("firstName"));
+        lastNameTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("lastName"));
+        nicTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("nicNo"));
         dobTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,LocalDate>("dob"));
-        genderTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("gender"));
+        genderTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("isMale"));
         occupationTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("occupation"));
-        civilTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("civil_Status"));
-        contactTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("contact_No"));
+        civilTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("isCivil"));
+        contactTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("telephone"));
         addressTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("address"));
         cityTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("city"));
-        districtTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("distric"));
-        regDocTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("registerDoctor_emp_Id"));
-        consultantTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("consultant_emp_Id"));
-        detailsTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("additional_Details"));
+        districtTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("district"));
+        regDocTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("registerDocId"));
+        consultantTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("consultantId"));
+        detailsTableColumn.setCellValueFactory(new PropertyValueFactory<Patient,String>("details"));
         loadDatabasePatient(); //Load patient into the TableView
         searchPatient(); //Searching Patient by ID,Name
         searchPatientName(); //Searching Patient by FName,Lname,City,District,Address

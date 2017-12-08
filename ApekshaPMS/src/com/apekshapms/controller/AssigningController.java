@@ -63,8 +63,16 @@ public class AssigningController implements Controller {
     @FXML
     private ListView<String> consultantDocListView;
 
+    @FXML
+    private ChoiceBox<String> cancerTypeChoiceBox;
+
+    @FXML
+    private DatePicker joinedDatePicker;
+
 
     private Patient patient;
+
+    private ObservableList cancerType = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -76,6 +84,9 @@ public class AssigningController implements Controller {
         //consultantDocListView.getItems().add(String.valueOf(consultant));
         addedDocterTable();
 
+        cancerType.addAll("A","B","C");
+        cancerTypeChoiceBox.setItems(cancerType);
+
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -84,31 +95,29 @@ public class AssigningController implements Controller {
                     String emp_idCons = txtConsultantId.getText();
                     if (ValidateSearchRegisterDoctor.validate_registerDoc(emp_idReg)){ //Check Registor Doctor ID
                         if (ValidateSearchConsultant.validate_consultant(emp_idCons)){ //Check Consultant Doctor ID
-                            try {
                                 patient.setRegisterDocId(txtRegisterDocId.getText());
                                 patient.setConsultantId(txtConsultantId.getText());
                                 patient.setDetails(EEE.getText());
-                            }catch (Exception e){
-                                System.err.println(e);
-                            }
+                                patient.setCancerType(cancerTypeChoiceBox.getValue());
+                                patient.setJoinedDate(joinedDatePicker.getValue());
 
+                            PatientServices.addPatient(patient);
 
-                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
-                            alert.setTitle("Confirmation Dialog");
-                            alert.setHeaderText("Look, a Confirmation Dialog");
-                            alert.setContentText("Are you ok with this?");
-
-                            Optional<ButtonType> result = alert.showAndWait();
-                            if (result.get() == ButtonType.OK){
-
-                                System.out.println("Yes");
-                                PatientServices.addPatient(patient);
-
-                            } else {
-                                UIFactory.launchUI(UIName.NEW_PATIENT, true);
-                                // ... user chose CANCEL or closed the dialog
-                            }
-                            //new AlertDialog(new Stage() , "Save Sucessful!", AlertDialog.ICON_INFO).showAndWait();
+//                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
+//                            alert.setTitle("Confirmation Dialog");
+//                            alert.setHeaderText("Look, a Confirmation Dialog");
+//                            alert.setContentText("Are you ok with this?");
+//
+//                            Optional<ButtonType> result = alert.showAndWait();
+//                            if (result.get() == ButtonType.OK){
+//
+//                                System.out.println("Yes");
+//                                PatientServices.addPatient(patient);
+//
+//                            } else {
+//                                UIFactory.launchUI(UIName.NEW_PATIENT, true);
+//                                // ... user chose CANCEL or closed the dialog
+//                            }
 
                         }else{
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -276,7 +285,7 @@ public class AssigningController implements Controller {
             // Show the error message
             //Dialogs.showErrorDialog(dialogStage, errorMessage,
             //"Please correct invalid fields", "Invalid Fields");
-            System.out.println("Successfully Fail");
+            System.out.println("Validation Successfully Fail");
             //Dialogs.showWarningDialog(new Stage(), "Careful with the next step!", "Warning Dialog", "title");
 
             return false;

@@ -41,11 +41,15 @@ public enum UIName {
     STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART("/com/apekshapms/ui/view/reportAnalysis/PieChartExample.fxml"),
     STATISTICAL_ANALYSIS_ALL_GRAPHICAL_EXAMPLE("/com/apekshapms/ui/view/reportAnalysis/Example.fxml"),
 
+    //Consultant Dostor Interfaces
+    SEND_MESSAGES("/com/apekshapms/ui/view/consultant/SendMessage.fxml"),
+
 
     //Lab Assistant
     ADD_REPORT("/com/apekshapms/ui/view/labAssistant/AddReport.fxml"),
     ADD_DETAILS("/com/apekshapms/ui/view/labAssistant/AddDetails.fxml"),
     CHECK_REPORT("/com/apekshapms/ui/view/labAssistant/CheckReport.fxml"),
+    RECEIVED_MESSAGES("/com/apekshapms/ui/view/labAssistant/ReceivedMessage.fxml"),
 
     //Ward
     NEW_WARD("/com/apekshapms/ui/view/ward/NewWard.fxml"),

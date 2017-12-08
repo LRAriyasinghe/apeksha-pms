@@ -1,7 +1,10 @@
 package com.apekshapms.controller.sidebar;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.factory.UIFactory;
+import com.apekshapms.ui.UIName;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -15,6 +18,9 @@ public class ConsultantDoctorSideBarController implements Controller {
 
     @FXML
     private Button searchPatientButton;
+
+    @FXML
+    private Button messageButton;
 
     @FXML
     void handleNewPatientButtonAction(ActionEvent event) {
@@ -33,6 +39,12 @@ public class ConsultantDoctorSideBarController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        messageButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UIFactory.launchUI(UIName.SEND_MESSAGES, true);
+            }
+        });
 
     }
 }

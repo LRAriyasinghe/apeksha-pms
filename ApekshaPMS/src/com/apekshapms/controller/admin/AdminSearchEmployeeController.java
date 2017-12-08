@@ -117,14 +117,14 @@ public class AdminSearchEmployeeController implements Controller {
     public void initialize(URL location, ResourceBundle resources) {
         employeeTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        empIDColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("emp_Id"));
+        empIDColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("id"));
         fnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("firstName"));
         lnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("lastName"));
-        nicColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("nic_No"));
+        nicColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("nic"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("type"));
         cityColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("city"));
-        districColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("district"));
-        contactColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("contact_No"));
+        districColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("distric"));
+        contactColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("contactNu"));
         departmentColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("department"));
 
         try {

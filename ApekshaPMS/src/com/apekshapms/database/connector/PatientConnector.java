@@ -14,10 +14,10 @@ public class PatientConnector extends Connector {
     public void newPatient(Patient patient){
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                    "patient(patient_Id,title, first_name, last_name,nic_No, dob,gender, " +
+                    "Patient(patient_Id,title, first_name, last_name,nic_No, dob,gender, " +
                     "occupation, civil_Status, contact_No,address,city,district,registerDoctor_emp_Id," +
-                    "additional_Details,consultant_emp_Id) " +
-                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    "additional_Details,consultant_emp_Id,cancer_type,Date_Joined) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
             preparedStatement.setString(1, patient.getId());
             preparedStatement.setString(2, patient.getTitle());
             preparedStatement.setString(3, patient.getFirstName());
@@ -34,6 +34,8 @@ public class PatientConnector extends Connector {
             preparedStatement.setString(14, patient.getRegisterDocId());
             preparedStatement.setString(15, patient.getDetails());
             preparedStatement.setString(16, patient.getConsultantId());
+            preparedStatement.setString(17, patient.getCancerType());
+            preparedStatement.setString(18, String.valueOf(patient.getJoinedDate()));
 
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -108,7 +110,6 @@ public class PatientConnector extends Connector {
             com.mysql.jdbc.PreparedStatement preparedStatement = (com.mysql.jdbc.PreparedStatement) getConnection().prepareStatement("UPDATE patient SET " +
                     "title = ?, " +
                     "first_name = ?, " +
-                    "last_name = ?, " +
                     "last_name = ?, " +
                     "nic_No = ?, " +
                     "dob = ?, " +
