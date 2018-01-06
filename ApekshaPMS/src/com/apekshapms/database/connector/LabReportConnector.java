@@ -1,11 +1,19 @@
 package com.apekshapms.database.connector;
 
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.database.Connector;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.main.Main;
 import com.apekshapms.model.*;
+import com.apekshapms.ui.UI;
+import com.apekshapms.ui.UIName;
+import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Optional;
 
 /**
  * Created by Thilina on 10/13/2017.
@@ -17,13 +25,14 @@ public class LabReportConnector extends Connector {
     private Main mainApp;
 
 
+    //Add Bonemarrow Report
     public void newBoneMarrowReport(BonemarrowReport bonemarrowreport) {
 
         try {
             System.out.println("Correct 2");
 
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, emp_Id,remarks) " +
                     "VALUES(?, ?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setString(1, bonemarrowreport.getTestID());
@@ -34,15 +43,8 @@ public class LabReportConnector extends Connector {
             preparedStatement.setString(6, bonemarrowreport.getReference());
             preparedStatement.setString(7, bonemarrowreport.getRemarks());
 
-            preparedStatement.execute();
-
-        } catch (SQLException e) {
-            System.err.println(e);
-            e.printStackTrace();
-        }
-        try {
             PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                    "bonemarrow_report(TestID,Patient_Id, BMBx, TrephineBMBx) " +
+                    "bonemarrow_report(TestID,Patient_Id, BMBx, TrepchineBMBx) " +
                     "VALUES(?, ?, ?, ?)");
 
             preparedStatement2.setString(1, bonemarrowreport.getTestID());
@@ -50,14 +52,44 @@ public class LabReportConnector extends Connector {
             preparedStatement2.setString(3, bonemarrowreport.getBMBx());
             preparedStatement2.setString(4, bonemarrowreport.getTrephineBMBx());
 
-            preparedStatement2.execute();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation Dialog");
+            alert.setHeaderText("Look, a Confirmation Dialog");
+            alert.setContentText("Do you need to insert the Lab Report ?");
+            alert.show();
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                // ... user chose OK
+                preparedStatement.execute();
+                preparedStatement2.execute();
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+                alert1.setTitle("Confirmation Dialog");
+                alert1.setHeaderText("Look, a Confirmation Dialog");
+                alert1.setContentText("BoneMarrowReport Lab Report Added Successfully");
+                alert1.show();
+                System.out.println("Yes");
+            } else {
+                // ... user chose CANCEL or closed the dialog then go to the Back
+                UI ui = UIFactory.getUI(UIName.BONEMARROW_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
+            }
+
+
+
+
         } catch (SQLException e) {
+            System.err.println(e);
             e.printStackTrace();
         }
+
 
     }
 
 
+    //Add CreactiveproteinReport Report
     public void newCreactiveProteinReport(CreactiveproteinReport creactiveproteinReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -95,10 +127,11 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add FullBloodReport Report
     public void newFullBloodReport(FullBloodReport fullBloodReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                    "testreport(test_Id,patient_Id, patient_name, date,type, labAssistaant_emp_Id,remarks) " +
+                    "testreport(test_Id,patient_Id, patient_name, date,type, emp_Id,remarks) " +
                     "VALUES(?, ?, ?, ?, ?, ?, ?)");
 
             preparedStatement.setString(1, fullBloodReport.getTestID());
@@ -110,6 +143,12 @@ public class LabReportConnector extends Connector {
             preparedStatement.setString(7, fullBloodReport.getRemarks());
 
             preparedStatement.execute();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText(null);
+            alert.setContentText("Successfully Added Full Blood Report!");
+
+            alert.showAndWait();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -136,6 +175,7 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add LipidProfileReport Report
     public void newLipidProfileReport(LipidProfileReport lipidProfileReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -179,6 +219,7 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add LiverFunctionReport Report
     public void newLiverFunctionReport(LiverFunctionReport liverFunctionReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -220,6 +261,7 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add SerumCalcuimReport Report
     public void newSerumCalciumReport(SerumCalcuimReport serumCalcuimReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -256,6 +298,7 @@ public class LabReportConnector extends Connector {
 
     }
 
+    //Add SerumElectrolytesReport Report
     public void newSerumElectrolytesReport(SerumElectrolytesReport serumElectrolytesReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -293,6 +336,7 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add SerumProteinReport Report
     public void newSerumProteinReport(SerumProteinReport serumProteinReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
@@ -333,6 +377,7 @@ public class LabReportConnector extends Connector {
     }
 
 
+    //Add ThyroidProfileReport Report
     public void newThyroidProfileReport(ThyroidProfileReport thyroidProfileReport) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +

@@ -2,14 +2,19 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
 import com.apekshapms.model.LiverFunctionReport;
 import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -19,7 +24,7 @@ import java.util.ResourceBundle;
 
 public class LiverFunctionController implements Controller{
     @FXML
-    private TextField TypeTextField;
+    private ComboBox<String> typeComboBox;
     @FXML
     private TextField TestIDTextField;
 
@@ -62,10 +67,15 @@ public class LiverFunctionController implements Controller{
     @FXML
     private Button CancelButton;
 
+    @FXML
+    private Button backButton;
+    private ObservableList CancerType = FXCollections.observableArrayList();
     private LiverFunctionReport liverFunctionReport = new LiverFunctionReport();
 
 
     public void initialize(URL location, ResourceBundle resources) {
+        CancerType.addAll("BoneMarrow","Creactive","FullBlood","LipidProfile","LiverFunction","SerumCalcium","SerumElectrolytes","serumProtein","Thyroid","UFRC","UrineForBence");
+        typeComboBox.setItems(CancerType);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -75,7 +85,7 @@ public class LiverFunctionController implements Controller{
                         liverFunctionReport.setPatientID(PatientIDTextField.getText());
                         liverFunctionReport.setPatientName(PatientNameTextField.getText());
                         liverFunctionReport.setDate(dateDatePicker.getValue());
-                        liverFunctionReport.setTestType(TypeTextField.getText());
+                        liverFunctionReport.setTestType(typeComboBox.getValue());
                         liverFunctionReport.setReference(ReferenceTextField.getText());
                         liverFunctionReport.setRemarks(RemarksTextField.getText());
                         liverFunctionReport.setSerum_Bilrubin(SerumBilTextField.getText());
@@ -104,6 +114,18 @@ public class LiverFunctionController implements Controller{
                     }
 
                 }
+
+            }
+        });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
 
             }
         });

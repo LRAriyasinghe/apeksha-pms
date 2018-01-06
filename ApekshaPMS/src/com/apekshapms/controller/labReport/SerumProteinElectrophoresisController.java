@@ -2,13 +2,18 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.SerumProteinReport;
 import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -17,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class SerumProteinElectrophoresisController implements Controller{
    @FXML
-    private TextField TypeTextField;
+    private ComboBox<String> typeComboBox;
 
    @FXML
    private TextField TestIDTextField;
@@ -58,9 +63,14 @@ public class SerumProteinElectrophoresisController implements Controller{
     @FXML
     private Button CancelButton;
 
+    @FXML
+    private Button backButton;
+    private ObservableList CancerType = FXCollections.observableArrayList();
     private SerumProteinReport serumProteinReport =  new SerumProteinReport();
 
     public void initialize(URL location, ResourceBundle resources) {
+        CancerType.addAll("BoneMarrow","Creactive","FullBlood","LipidProfile","LiverFunction","SerumCalcium","SerumElectrolytes","serumProtein","Thyroid","UFRC","UrineForBence");
+        typeComboBox.setItems(CancerType);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -70,7 +80,7 @@ public class SerumProteinElectrophoresisController implements Controller{
                         serumProteinReport.setPatientID(PatientIDTextField.getText());
                         serumProteinReport.setPatientName(PatientNameTextField.getText());
                         serumProteinReport.setDate(dateDatePicker.getValue());
-                        serumProteinReport.setTestType(TestIDTextField.getText());
+                        serumProteinReport.setTestType(typeComboBox.getValue());
                         serumProteinReport.setReference(ReferenceTextField.getText());
                         serumProteinReport.setRemarks(RemarksTextField.getText());
                         serumProteinReport.setAlbumin(AlbumineeTextField.getText());
@@ -101,6 +111,18 @@ public class SerumProteinElectrophoresisController implements Controller{
 
             }
         });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
+
+            }
+        });
     }
 
     @Override
@@ -117,7 +139,7 @@ public class SerumProteinElectrophoresisController implements Controller{
         if (PatientNameTextField.getText() == null || PatientNameTextField.getText().length() == 0) {
             errorMessage += "No valid Patient name ID!\n";
         }
-        if (TypeTextField.getText() == null || TypeTextField.getText().length() == 0) {
+        if (typeComboBox.getValue() == null || typeComboBox.getValue().length() == 0) {
             errorMessage += "No valid TestId ID!\n";
         }
         if (errorMessage.length() == 0) {

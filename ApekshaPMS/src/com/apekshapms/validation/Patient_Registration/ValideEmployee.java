@@ -1,5 +1,7 @@
 package com.apekshapms.validation.Patient_Registration;
 
+import com.apekshapms.database.Connector;
+
 import java.sql.*;
 
 /**
@@ -10,8 +12,8 @@ public class ValideEmployee {
     public static boolean validate_login(String user, String pwd) {
         try {
 
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama?", "root", "");
-            PreparedStatement pst = conn.prepareStatement("Select * from usernamepassword where username=? and password=?");
+            Connection connection = new Connector().getConnection();
+            PreparedStatement pst = connection.prepareStatement("Select * from usernamepassword where username=? and password=?");
             pst.setString(1, user);
             pst.setString(2, pwd);
             ResultSet rs = pst.executeQuery();

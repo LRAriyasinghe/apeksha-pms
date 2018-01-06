@@ -19,36 +19,21 @@ import java.util.ResourceBundle;
  * Univercity of Colombo School of Computing
  */
 public class WardDashboardController implements Controller {
-    @Override
-    public void refreshView() {
 
-    }
+    @FXML
+    private Button wardManagementButton;
+    @FXML
+    private Button wardDeleteButton;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
 
-    }
-
-    // @FXML
-   // private Button wardManagementButton;
-   // @FXML
-   // private Button wardDeleteButton;
-
-    /*@FXML
+    //Action button for New ward
+    @FXML
     void handleNewWardButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.NEW_WARD);
         Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
     }
-    @FXML
-    void handleWardButtonAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.WARD_MANAGEMENT);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-    }
-
 
     @Override
     public void refreshView() {
@@ -57,16 +42,17 @@ public class WardDashboardController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Actioneent for Ward Management
+        wardManagementButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UI ui = UIFactory.getUI(UIName.WARD_MANAGEMENT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
+            }
+        });
+
 
     }
 }
-
- /*wardManagementButton.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
-        public void handle(ActionEvent event) {
-            UI ui = UIFactory.getUI(UIName.WARD_MANAGEMENT);
-            Parent parent = ui.getParent();
-            AdminDashboardController adminDashboardController = ((AdminDashboardController) (UIFactory.getUI(UIName.ADMIN_DASHBOARD).getController()));
-            adminDashboardController.setWorkspace(parent);
-        }*/
-    }

@@ -21,6 +21,8 @@ public class RegisterDoctorSideBarController implements Controller {
     @FXML
     private Button issueDiagnizationButton;
 
+
+    //All sidebar button action event
     @FXML
     void handleNewPatientButtonAction(ActionEvent event) {
         UIFactory.launchUI(UIName.NEW_PATIENT, true);
@@ -35,7 +37,7 @@ public class RegisterDoctorSideBarController implements Controller {
 
     @FXML
     void issueDiagnizationButtonAction(ActionEvent event) {
-        UIFactory.launchUI(UIName.SOME_LOGIN, true);
+        UIFactory.launchUI(UIName.SEARCH_PATIENT_DIAGNOSIS, true);
 
     }
 

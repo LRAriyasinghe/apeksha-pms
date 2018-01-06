@@ -21,6 +21,7 @@ public class EmployeeDashboardController implements Controller {
     @FXML
     private Button addEmployeeButton;
 
+    //Action event for add New Employee Button
     @FXML
     void handleAddEmployeeOnAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.ADD_NEW_EMPLOYEE);
@@ -30,6 +31,8 @@ public class EmployeeDashboardController implements Controller {
 
     }
 
+
+    //Action event for Search Employee
     @FXML
     void handleSearchEmployeeButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.ADMIN_SEARCH_EMPLOYEE);
@@ -39,6 +42,7 @@ public class EmployeeDashboardController implements Controller {
 
     }
 
+    //Example
     @FXML
     void handleExampleButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.EXAMPLE);

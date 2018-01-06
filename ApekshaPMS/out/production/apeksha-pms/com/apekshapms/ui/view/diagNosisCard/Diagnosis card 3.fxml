@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.consultant.DiagnosisCardController3">
+
+     <children>
+            <Label layoutX="59.0" layoutY="35.0" prefHeight="40.0" prefWidth="238.0" text="DIAGNOSIS CARD" textFill="#595959">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="96.0" prefHeight="25.0" prefWidth="123.0" text="Treatment Plan" textFill="#595959">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="200.0" layoutY="102.0" prefHeight="14.0" prefWidth="851.0" />
+            <TableView fx:id="patientTableView" layoutX="110.0" layoutY="142.0" prefHeight="332.0" prefWidth="873.0">
+               <columns>
+                  <TableColumn fx:id="DateTableColumn" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="TimeTableColumn" prefWidth="126.0" text="Time" />
+                  <TableColumn fx:id="VenueTableColumn" prefWidth="102.0" text="Venue" />
+                  <TableColumn fx:id="DiagnosisTableColumn" prefWidth="562.0" text="Discription" />
+               </columns>
+            </TableView>
+            <Button fx:id="addButton" layoutX="905.0" layoutY="571.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #01aece;" styleClass="sideBarButton" text="Add" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+            <Button fx:id="backButton" layoutX="757.0" layoutY="571.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #01aece;" styleClass="sideBarButton" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+            <TextField fx:id="txtTimeh" layoutX="213.0" layoutY="510.0" prefHeight="25.0" prefWidth="60.0" promptText="hour" />
+            <TextField fx:id="txtVenue" layoutX="346.0" layoutY="510.0" prefHeight="25.0" prefWidth="78.0" promptText="Venue" />
+            <TextField fx:id="txtDescription" layoutX="453.0" layoutY="510.0" prefHeight="25.0" prefWidth="374.0" promptText="Discription" />
+            <Button fx:id="cancelButton" layoutX="611.0" layoutY="571.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #01aece;" styleClass="sideBarButton" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+            <DatePicker fx:id="datePicker" layoutX="86.0" layoutY="510.0" prefHeight="25.0" prefWidth="123.0" />
+      <Separator layoutX="191.0" layoutY="654.0" prefHeight="14.0" prefWidth="752.0" />
+      <Circle fill="#01aece" layoutX="453.0" layoutY="661.0" radius="13.0" strokeType="INSIDE" />
+      <Circle fill="#cfcfcf" layoutX="686.0" layoutY="661.0" radius="12.0" strokeType="INSIDE" />
+      <Circle fill="#cfcfcf" layoutX="905.0" layoutY="661.0" radius="12.0" strokeType="INSIDE" />
+      <Circle fill="#cfcfcf" layoutX="220.0" layoutY="661.0" radius="12.0" strokeType="INSIDE" />
+      <TextField fx:id="txtTimem" layoutX="284.0" layoutY="510.0" prefHeight="25.0" prefWidth="51.0" promptText="minute" />
+         </children>
+      </AnchorPane>

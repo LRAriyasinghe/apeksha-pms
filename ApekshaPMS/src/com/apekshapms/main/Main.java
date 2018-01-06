@@ -12,7 +12,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/com/apekshapms/ui/view/login.fxml"));
+
         Scene scene = new Scene(root, 498, 400);
+
         stage.setTitle("Apeksha Hospital Maharagama");
         stage.setScene(scene);
         stage.show();

@@ -2,14 +2,19 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
 import com.apekshapms.model.LipidProfileReport;
 import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -20,7 +25,7 @@ public class LipidProfileController implements Controller{
     @FXML
     private TextField TestIDTextField;
     @FXML
-    private TextField TypeTextField;
+    private ComboBox<String> typeComboBox;
 
     @FXML
     private DatePicker dateDatePicker;
@@ -67,9 +72,15 @@ public class LipidProfileController implements Controller{
     @FXML
     private Button CancelButton;
 
+    @FXML
+    private Button backButton;
+    private ObservableList CancerType = FXCollections.observableArrayList();
+
     private LipidProfileReport lipidProfileReport = new LipidProfileReport();
 
     public void initialize(URL location, ResourceBundle resources) {
+        CancerType.addAll("BoneMarrow","Creactive","FullBlood","LipidProfile","LiverFunction","SerumCalcium","SerumElectrolytes","serumProtein","Thyroid","UFRC","UrineForBence");
+        typeComboBox.setItems(CancerType);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -79,7 +90,7 @@ public class LipidProfileController implements Controller{
                         lipidProfileReport.setPatientID(PatientIDTextField.getText());
                         lipidProfileReport.setPatientName(PatientNameTextField.getText());
                         lipidProfileReport.setDate(dateDatePicker.getValue());
-                        lipidProfileReport.setTestType(TypeTextField.getText());
+                        lipidProfileReport.setTestType(typeComboBox.getValue());
                         lipidProfileReport.setReference(ReferenceTextField.getText());
                         lipidProfileReport.setRemarks(RemarksTextField.getText());
                         lipidProfileReport.setSerium_Colostrol(SerumCholestrolTextField.getText());
@@ -111,6 +122,18 @@ public class LipidProfileController implements Controller{
                     }
 
                 }
+
+            }
+        });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
 
             }
         });

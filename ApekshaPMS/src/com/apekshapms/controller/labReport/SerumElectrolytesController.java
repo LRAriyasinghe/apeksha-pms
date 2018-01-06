@@ -2,14 +2,19 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
 import com.apekshapms.model.SerumElectrolytesReport;
 import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -18,7 +23,7 @@ import java.util.ResourceBundle;
 
 public class SerumElectrolytesController implements Controller{
     @FXML
-    private TextField typeTextField;
+    private ComboBox<String> typeComboBox;
 
     @FXML
     private TextField testIDTextField;
@@ -52,9 +57,14 @@ public class SerumElectrolytesController implements Controller{
     @FXML
     private Button CancelButton;
 
+    @FXML
+    private Button backButton;
+    private ObservableList CancerType = FXCollections.observableArrayList();
     private SerumElectrolytesReport serumElectrolytesReport = new SerumElectrolytesReport();
 
     public void initialize(URL location, ResourceBundle resources) {
+        CancerType.addAll("BoneMarrow","Creactive","FullBlood","LipidProfile","LiverFunction","SerumCalcium","SerumElectrolytes","serumProtein","Thyroid","UFRC","UrineForBence");
+        typeComboBox.setItems(CancerType);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -64,7 +74,7 @@ public class SerumElectrolytesController implements Controller{
                         serumElectrolytesReport.setPatientID(PatientIDTextField.getText());
                         serumElectrolytesReport.setPatientName(PatientNameTextField.getText());
                         serumElectrolytesReport.setDate(dateDatePicker.getValue());
-                        serumElectrolytesReport.setTestType(typeTextField.getText());
+                        serumElectrolytesReport.setTestType(typeComboBox.getValue());
                         serumElectrolytesReport.setReference(ReferenceTextField.getText());
                         serumElectrolytesReport.setRemarks(RemarksTextField.getText());
                         serumElectrolytesReport.setSodium(SodiumTextField.getText());
@@ -89,6 +99,18 @@ public class SerumElectrolytesController implements Controller{
                     }
 
                 }
+
+            }
+        });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
 
             }
         });

@@ -5,6 +5,7 @@ import com.apekshapms.model.Patient;
 import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -32,34 +33,43 @@ public class PatientHistoryController implements Controller{
     @FXML
     private TextArea txtFamily;
 
+    @FXML
+    private Button cancelButton;
+
 
     private Patient patient;
 
-
-    @FXML
-    void handleCancelOnAction(javafx.event.ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.EMTY);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        nextButton.setOnAction(event -> {
+        //get New PAtient
+        patient = new Patient();
+
+        //Next Button Action Even
+        nextButton.setOnAction((ActionEvent event) -> {
             patient.setHistory(txtHistory.getText());
             patient.setSurgical(txtSurgical.getText());
             patient.setAllergy(txtAllergy.getText());
             patient.setSocial(txtSocial.getText());
             patient.setFamily(txtFamily.getText());
 
+            //Go to the Assign UI
             UI ui = UIFactory.getUI(UIName.ASSIGNING);
             Parent parent = ui.getParent();
             AssigningController controller = (AssigningController) ui.getController();
-            controller.showPatient(parent);
+            controller.showPatientAgain(patient);
             DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
             dashboardController.setWorkspace(parent);
+        });
+
+        //Cancel Button Action Event
+        cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UI ui = UIFactory.getUI(UIName.APEKSHA_HOME);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
+            }
         });
     }
 
@@ -73,6 +83,8 @@ public class PatientHistoryController implements Controller{
         this.patient = patient;
     }
 
+
+    //Back Button Action Event
     @FXML
     void handleBackToButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.NEW_PATIENT);

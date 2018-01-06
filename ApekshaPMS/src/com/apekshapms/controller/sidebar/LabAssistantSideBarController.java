@@ -5,6 +5,7 @@ import com.apekshapms.controller.labAssistant.ReceivedMessageController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.ui.UIName;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -23,9 +24,12 @@ public class LabAssistantSideBarController implements Controller{
     @FXML
     private Button checkReportButton;
 
+
     @FXML
     private Label massageNotificationLable;
 
+
+    //All Sidebar Buyyon Action Event
     @FXML
     void handleAddDetailsButtonAction(ActionEvent event) {UIFactory.launchUI(UIName.ADD_DETAILS, true);}
 
@@ -45,6 +49,13 @@ public class LabAssistantSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Check report action event
+        checkReportButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UIFactory.launchUI(UIName.SEARCH_LAB_REPORT, true);
+            }
+        });
         getMassageNotificationLable().setText(String.valueOf(ReceivedMessageController.sideBarcountNewMessage()));
     }
 

@@ -23,6 +23,9 @@ public class ConsultantDoctorSideBarController implements Controller {
     private Button messageButton;
 
     @FXML
+    private Button diagnosisCardButton;
+
+    @FXML
     void handleNewPatientButtonAction(ActionEvent event) {
 
     }
@@ -37,12 +40,29 @@ public class ConsultantDoctorSideBarController implements Controller {
 
     }
 
+    //All action event for Every Button
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+
         messageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 UIFactory.launchUI(UIName.SEND_MESSAGES, true);
+            }
+        });
+
+        searchPatientButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UIFactory.launchUI(UIName.SEARCH_PATIENT, true);
+            }
+        });
+
+        diagnosisCardButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UIFactory.launchUI(UIName.SEARCH_PATIENT_DIAGNOSIS, true);
             }
         });
 

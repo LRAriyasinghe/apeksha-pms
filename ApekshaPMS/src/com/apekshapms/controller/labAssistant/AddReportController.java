@@ -24,6 +24,9 @@ public class AddReportController implements Controller {
     //@FXML
     //private Button btnCreactiveReport;
 
+
+
+    //All Handle event for Add report in the below
     @FXML
     void handleaddNewReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.LAB_OVERVIEW);
@@ -32,6 +35,8 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+
+    //BONEMARROW_REPORT
     @FXML
     void handleBoneMarrowReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.BONEMARROW_REPORT);
@@ -40,6 +45,7 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    //CREACTIVEPROTEIN_REPORT
     @FXML
     void handleCeativeReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.CREACTIVEPROTEIN_REPORT);
@@ -48,6 +54,7 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    //FULLBLOODCOUNT_REPORT
     @FXML
     void handleFullBloodReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.FULLBLOODCOUNT_REPORT);
@@ -56,6 +63,8 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+
+    //LIPIDPROFILE_REPORT
     @FXML
     void handleLipidProfileReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.LIPIDPROFILE_REPORT);
@@ -64,6 +73,7 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    //LIVERFUNCTION_REPORT
     @FXML
     void handleLiverFunctionReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.LIVERFUNCTION_REPORT);
@@ -72,6 +82,8 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+
+    //SERUMCALCIUM_REPORT
     @FXML
     void handleSerumCalciumReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.SERUMCALCIUM_REPORT);
@@ -80,6 +92,7 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    //SERUM_ELECTROLYTES_REPORT
     @FXML
     void handleSerumElectrolytesReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.SERUM_ELECTROLYTES_REPORT);
@@ -87,6 +100,8 @@ public class AddReportController implements Controller {
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
     }
+
+    //SERUM_PROTEIN_REPORT
     @FXML
     void handleSerumProteinReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.SERUM_PROTEIN_REPORT);
@@ -95,9 +110,28 @@ public class AddReportController implements Controller {
         dashboardController.setWorkspace(parent);
     }
 
+    //THYROID_REPORT
     @FXML
     void handleThyroidReportButtonAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.THYROID_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    //UFR_REPORT
+    @FXML
+    void handleUFRReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.UFR_REPORT);
+        Parent parent = ui.getParent();
+        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
+    }
+
+    //URINE_FOR_BENCE_REPORT
+    @FXML
+    void handleUrineForNenceRReportButtonAction(ActionEvent event) {
+        UI ui = UIFactory.getUI(UIName.URINE_FOR_BENCE_REPORT);
         Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);

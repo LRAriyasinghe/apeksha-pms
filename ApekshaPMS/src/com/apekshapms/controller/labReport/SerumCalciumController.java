@@ -2,14 +2,19 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
 import com.apekshapms.model.SerumCalcuimReport;
 import com.apekshapms.services.LabReportServices;
+import com.apekshapms.ui.UI;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -23,7 +28,7 @@ import java.util.concurrent.Executor;
 public class SerumCalciumController implements Controller{
 
     @FXML
-    private TextField TypeTextField;
+    private ComboBox<String> typeComboBox;
 
     @FXML
     private TextField TestIDTextField;
@@ -55,9 +60,14 @@ public class SerumCalciumController implements Controller{
     @FXML
     private Button CancelButton;
 
+    @FXML
+    private Button backButton;
+    private ObservableList CancerType = FXCollections.observableArrayList();
     private SerumCalcuimReport serumCalcuimReport = new SerumCalcuimReport();
 
     public void initialize(URL location, ResourceBundle resources) {
+        CancerType.addAll("BoneMarrow","Creactive","FullBlood","LipidProfile","LiverFunction","SerumCalcium","SerumElectrolytes","serumProtein","Thyroid","UFRC","UrineForBence");
+        typeComboBox.setItems(CancerType);
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -67,7 +77,7 @@ public class SerumCalciumController implements Controller{
                         serumCalcuimReport.setPatientID(PatientIDTextField.getText());
                         serumCalcuimReport.setPatientName(PatientNameTextField.getText());
                         serumCalcuimReport.setDate(dateDatePicker.getValue());
-                        serumCalcuimReport.setTestType(TypeTextField.getText());
+                        serumCalcuimReport.setTestType(typeComboBox.getValue());
                         serumCalcuimReport.setReference(ReferenceTextField.getText());
                         serumCalcuimReport.setRemarks(RemarksTextField.getText());
                         serumCalcuimReport.setFreeCalcium(FreeCalciumTextField.getText());
@@ -92,6 +102,18 @@ public class SerumCalciumController implements Controller{
                     }
 
                 }
+
+            }
+        });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
 
             }
         });

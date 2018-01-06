@@ -30,6 +30,7 @@ public class SystemMessage {
     }
 
 
+
     public String getPatientId() {
         return patientId;
     }

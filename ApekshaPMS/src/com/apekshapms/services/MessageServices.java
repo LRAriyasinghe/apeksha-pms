@@ -1,7 +1,6 @@
 package com.apekshapms.services;
 
 import com.apekshapms.database.connector.MessageConnector;
-import com.apekshapms.main.Session;
 import com.apekshapms.model.SystemMessage;
 
 public class MessageServices {

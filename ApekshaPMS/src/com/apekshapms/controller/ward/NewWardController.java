@@ -1,10 +1,13 @@
 package com.apekshapms.controller.ward;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.database.Connector;
 import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.Ward;
 import com.apekshapms.services.WardServices;
 import com.apekshapms.ui.UIName;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -12,14 +15,23 @@ import javafx.scene.control.*;
 
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Thilina on 10/15/2017.
  * Univercity of Colombo School of Computing
  */
 public class NewWardController implements Controller {
+    PreparedStatement preparedStatement = null;
+    ResultSet rs= null;
+
+
     @FXML
     private TextField wardIdTextField;
     @FXML
@@ -29,21 +41,46 @@ public class NewWardController implements Controller {
     @FXML
     private TextField maxPatientCountTextField;
     @FXML
-    private RadioButton radiobtnMale;
+    private ComboBox<String> genderComboBox;
     @FXML
-    private RadioButton radiobtnFemale;
-    @FXML
-    private TextField headID;
+    private ComboBox<String> headID;
     @FXML
     private Button SubmitButton;
 
+
+    //Make a observable list called 'gendertypes' to store gender
+    private ObservableList gendertypes = FXCollections.observableArrayList();
+    //Make a observale list called 'SupervisorList' to store Consultant names
+    private ObservableList SupervisorList = FXCollections.observableArrayList();
+
     private Ward ward = new Ward();
 
+
+
     public void initialize(URL location, ResourceBundle resources) {
-        ToggleGroup group = new ToggleGroup();
-        radiobtnMale.setToggleGroup(group);
-        radiobtnFemale.setToggleGroup(group);
-        radiobtnMale.setSelected(true);
+
+        try {
+            Connection connection = new Connector().getConnection();
+            String query = "select * from employee WHERE type LIKE 'Consultant Doctor' ";
+            preparedStatement=connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                SupervisorList.setAll(rs.getString(3));
+            }
+
+            headID.setItems(SupervisorList);
+
+        }
+
+        catch (Exception e){
+            System.err.println(e);
+        }
+
+
+        gendertypes.addAll("Male","Female");
+        genderComboBox.setItems(gendertypes);
+
+        //Add a ward to the system
         SubmitButton.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent event) {
@@ -53,8 +90,8 @@ public class NewWardController implements Controller {
                         ward.setWardName(wardNameTextField.getText());
                         ward.setDescription(descriptionTextArea.getText());
                         ward.setMaxPatient_Count(maxPatientCountTextField.getText());
-                        ward.setMale(radiobtnMale.isSelected());
-                        ward.setSupervisor(headID.getText());
+                        ward.setGender_acceptence(genderComboBox.getValue());
+                        ward.setSupervisor(headID.getValue());
 
                     }catch (Exception e){
                         System.err.println(e);
@@ -69,6 +106,11 @@ public class NewWardController implements Controller {
 
                         System.out.println("Yes");
                         WardServices.addNewWord(ward);
+
+                        wardIdTextField.setText("");
+                        wardNameTextField.setText("");
+                        descriptionTextArea.setText("");
+                        maxPatientCountTextField.setText("");
                     }else {
                         UIFactory.launchUI(UIName.NEW_WARD, true);
                         // ... user chose CANCEL or closed the dialog
@@ -87,16 +129,25 @@ public class NewWardController implements Controller {
 
     private boolean isInputValid() {
         String errorMessage = "";
+        String expression = "^[a-zA-Z]*$";
 
-        if (wardIdTextField.getText() == null || wardIdTextField.getText().length() == 0) {
-            errorMessage += "Ward ID field is Empty!\n";
+        //java.lang.String expression2 = "[0-9]";
+
+        CharSequence inputStr1 = wardNameTextField.getText();
+        Pattern pattern1 = Pattern.compile(expression);
+        Matcher matcher1 = pattern1.matcher(inputStr1);
+
+        if (wardIdTextField.getText() == null || wardNameTextField.getText().length() == 0||!matcher1.matches()) {
+            errorMessage += "Not a Valid Ward Name!\n";
         }
-        if (wardNameTextField.getText() == null || wardNameTextField.getText().length() == 0) {
-            errorMessage += "Ward Name Field is Empty!\n";
+
+
+        if(maxPatientCountTextField.getText() == null ||maxPatientCountTextField.getText().length() == 0 ){
+            errorMessage += "Max Patient field is Empty!\n";
         }
-        if (headID.getText() == null || headID.getText().length() == 0) {
+        /*if (headID.getValue() == null || headID.getValue().length() == 0) {
             errorMessage += "Ward Head is Empty!\n";
-        }
+        }*/
         if (errorMessage.length() == 0) {
             return true;
         }else{

@@ -8,6 +8,7 @@ import java.time.LocalDate;
  */
 public class Employee {
     private String id;
+    private String title;
     private String firstName;
     private String lastName;
     private String doorNu;
@@ -21,7 +22,13 @@ public class Employee {
     private String department;
     private String type;
     private LocalDate dob;
-    public Employee(){
+    private String grade;
+    private String bank_acc_nu;
+    private String address;
+    private String gender;
+
+
+    public Employee() {
 
     }
 
@@ -33,15 +40,15 @@ public class Employee {
     }
 
     public Employee(String emp_id, String firstName, String lastName, String nic_no, String type, String city, String district, String contact_no, String department) {
-    this.id= emp_id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.nic = nic_no;
-    this.type = type;
-    this.city = city;
-    this.distric = district;
-    this.contactNu = contact_no;
-    this.department = department;
+        this.id = emp_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nic = nic_no;
+        this.type = type;
+        this.city = city;
+        this.distric = district;
+        this.contactNu = contact_no;
+        this.department = department;
     }
 
 
@@ -157,4 +164,50 @@ public class Employee {
     public void setDob(LocalDate dob) {
         this.dob = dob;
     }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getBank_acc_nu() {
+        return bank_acc_nu;
+    }
+
+    public void setBank_acc_nu(String bank_acc_nu) {
+        this.bank_acc_nu = bank_acc_nu;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
+
+

@@ -1,11 +1,14 @@
 package com.apekshapms.controller.sidebar;
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.admin.AdminMessageController;
 import com.apekshapms.factory.UIFactory;
+import com.apekshapms.model.AdminMessage;
 import com.apekshapms.ui.UIName;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
@@ -25,19 +28,27 @@ public class AdminSideBarController implements Controller{
     @FXML
     private Button wardButton;
 
+    @FXML
+    private Button messageButton;
+
+    @FXML
+    private Label messageNotifiLable;
+
+    @FXML
+    private Button viewDiagnosisCardButton;
+
     @Override
     public void refreshView() {
 
     }
 
+
+    //All action event for Every Button
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         patientButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent event) {
-                UIFactory.launchUI(UIName.PATIENT_DASHBOARD, true);
-
-            }
+            public void handle(javafx.event.ActionEvent event) { UIFactory.launchUI(UIName.PATIENT_DASHBOARD, true); }
         });
 
         employeeButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
@@ -61,6 +72,27 @@ public class AdminSideBarController implements Controller{
             }
         });
 
+        messageButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
+            @Override
+            public void handle(javafx.event.ActionEvent event) { UIFactory.launchUI(UIName.ADMIN_MESSAGE, true); }
+        });
+
+        viewDiagnosisCardButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
+            @Override
+            public void handle(javafx.event.ActionEvent event) {
+                UIFactory.launchUI(UIName.SEARCH_PATIENT_DIAGNOSIS, true);
+            }
+        });
+
+
+        getMessageNotifiLable().setText(String.valueOf(AdminMessageController.sideBarcountNewMessage())); //get to Message notification
     }
 
+    public Label getMessageNotifiLable() {
+        return messageNotifiLable;
+    }
+
+    public void setMessageNotifiLable(Label messageNotifiLable) {
+        this.messageNotifiLable = messageNotifiLable;
+    }
 }

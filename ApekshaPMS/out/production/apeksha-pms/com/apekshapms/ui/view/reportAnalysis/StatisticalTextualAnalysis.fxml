@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.reportAnalysis.StatisticalTextualAnalysisController">
+   <children>
+      <Label layoutX="75.0" layoutY="68.0" prefHeight="40.0" prefWidth="297.0" text="Textual Analysis" textFill="#404040">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="clearButton" layoutX="745.0" layoutY="550.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #01aece;" styleClass="bottomButton" text="Clear" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="getButton" layoutX="883.0" layoutY="550.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #01aece;" styleClass="bottomButton" text="Get" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="189.0" layoutY="335.0" prefHeight="25.0" prefWidth="148.0" text="Choose Type" textFill="#595959">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="189.0" layoutY="227.0" prefHeight="25.0" prefWidth="77.0" text="Year" textFill="#404040">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="270.0" prefHeight="25.0" prefWidth="63.0" text="Total" textFill="#404040">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalTextField" layoutX="671.0" layoutY="270.0" prefHeight="52.0" prefWidth="225.0" />
+      <Separator layoutX="75.0" layoutY="115.0" prefHeight="14.0" prefWidth="931.0" />
+      <Label layoutX="189.0" layoutY="445.0" prefHeight="25.0" prefWidth="148.0" text="Choose District" textFill="#595959">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="YearComboBox" layoutX="310.0" layoutY="227.0" prefWidth="150.0" />
+      <ComboBox fx:id="TypeComboBox" layoutX="310.0" layoutY="338.0" prefWidth="150.0" />
+      <ComboBox fx:id="DistrictComboBox" layoutX="316.0" layoutY="445.0" prefWidth="150.0" />
+      <Label layoutX="648.0" layoutY="353.0" prefHeight="25.0" prefWidth="148.0" text="Male" textFill="#404040">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="maleTextField" layoutX="756.0" layoutY="350.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label layoutX="648.0" layoutY="393.0" prefHeight="25.0" prefWidth="148.0" text="Female" textFill="#404040">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="femaleTextField" layoutX="756.0" layoutY="395.0" prefHeight="25.0" prefWidth="140.0" />
+   </children>
+</AnchorPane>

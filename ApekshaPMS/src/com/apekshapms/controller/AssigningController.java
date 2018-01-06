@@ -34,6 +34,9 @@ public class AssigningController implements Controller {
     private Button submitButton;
 
     @FXML
+    private Button cancelButton;
+
+    @FXML
     private TextField txtRegisterDocId;
 
     @FXML
@@ -69,70 +72,78 @@ public class AssigningController implements Controller {
     @FXML
     private DatePicker joinedDatePicker;
 
-
     private Patient patient;
 
-    private ObservableList cancerType = FXCollections.observableArrayList();
+    private ObservableList<String> cancerType = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Load ListView In Register Doctors
         fillListView1();
+        //Load ListView In Consultant Doctors
         fillListView12();
+        // load Cancer Type to ChoiceBox
+        //checkCencerItems();
+
         //registerDocListView.getItems().addAll("a","b","c");
         //consultantDocListView.getItems().addAll("a","b","c");
         //registerDocListView.getItems().add(String.valueOf(registerDoc));
         //consultantDocListView.getItems().add(String.valueOf(consultant));
+
+        //Load Doctors TavleView
         addedDocterTable();
 
-        cancerType.addAll("A","B","C");
+        //Add Cancer Type to Choice Box
+        cancerType.addAll("Lung","Brain","Bladder","Leukemia","Breast","Oral","Oesophagus","Prostate","Colon","Thyroid","Other");
         cancerTypeChoiceBox.setItems(cancerType);
 
+        //Get New Patient
+        patient = new Patient();
+
+        //Submit Button Action Event
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                //Check Validity
                 if (isInputValid()){
                     String emp_idReg = txtRegisterDocId.getText();
                     String emp_idCons = txtConsultantId.getText();
-                    if (ValidateSearchRegisterDoctor.validate_registerDoc(emp_idReg)){ //Check Registor Doctor ID
-                        if (ValidateSearchConsultant.validate_consultant(emp_idCons)){ //Check Consultant Doctor ID
-                                patient.setRegisterDocId(txtRegisterDocId.getText());
+
+                    //Check Registor Doctor Availability
+                    if (ValidateSearchRegisterDoctor.validate_registerDoc(emp_idReg)){
+                        //Check Consultant Doctor Availability
+                        if (ValidateSearchConsultant.validate_consultant(emp_idCons)){
+                            System.out.println("Separated");
+                            patient.setRegisterDocId(txtRegisterDocId.getText());
+                            System.out.println(txtRegisterDocId.getText());
                                 patient.setConsultantId(txtConsultantId.getText());
+                            System.out.println(txtConsultantId.getText());
                                 patient.setDetails(EEE.getText());
+                            System.out.println(EEE.getText());
                                 patient.setCancerType(cancerTypeChoiceBox.getValue());
+                            System.out.println(cancerTypeChoiceBox.getValue());
                                 patient.setJoinedDate(joinedDatePicker.getValue());
+                            System.out.println(joinedDatePicker.getValue());
+                            System.out.println("Data all get");
 
+                            //Get the Patient and Go to the Patient Service
                             PatientServices.addPatient(patient);
-
-//                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);//Patient Register Confirmation Dialog box
-//                            alert.setTitle("Confirmation Dialog");
-//                            alert.setHeaderText("Look, a Confirmation Dialog");
-//                            alert.setContentText("Are you ok with this?");
-//
-//                            Optional<ButtonType> result = alert.showAndWait();
-//                            if (result.get() == ButtonType.OK){
-//
-//                                System.out.println("Yes");
-//                                PatientServices.addPatient(patient);
-//
-//                            } else {
-//                                UIFactory.launchUI(UIName.NEW_PATIENT, true);
-//                                // ... user chose CANCEL or closed the dialog
-//                            }
+                            PatientServices.addHistory(patient);
 
                         }else{
+                            //Message box if Consultant Doctor is Unavailable
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Warning Dialog");
                             alert.setHeaderText("Look, a Warning Dialog");
                             alert.setContentText("Invalid Consultant ID.!");
-
                             alert.showAndWait();
                         }
                     }else{
+                        //Message box if Register Doctor is Unavailable
                         Alert alert = new Alert(Alert.AlertType.WARNING);
                         alert.setTitle("Warning Dialog");
                         alert.setHeaderText("Look, a Warning Dialog");
                         alert.setContentText("Invalid Regostor Doctor ID.!");
-
                         alert.showAndWait();
                     }
                 }
@@ -142,11 +153,12 @@ public class AssigningController implements Controller {
             }
         });
 
+        //Mouse Action Event for Displaying Register Doctor list view when Clicked
         registerDocListView.setOnMouseClicked((MouseEvent mouseEvent) ->{
 
             try {
                 Connection connection = new Connector().getConnection();
-                preparedStatement = connection.prepareStatement("select emp_Id from registerdoctor");
+                preparedStatement = connection.prepareStatement("select emp_Id from RegisterDoctor");
                 rs=preparedStatement.executeQuery();
                 while (rs.next()){
                     txtRegisterDocId.setText(rs.getString("emp_Id"));
@@ -161,10 +173,11 @@ public class AssigningController implements Controller {
 
         });
 
+        //Mouse Action Event for Displaying Consultant Doctor list view when Clicked
         consultantDocListView.setOnMouseClicked((MouseEvent mouseEvent) ->{
             try {
                 Connection connection = new Connector().getConnection();
-                preparedStatement = connection.prepareStatement("select emp_Id from consultant");
+                preparedStatement = connection.prepareStatement("select emp_Id from Consultant");
                 rs=preparedStatement.executeQuery();
                 while (rs.next()){
                     txtConsultantId.setText(rs.getString("emp_Id"));
@@ -178,16 +191,30 @@ public class AssigningController implements Controller {
             }
 
         });
+
+
+        //Cancel button Action Event go to the Home Page
+        cancelButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UI ui = UIFactory.getUI(UIName.APEKSHA_HOME);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
+            }
+        });
     }
 
+
+    //Load  Table View in All Doctors
     private void loadDocterDetails() {
         try {
             Connection connection = new Connector().getConnection();
-            preparedStatement = connection.prepareStatement("select emp_Id,firstName,lastName,type from employee");
+            preparedStatement = connection.prepareStatement("select emp_Id,firstName,lastName,type from Employee");
             rs=preparedStatement.executeQuery();
             while (rs.next()){
                 empdata.add(new Employee(
-                        rs.getString("emp_Id"),
+                        rs.getString("emp_id"),
                         rs.getString("firstName"),
                         rs.getString("lastName"),
                         rs.getString("type")
@@ -203,10 +230,11 @@ public class AssigningController implements Controller {
         }
     }
 
+    //Load Register Doctor ListView
     private void fillListView1(){
         try {
             Connection connection = new Connector().getConnection();
-            preparedStatement = connection.prepareStatement("select emp_Id from registerdoctor");
+            preparedStatement = connection.prepareStatement("select emp_Id from RegisterDoctor");
             rs=preparedStatement.executeQuery();
             while (rs.next()){
                 String current = rs.getString("emp_Id");
@@ -222,10 +250,11 @@ public class AssigningController implements Controller {
 
     }
 
+    //Load Consultant Doctor ListView
     private void fillListView12(){
         try {
             Connection connection = new Connector().getConnection();
-            preparedStatement = connection.prepareStatement("select emp_Id from consultant");
+            preparedStatement = connection.prepareStatement("select emp_Id from Consultant");
             rs=preparedStatement.executeQuery();
             while (rs.next()){
                 String current = rs.getString("emp_Id");
@@ -241,9 +270,10 @@ public class AssigningController implements Controller {
 
     }
 
+    //Add Doctors To the Table
     private  void addedDocterTable(){
         docterTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        idColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("emp_Id"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("id"));
         firstnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("firstName"));
         lastnameColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("lastName"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Employee,String>("type"));
@@ -260,6 +290,7 @@ public class AssigningController implements Controller {
         this.patient = patient;
     }
 
+    //check the validity of the input
     private boolean isInputValid() {
         String errorMessage = "";
 
@@ -279,7 +310,6 @@ public class AssigningController implements Controller {
             alert.setTitle("Warning Dialog");
             alert.setHeaderText("Look, a Warning Dialog");
             alert.setContentText(errorMessage);
-
             alert.showAndWait();
 
             // Show the error message
@@ -293,9 +323,12 @@ public class AssigningController implements Controller {
         }
     }
 
-    public void showPatient(Parent parent) {
+    //Show the Patient
+    public void showPatientAgain(Patient patient) {
+        this.patient=patient;
     }
 
+    //Action event for the back buton
     @FXML
     void handleBackButton(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.PATIENT_HISTORY);
@@ -306,12 +339,5 @@ public class AssigningController implements Controller {
         dashboardController.setWorkspace(parent);
 
     }
-    @FXML
-    void handleBackOnAction(javafx.event.ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.EMTY);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
 
-    }
 }

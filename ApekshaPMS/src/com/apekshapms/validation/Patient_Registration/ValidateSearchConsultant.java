@@ -1,5 +1,7 @@
 package com.apekshapms.validation.Patient_Registration;
 
+import com.apekshapms.database.Connector;
+
 import java.sql.*;
 
 /**
@@ -9,8 +11,8 @@ import java.sql.*;
 public class ValidateSearchConsultant {
     public static boolean validate_consultant(String emp_id){ //Validate Consultant Doctor ID in the consultant Table
         try {
-            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/apekshahospitalmaharagama?", "root", "");
-            PreparedStatement preparedStatement = connection.prepareStatement("Select * from consultant where emp_Id=?");
+            Connection connection = new Connector().getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from Consultant where emp_Id=?");
             preparedStatement.setString(1,emp_id);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs.next()){

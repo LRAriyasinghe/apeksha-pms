@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.admin.AdminMessageController">
+   <children>
+      <Label layoutX="64.0" layoutY="42.0" prefHeight="40.0" prefWidth="635.0" text="Received Messages From All System Employee" textFill="#595959">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="816.0" layoutY="629.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #01aece;" styleClass="bottomButton" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="checkedButton" layoutX="939.0" layoutY="629.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #01aece;" styleClass="bottomButton" text="Checked" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label layoutX="64.0" layoutY="95.0" prefHeight="25.0" prefWidth="126.0" text="Messages" textFill="#595959">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="146.0" layoutY="101.0" prefHeight="14.0" prefWidth="440.0" />
+      <Label layoutX="146.0" layoutY="348.0" text="Received Message">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextArea fx:id="receivedMessageTextArea" layoutX="300.0" layoutY="349.0" prefHeight="135.0" prefWidth="740.0" />
+      <TableView fx:id="messageTableView" layoutX="150.0" layoutY="129.0" onMouseClicked="#showOnClicked" onMousePressed="#showOnClicked" prefHeight="200.0" prefWidth="887.0">
+        <columns>
+            <TableColumn fx:id="idTableColumn" text="ID" />
+          <TableColumn fx:id="employeeidTableColumn" prefWidth="131.0" text="Employee ID" />
+            <TableColumn fx:id="messageTableColumn" prefWidth="231.0" text="Message" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="106.0" text="Status" />
+            <TableColumn fx:id="receivedDateTableColumn" minWidth="0.0" prefWidth="175.0" text="Received Date" />
+        </columns>
+      </TableView>
+      <Separator layoutX="154.0" layoutY="494.0" prefHeight="14.0" prefWidth="887.0" />
+      <Group layoutX="724.0" layoutY="90.0">
+         <children>
+            <Button fx:id="loadNewMessagesButton" layoutX="35.0" layoutY="-7.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #01aece;" text="New Messages" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Label fx:id="notificationLable" layoutX="-24.0" layoutY="-6.0" prefHeight="27.0" prefWidth="50.0" text="SMS" textFill="#0282cc">
+               <font>
+                  <Font name="Lao MN" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Button fx:id="loadAllMessageButton" layoutX="932.0" layoutY="85.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #01aece;" text="All Inbox" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label layoutX="623.0" layoutY="90.0" text="You Have " textFill="#01aece">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Group layoutX="150.0" layoutY="383.0">
+         <children>
+            <Label text="Message ID :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="messageIdLable" layoutX="58.0" layoutY="17.0" text="Label" textFill="#01aece">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </Group>
+      <Group layoutX="150.0" layoutY="431.0">
+         <children>
+            <Label text="Employee ID :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="messageEmployeeIDLable" layoutX="58.0" layoutY="17.0" text="Label" textFill="#01aece">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </Group>
+      <Button fx:id="cancelButton" layoutX="693.0" layoutY="629.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #01aece;" styleClass="bottomButton" text="Cancel" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apekshapms.controller.ApekshaHomeController">
+   <children>
+      <ImageView fitHeight="995.0" fitWidth="702.0" layoutX="189.0" layoutY="-106.0" opacity="0.14">
+         <image>
+            <Image url="@../Image/25270868_859049290928436_1021792035_o.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="homeTopAnchorPane" prefHeight="77.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="200.0" layoutX="28.0" layoutY="13.0">
+               <image>
+                  <Image url="@../Image/25188396_859058357594196_653446151_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="77.0" layoutX="988.0" layoutY="19.0">
+               <image>
+                  <Image url="@../Image/25188340_859058360927529_20346523_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="35.0" layoutX="928.0" layoutY="14.0">
+               <image>
+                  <Image url="@../Image/25139221_859058364260862_80001751_o.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

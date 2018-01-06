@@ -24,73 +24,56 @@ public class ReportDashboardController implements Controller {
     private Button addReportButton;
 
     @FXML
-    private Button statisticalMaleFemaleDistrictButoon;
+    private Button textualAnalysisButton;
+
+    @FXML
+    private  Button searchReportButton;
 
     @Override
     public void refreshView() {
 
     }
 
+
+    //Action event for Statistical Button
     @FXML
-    void handleAnalysisallReportOnAction(ActionEvent event) {
+    void handleMaleFemaleDistrictOnAction(ActionEvent event) {
         UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_ALL_GRAPHICAL_EXAMPLE);
         Parent parent = ui.getParent();
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
-
     }
-
-    @FXML
-    void handleStatisticalOnAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-
-    }
-
-    @FXML
-    void handleMaleFemaleDistrictOnAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_MALE_FEMALE_DISTRICT);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-    }
-
-    @FXML
-    void handleCancerTypeCountOnAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_CANCERTYPE_COUNT);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-    }
-
-    @FXML
-    void handleCancerTypePieChartOnAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.STATISTICAL_ANALYSIS_GRAPHICAL_PIE_CHART);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-    }
-
-    @FXML
-    void handleSearchOnAction(ActionEvent event) {
-        UI ui = UIFactory.getUI(UIName.SEARCH_PATIENT);
-        Parent parent = ui.getParent();
-        DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
-        dashboardController.setWorkspace(parent);
-    }
-
-
-
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Action button for Add report
         addReportButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                UI ui = UIFactory.getUI(UIName.LAB_OVERVIEW);
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController adminDashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                adminDashboardController.setWorkspace(parent);
+            }
+        });
+
+        //Action Event For textual Button
+        textualAnalysisButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UI ui = UIFactory.getUI(UIName.STATISTICAL_TEXTUAL_ANALYSIS);
+                Parent parent = ui.getParent();
+                DashboardController adminDashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                adminDashboardController.setWorkspace(parent);
+            }
+        });
+
+        //Action button for Search report
+        searchReportButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                UI ui = UIFactory.getUI(UIName.SEARCH_LAB_REPORT);
                 Parent parent = ui.getParent();
                 DashboardController adminDashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
                 adminDashboardController.setWorkspace(parent);

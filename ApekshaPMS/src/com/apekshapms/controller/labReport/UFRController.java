@@ -2,10 +2,15 @@ package com.apekshapms.controller.labReport;
 
 
 import com.apekshapms.controller.Controller;
+import com.apekshapms.controller.DashboardController;
+import com.apekshapms.factory.UIFactory;
 import com.apekshapms.model.LabReport;
+import com.apekshapms.ui.UI;
+import com.apekshapms.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -77,8 +82,12 @@ public class UFRController implements Controller{
 
     private LabReport labReport;
 
+    @FXML
+    private Button backButton;
+
 
     public void initialize(URL location, ResourceBundle resources) {
+        labReport = new LabReport();
         SubmitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -104,6 +113,18 @@ public class UFRController implements Controller{
 
                 //LabReportServices.addLabReport(labReport);
 
+
+            }
+        });
+
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // ... user chose Bach Button
+                UI ui = UIFactory.getUI(UIName.ADD_REPORT);
+                Parent parent = ui.getParent();
+                DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+                dashboardController.setWorkspace(parent);
 
             }
         });

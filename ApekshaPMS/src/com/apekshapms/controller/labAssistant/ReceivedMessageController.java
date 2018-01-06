@@ -1,9 +1,9 @@
 package com.apekshapms.controller.labAssistant;
 
 import com.apekshapms.controller.Controller;
-import com.apekshapms.controller.sidebar.LabAssistantSideBarController;
 import com.apekshapms.database.Connector;
 import com.apekshapms.model.SystemMessage;
+import com.apekshapms.validation.Patient_Registration.ValidateLabAssistantID;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,7 +20,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class ReceivedMessageController implements Controller{
+public class ReceivedMessageController implements Controller {
 
     @FXML
     private Button backButton;
@@ -76,6 +76,7 @@ public class ReceivedMessageController implements Controller{
     @FXML
     private Label messagePatientIdLable;
 
+    //get Array list for message save
     private ObservableList<SystemMessage> message = FXCollections.observableArrayList();
 
     @Override
@@ -83,6 +84,7 @@ public class ReceivedMessageController implements Controller{
 
     }
 
+    //message passing for Text Area when click row of Table View
     public void showOnClicked(){
         try {
             SystemMessage systemMessage = (SystemMessage)messageTableView.getSelectionModel().getSelectedItem();
@@ -97,10 +99,14 @@ public class ReceivedMessageController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        messageIdLable.setText(""); // Message Id is Zero when a not load new message button
-        messagePatientIdLable.setText(""); // Message Id is Zero when a not load new message button
+        // Message Id is Zero when a not load new message button
+        messageIdLable.setText("");
 
-        countNewMessage(); // Count the New Message and Set to Notification Lable
+        // Message Id is Zero when a not load new message button
+        messagePatientIdLable.setText("");
+
+        // Count the New Message and Set to Notification Lable
+        countNewMessage();
 
         //Set to TableColumn to Values
         idTableColumn.setCellValueFactory(new PropertyValueFactory<SystemMessage,Integer>("messageid"));
@@ -110,6 +116,12 @@ public class ReceivedMessageController implements Controller{
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<SystemMessage,String>("statusMessage"));
         receivedDateTableColumn.setCellValueFactory(new PropertyValueFactory<SystemMessage,LocalDate>("sendDate"));
 
+        messageTableView.refresh();
+        messageTableView.getItems().clear();
+        //Load only new Messages
+        loadNewMessages();
+
+        //Loadd All Message on action event for All message button
         loadAllMessageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -119,29 +131,47 @@ public class ReceivedMessageController implements Controller{
             }
         });
 
+        //Loadd All new Message on action event for All new message button
         loadNewMessagesButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 messageTableView.refresh();
                 messageTableView.getItems().clear();
-                loadNewMessages(); //Load only new Messages
+                //Load only new Messages
+                loadNewMessages();
             }
         });
 
+        //Action Event after checking message and updating status in database
         checkedButton.setOnAction(new EventHandler<ActionEvent>() {
+
             @Override
             public void handle(ActionEvent event) {
-                Connection connection = new Connector().getConnection();
-                PreparedStatement preparedStatement = null;
-                try {
-                    preparedStatement = connection.prepareStatement("UPDATE messages SET labassistant_id = '" + labAssistantIdTextField.getText() + "', status='Read', workedstatus='" + checkedMessageTextArea.getText() + "', receivedDate='" + checkedDatePicker.getValue() + "' WHERE id='" + messageIdLable.getText() + "'");
-                    preparedStatement.execute();
-                    messageTableView.getItems().clear();
-                    loadNewMessages(); //load all messages
-                    countNewMessage(); //Count updated new messages
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                if (isInputValid()) {
+                    String id = labAssistantIdTextField.getText(); //get the Lab Assistant ID
+                    if(ValidateLabAssistantID.validate_labAssistantId(id)){
+                        Connection connection = new Connector().getConnection();
+                        PreparedStatement preparedStatement = null;
+                        try {
+                            preparedStatement = connection.prepareStatement("UPDATE messages SET labAssistant_emp_id = '" + labAssistantIdTextField.getText() + "', status='Read', workedstatus='" + checkedMessageTextArea.getText() + "', receivedDate='" + checkedDatePicker.getValue() + "' WHERE id='" + messageIdLable.getText() + "'");
+                            preparedStatement.execute();
+                            messageTableView.getItems().clear();
+                            loadNewMessages(); //load all messages
+                            countNewMessage(); //Count updated new messages
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                        sideBarcountNewMessage();
+                    }else{
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Error Dialog");
+                        alert.setHeaderText("Look, an Error Dialog");
+                        alert.setContentText("Ooops, there was an error Lab Assistant ID is Invalide.!");
+                        alert.showAndWait();
+
+                    }
                 }
+
 
             }
         });
@@ -150,16 +180,17 @@ public class ReceivedMessageController implements Controller{
 
     }
 
-    public void loadAllMessages(){ //Select All Messages and add to TableView
+    //Select All Messages and add to TableView
+    public void loadAllMessages(){
         try {
             Connection connection = new Connector().getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,patient_id,consultant_id,message,status,sendDate FROM messages");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,patient_Id,Consultant_emp_Id,message,status,sendDate FROM messages");
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()){
                 message.add(new SystemMessage(
                         rs.getInt("id"),
-                        rs.getString("patient_id"),
-                        rs.getString("consultant_id"),
+                        rs.getString("patient_Id"),
+                        rs.getString("Consultant_emp_Id"),
                         rs.getString("message"),
                         rs.getString("status"),
                         rs.getDate("sendDate").toLocalDate()
@@ -177,18 +208,19 @@ public class ReceivedMessageController implements Controller{
         }
     }
 
-    public void loadNewMessages(){ //Select New Messages and add to TableView
+    //Select New Messages and add to TableView
+    public void loadNewMessages(){
 
 
         try {
             Connection connection = new Connector().getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,patient_id,consultant_id,message,status,sendDate FROM messages WHERE status='Unread'");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,patient_Id,Consultant_emp_Id,message,status,sendDate FROM messages WHERE status='Unread'");
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()){
                 message.add(new SystemMessage(
                         rs.getInt("id"),
-                        rs.getString("patient_id"),
-                        rs.getString("consultant_id"),
+                        rs.getString("patient_Id"),
+                        rs.getString("Consultant_emp_Id"),
                         rs.getString("message"),
                         rs.getString("status"),
                         rs.getDate("sendDate").toLocalDate()
@@ -206,7 +238,8 @@ public class ReceivedMessageController implements Controller{
         }
     }
 
-    public void countNewMessage(){ //Count All New Messages and Set to Notification
+    //Count All New Messages and Set to Notification
+    public void countNewMessage(){
         try {
             Connection connection = new Connector().getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT COUNT(status) FROM messages WHERE status='Unread'");
@@ -214,7 +247,8 @@ public class ReceivedMessageController implements Controller{
             while (rs.next()){
                 getNotificationLable().setText(String.valueOf(rs.getInt(1)));
             }
-            preparedStatement.close(); //Close the Connection
+            //Close the Connection
+            preparedStatement.close();
             rs.close();
 
         }catch (Exception e){
@@ -223,7 +257,8 @@ public class ReceivedMessageController implements Controller{
         }
     }
 
-    public static Integer sideBarcountNewMessage(){ //Count All New Messages and Set to Notification in SideBar of Lab Assistant
+    //Count All New Messages and Set to Notification in SideBar of Lab Assistant
+    public static Integer sideBarcountNewMessage(){
         try {
             Connection connection = new Connector().getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT COUNT(status) FROM messages WHERE status='Unread'");
@@ -232,7 +267,8 @@ public class ReceivedMessageController implements Controller{
                 Integer count = Integer.valueOf(rs.getString(1));
                 return count;
             }
-            preparedStatement.close(); //Close the Connection
+            //Close the Connection
+            preparedStatement.close();
             rs.close();
 
         }catch (Exception e){
@@ -248,5 +284,45 @@ public class ReceivedMessageController implements Controller{
 
     public void setNotificationLable(Label notificationLable) {
         this.notificationLable = notificationLable;
+    }
+
+
+    //Validation
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (receivedMessageTextArea.getText() == null || receivedMessageTextArea.getText().length() == 0) {
+            errorMessage += "Please Select Message in the Table!\n";
+        }
+        if (checkedDatePicker.getValue() == null || checkedDatePicker.getValue().lengthOfYear() == 0) {
+            errorMessage += "Please Select Date!\n";
+        }
+        if (checkedMessageTextArea.getText() == null || checkedMessageTextArea.getText().length() == 0) {
+            errorMessage += "Please Type here Confirms Messages!\n";
+        }
+        if (labAssistantIdTextField.getText() == null || labAssistantIdTextField.getText().length() == 0) {
+            errorMessage += "Please Type Here Lab Assistant Doctor ID.!!\n";
+        }
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+
+
+            // Show the error message
+            //Dialogs.showErrorDialog(dialogStage, errorMessage,
+            //"Please correct invalid fields", "Invalid Fields");
+            System.out.println("Successfully Fail");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Dialog");
+            alert.setHeaderText("Look, a Warning Dialog");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+            // Dialogs.showWarningDialog(new Stage(), "Careful with the next step!", "Warning Dialog", "title");
+
+            return false;
+
+        }
     }
 }
